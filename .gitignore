@@ -7,3 +7,6 @@ sites/*/private
 
 # Ignore mac trash folder
 .DS_Store
+
+# Ignore deploy.php
+/deploy.php
