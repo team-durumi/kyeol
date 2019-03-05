@@ -14,7 +14,7 @@ define('__SLOWALK__', drupal_get_path('module', 'slowalk'));
 function slowalk_menu()
 {
     $items['admin/webzine'] = array(
-        'title' => '웹진',
+        'title' => '유지관리',
         'description' => '웹진 어드민 페이지입니다',
         'page callback' => 'drupal_get_form',
         'page arguments' => array('wz_main_callback'),
