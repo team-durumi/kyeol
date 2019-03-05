@@ -2,12 +2,7 @@
     $(document).ready(function () {
         //Vol select change 이벤트
         $('#edit-wz-main-vol').change(function () {
-            $('.form-item-wz-main-features input[type=checkbox]').attr('checked', false);
-            $('#edit-grid #first').empty();
-            $('input[name=wz_main_first_feature]').val('');
-            $('#edit-grid #second').empty();
-            $('input[name=wz_main_second_feature]').val('');
-            $('#lists').empty();
+            reset();
         });
 
         //첫 로딩시 저정된 값이 있을 때
@@ -57,27 +52,31 @@
                $('input[name=wz_main_first_feature]').val('');
             }
 
-            if(totalChk === 1) {
-               let firstLabel = $('<h1 />').text(thisTxt);
-               if($(this).attr('checked')) {
-                   generateFirstFeature($this, firstLabel, val);
-               } else {
-                   $('#edit-grid #second').empty();
-                   $('input[name=wz_main_second_feature]').val('');
-                   $('#lists').empty();
-               }
-            }
-
-            if(totalChk === 2) {
-               let secondLabel = $('<h1 />').text(thisTxt);
-               if($(this).attr('checked')) {
-                   generateSecondFeature($this, secondLabel, val);
-               }
-            }
-
-            if(totalChk === 3) {
-               alert('2개까지 선택이 가능합니다.');
-               $(this).attr("checked", false);
+            if($(this).attr('checked')) {
+                if(totalChk === 1) {
+                    let firstLabel = $('<h1 />').text(thisTxt);
+                    generateFirstFeature($this, firstLabel, val);
+                }
+                else if(totalChk === 2) {
+                    let secondLabel = $('<h1 />').text(thisTxt);
+                    generateSecondFeature($this, secondLabel, val);
+                }
+                else if(totalChk === 3) {
+                    alert('2개까지 선택이 가능합니다.');
+                    $(this).attr("checked", false);
+                }
+            } else {
+                $('#lists').empty();
+                $('#edit-grid .item').empty();
+                $('input[name=wz_main_first_feature]').val('');
+                $('input[name=wz_main_second_feature]').val('');
+                if(totalChk === 1) {
+                    let $chk = $('.form-item-wz-main-features input[type=checkbox]:checked');
+                    let chkText = $chk.parent().text();
+                    let firstLabel = $('<h1 />').text(chkText);
+                    let chkVal = $chk.val();
+                    generateFirstFeature($chk, firstLabel, chkVal);
+                }
             }
         });
 
@@ -146,6 +145,16 @@
                    $('#lists').append(item);
                });
             });
+        }
+
+        function reset()
+        {
+            $('.form-item-wz-main-features input[type=checkbox]').attr('checked', false);
+            $('#edit-grid #first').empty();
+            $('#edit-grid #second').empty();
+            $('input[name=wz_main_first_feature]').val('');
+            $('input[name=wz_main_second_feature]').val('');
+            $('#lists').empty();
         }
     });
 })(jQuery);
