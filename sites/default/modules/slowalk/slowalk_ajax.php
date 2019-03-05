@@ -39,7 +39,7 @@ function webzine_ajax_callback()
                         'nid' => $nid,
                         'url' => '/node/'.$nid,
                         'title' => $node->title,
-                        'img' => file_create_url($node->field_image['und'][0]['uri']),
+                        'img' => image_style_url('medium', $node->field_image['und'][0]['uri']),
                         'body' => text_summary($node->body['und'][0]['value'], 'plain_text', 100)
                     );
                 }
@@ -67,7 +67,7 @@ function webzine_ajax_callback()
                             'url' => '/node/'.$nid,
                             'title' => $node->title,
                             'category' => $catLabel[$tid],
-                            'img' => file_create_url($node->field_image['und'][0]['uri']),
+                            'img' => image_style_url('medium', $node->field_image['und'][0]['uri']),
                             'body' => text_summary($node->body['und'][0]['value'], 'plain_text', 100)
                         );
                     }
@@ -83,7 +83,7 @@ function webzine_ajax_callback()
                         'url' => '/node/'.$nid,
                         'title' => $node->title,
                         'category' => $catLabel[$tid],
-                        'img' => file_create_url($node->field_image['und'][0]['uri']),
+                        'img' => image_style_url('medium', $node->field_image['und'][0]['uri']),
                         'body' => text_summary($node->body['und'][0]['value'], 'plain_text', 100)
                     );
                 }

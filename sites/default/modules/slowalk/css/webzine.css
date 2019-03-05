@@ -9,5 +9,5 @@ hr{clear:both}
 #lists .list-item {display:inline-block;max-width:200px;margin-right:10px}
 #lists .list-item img {max-width:200px}
 #lists .list-item .category {display:block;color:#B6A27C}
-#lists .list-item .text {color:black}
+.text {color:black}
 #lists .list-item a{text-decoration:none}
