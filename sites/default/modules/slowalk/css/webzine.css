@@ -1,5 +1,6 @@
-#edit-grid {min-height:250px}
-#edit-grid .item {float:left;min-width:400px;min-height:200px;border:1px solid black}
+#edit-grid {min-height:300px}
+hr{clear:both}
+#edit-grid .item {float:left;min-width:400px;min-height:200px;border:1px dashed black}
 #edit-grid .item img{max-width:190px;margin-right:10px;float:left}
 #edit-grid .item .text{float:left;max-width:200px}
 #edit-grid #first{margin-right:10px}
@@ -7,4 +8,6 @@
 #edit-lists #lists{display: block;min-height:300px;min-width:810px}
 #lists .list-item {display:inline-block;max-width:200px;margin-right:10px}
 #lists .list-item img {max-width:200px}
-#lists .list-item .category {display:block}
+#lists .list-item .category {display:block;color:#B6A27C}
+#lists .list-item .text {color:black}
+#lists .list-item a{text-decoration:none}

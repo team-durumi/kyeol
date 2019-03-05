@@ -99,6 +99,11 @@ function wz_main_callback($form, &$form_state)
         '#markup' => '<div id="first" class="item"></div><div id="second" class="item"></div>'
     );
 
+    $form['fieldset']['hr'] = array(
+        '#type' => 'markup',
+        '#markup' => '<hr />'
+    );
+
     $form['fieldset']['lists'] = array(
         '#type' => 'item',
         '#title' => t('Articles'),
