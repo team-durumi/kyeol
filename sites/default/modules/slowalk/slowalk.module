@@ -42,7 +42,7 @@ function slowalk_menu()
         'title' => 'Ajax',
         'description' => '',
         'page callback' => 'webzine_ajax_callback',
-        'access arguments' => 'access administrator',
+        'access arguments' => array('access administrator'),
         'type' => MENU_CALLBACK,
         'file' => 'slowalk_ajax.php'
     );
