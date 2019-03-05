@@ -38,11 +38,24 @@ function slowalk_menu()
         'weight' => 1
     );
 
+    $items['ajax/webzine'] = array(
+        'title' => 'Ajax',
+        'description' => '',
+        'page callback' => 'webzine_ajax_callback',
+        'access arguments' => 'access administrator',
+        'type' => MENU_CALLBACK,
+        'file' => 'slowalk_ajax.php'
+    );
+
     return $items;
 }
 
 function wz_main_callback($form, &$form_state)
 {
+    drupal_add_js(array(
+        'Webzine' => array('ajaxUrl' => '/ajax/webzine')
+    ), 'setting');
+
     $form['fieldset'] = array(
         '#type' => 'fieldset',
         '#title' => '메인 콘첸츠 선택'
@@ -50,19 +63,21 @@ function wz_main_callback($form, &$form_state)
 
     $vol = taxonomy_vocabulary_machine_name_load('vol');
     $volTerms = taxonomy_get_tree($vol->vid);
-    $volOptions = array();
+    $volOptions = array('_none_' => '- 선택 -');
+    krsort($volTerms);
     foreach($volTerms as $term) {
-        $volOptions["$term->tid"] = $term->name;
+        $volOptions[$term->tid] = $term->name;
     }
-    krsort($volOptions);
 
-    $form['fieldset']['vol'] = array(
+    $form['fieldset']['wz_main_vol'] = array(
         '#type' => 'select',
         '#title' => 'Vol.',
-        '#options' => $volOptions
+        '#options' => $volOptions,
+        '#default_value' => variable_get('wz_main_vol', '_none_'),
+        '#required' => TRUE
     );
 
-    $form['fieldset']['features'] = array(
+    $form['fieldset']['wz_main_features'] = array(
         '#type' => 'checkboxes',
         '#title' => '기사 분류',
         '#options' => array(
@@ -73,6 +88,7 @@ function wz_main_callback($form, &$form_state)
             6 => '연구자와 지원단체',
             7 => '인터뷰'
         ),
+        '#default_value' => variable_get('wz_main_features', array()),
         '#required' => TRUE
     );
 
@@ -88,15 +104,22 @@ function wz_main_callback($form, &$form_state)
         '#markup' => '<div id="lists"></div>'
     );
 
-    $form['#attached']['js'] = array(
-        __SLOWALK__ . '/js/webzine.js' => array('scope' => 'footer', 'type' => 'file')
+    $form['wz_main_first_feature'] = array(
+        '#type' => 'hidden',
+        '#default_value' => variable_get('wz_main_first_feature', '')
     );
 
-    $form['#attached']['css'] = array(
-        __SLOWALK__ . '/css/webzine.css'
+    $form['wz_main_second_feature'] = array(
+        '#type' => 'hidden',
+        '#default_value' => variable_get('wz_main_second_feature', '')
     );
 
-    return $form;
+    $form['#attached'] = array(
+        'js' => array(__SLOWALK__ . '/js/webzine.js' => array('scope' => 'footer', 'type' => 'file')),
+        'css' => array(__SLOWALK__ . '/css/webzine.css')
+    );
+
+    return system_settings_form($form);
 }
 
 function wz_slide_callback($form, &$form_state)

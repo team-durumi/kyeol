@@ -1,3 +1,9 @@
-#edit-grid .item {display:inline-block;min-width:400px;min-height:200px;border:1px solid black}
+#edit-grid {min-height:250px}
+#edit-grid .item {float:left;min-width:400px;min-height:200px;border:1px solid black}
+#edit-grid .item img{max-width:190px;margin-right:10px;float:left}
+#edit-grid .item .text{float:left;max-width:200px}
 #edit-grid #first{margin-right:10px}
-#edit-lists #lists{display: block;border:1px solid black;min-height:300px;width:810px}
+#edit-lists {clear:both}
+#edit-lists #lists{display: block;min-height:300px;min-width:810px}
+#lists .list-item {display:inline-block;max-width:200px;margin-right:10px}
+#lists .list-item img {max-width:200px}
