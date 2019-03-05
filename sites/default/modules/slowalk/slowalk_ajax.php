@@ -53,15 +53,16 @@ function webzine_ajax_callback()
                     ->propertyCondition('status', 1)
                     ->propertyCondition('nid', $nid, 'NOT IN')
                     ->fieldCondition('field_vol', 'tid', $vol)
+                    ->fieldOrderBy('field_category', 'tid', 'ASC')
                     ->propertyOrderBy('created', 'DESC')
                     ->execute();
                 if($result['node']) {
                     $nids = array_keys($result['node']);
-                    $nodes = node_load_multiple($nids);
+                    $nodes = entity_load('node', $nids);
                     foreach($nodes as $node) {
                         $tid = $node->field_category['und'][0]['tid'];
                         $nid = $node->nid;
-                        $return[$nid] = array(
+                        $return[] = array(
                             'nid' => $nid,
                             'url' => '/node/'.$nid,
                             'title' => $node->title,

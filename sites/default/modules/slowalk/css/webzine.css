@@ -7,3 +7,4 @@
 #edit-lists #lists{display: block;min-height:300px;min-width:810px}
 #lists .list-item {display:inline-block;max-width:200px;margin-right:10px}
 #lists .list-item img {max-width:200px}
+#lists .list-item .category {display:block}

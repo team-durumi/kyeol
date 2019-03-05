@@ -131,15 +131,17 @@
                nid.push($(v).data('nid'));
             });
             $.post(Drupal.settings.Webzine.ajaxUrl, {vol:$('#edit-wz-main-vol').val(), nid:nid, type:'articles'}, function(res) {
+                console.log(res);
                $.each(res, function(i, v) {
                    let item = $('<div />').addClass('list-item');
                    let nodeUrl = $('<a />').attr('href', v.url).attr('data-nid', v.nid);
                    let title = $('<h2 />').text(v.title);
+                   let category = $('<span />').addClass('category').text(v.category);
                    let img = $('<img />').attr('src', v.img);
                    let desc = $('<span />').text(v.body);
                    let box = $('<div />').addClass('text');
                    box.append(title).append(desc);
-                   nodeUrl.append(img).append(box);
+                   nodeUrl.append(img).append(category).append(box);
                    item.append(nodeUrl);
                    $('#lists').append(item);
                });
