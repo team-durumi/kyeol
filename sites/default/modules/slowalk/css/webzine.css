@@ -1,0 +1,3 @@
+#edit-grid .item {display:inline-block;min-width:400px;min-height:200px;border:1px solid black}
+#edit-grid #first{margin-right:10px}
+#edit-lists #lists{display: block;border:1px solid black;min-height:300px;width:810px}
