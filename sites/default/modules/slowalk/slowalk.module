@@ -52,6 +52,8 @@ function slowalk_menu()
 
 function wz_main_callback($form, &$form_state)
 {
+    global $base_url;
+    dpm($base_url);
     drupal_add_js(array(
         'Webzine' => array('ajaxUrl' => '/ajax/webzine')
     ), 'setting');
