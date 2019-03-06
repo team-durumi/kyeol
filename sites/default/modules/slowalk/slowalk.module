@@ -42,12 +42,25 @@ function slowalk_menu()
         'title' => 'Ajax',
         'description' => '',
         'page callback' => 'webzine_ajax_callback',
-        'access arguments' => array('access administrator'),
+        'access arguments' => array('access webzine ajax'),
         'type' => MENU_CALLBACK,
         'file' => 'slowalk_ajax.php'
     );
 
     return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function slowalk_permission()
+{
+    return array(
+        'access webzine ajax' => array(
+            'title' => 'Webzine Ajax',
+            'description' => 'Webzine Ajax access role.'
+        )
+    );
 }
 
 function wz_main_callback($form, &$form_state)
