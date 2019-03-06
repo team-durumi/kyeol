@@ -8,15 +8,17 @@
 
 class Slowalk
 {
-    public $vol, $category, $main, $webzines, $person, $location, $years, $writer;
+    public $vol, $catLabel, $category, $webzines, $person, $location, $years, $writer, $featureIds, $featureLabel, $baseUrl;
 
     public function __construct()
     {
-        //호수
-        $this->vol = variable_get('wz_main_vol', '');
+        global $base_url;
+        $this->vol = variable_get('wz_main_vol', '');   //호수
+        $this->featureIds = array();    //메인피쳐
+        $this->baseUrl = $base_url;
 
         //기사 분류
-        $catLabel = array(
+        $this->catLabel = array(
             2 => '연구자의 말',
             3 => '논평',
             4 => '에세이',
@@ -28,13 +30,9 @@ class Slowalk
             variable_get('wz_main_first_feature', ''),
             variable_get('wz_main_second_feature', '')
         );
-
-        //메인페이지
-        $this->main = array(
-            'vol' => '',
-            'slide' => array(),
-            'features' => array(),
-            'articles' => array()
+        $this->featureLabel = array(
+            $this->catLabel[$this->category[0]],
+            $this->catLabel[$this->category[1]]
         );
 
         //지난호 보기
@@ -52,6 +50,17 @@ class Slowalk
         //모아보기 - 필자
         $this->writer = '';
     }
+
+    protected function getData($data)
+    {
+        $request = drupal_http_request($this->baseUrl . '/ajax/webzine', array(
+            'headers' => array('Content-Type' => 'application/x-www-form-urlencoded'),
+            'method' => 'POST',
+            'data' => http_build_query($data)
+        ));
+
+        return drupal_json_decode($request->data);
+    }
 }
 
 class Main extends Slowalk
@@ -59,7 +68,7 @@ class Main extends Slowalk
     /**
      * @return array
      */
-    protected function slide(): array
+    public function slide(): array
     {
         $total = variable_get('wz_slide_count', 0);
         $slide = array();
@@ -80,9 +89,8 @@ class Main extends Slowalk
     /**
      * @return array
      */
-    protected function features(): array
+    public function features(): array
     {
-        global $base_url;
         $features = array();
         for($i = 0; $i < 2; $i++) {
             $data = array(
@@ -90,12 +98,26 @@ class Main extends Slowalk
                 'category' => $this->category[$i],
                 'type' => 'features'
             );
-            $features[] = drupal_http_request($base_url . '/webzine/ajax', array(
-                'methid' => 'POST',
-                'data' => http_build_query($data)
-            ));
+            $request = $this->getData($data);
+            $this->featureIds[] = $request['nid'];
+            $features[] = $request;
         }
         return $features;
+    }
+
+    public function articles(): array
+    {
+        $articles = array();
+        if(!empty($this->featureIds)) {
+            $data = array(
+                'vol' => $this->vol,
+                'nid' => $this->featureIds,
+                'type' => 'articles'
+            );
+
+            $articles = $this->getData($data);
+        }
+        return $articles;
     }
 }
 

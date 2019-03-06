@@ -75,6 +75,7 @@ function webzine_ajax_callback()
                 break;
         }
         drupal_json_output($return);
+    } else {
+        drupal_json_output(array('error' => '정상적인 접근이 아닙니다.'));
     }
-
 }

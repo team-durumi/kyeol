@@ -40,6 +40,15 @@ function slowalk_menu()
         'file' => 'include/slide.php'
     );
 
+    $items['admin/webzine/devel'] = array(
+        'title' => '개발 테스트',
+        'description' => '',
+        'page callback' => 'wz_devel',
+        'access arguments' => array('access administrator'),
+        'type' => MENU_LOCAL_TASK,
+        'file' => 'include/devel.php'
+    );
+
     $items['ajax/webzine'] = array(
         'title' => 'Ajax',
         'description' => '',
