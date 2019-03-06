@@ -3,3 +3,5 @@ description = "웹진 드루팔 모듈"
 core = 7.x
 package = Webzine
 version = 1.0
+
+files[] = Slowalk.inc

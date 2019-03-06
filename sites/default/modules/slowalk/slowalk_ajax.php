@@ -73,21 +73,6 @@ function webzine_ajax_callback()
                     }
                 }
                 break;
-            case 'node':
-                if(isset($_POST['nid'])) {
-                    $nid = $_POST['nid'];
-                    $node = node_load($nid);
-                    $tid = $node->field_category['und'][0]['tid'];
-                    $return = array(
-                        'nid' => $nid,
-                        'url' => '/node/'.$nid,
-                        'title' => $node->title,
-                        'category' => $catLabel[$tid],
-                        'img' => image_style_url('medium', $node->field_image['und'][0]['uri']),
-                        'body' => text_summary($node->body['und'][0]['value'], 'plain_text', 100)
-                    );
-                }
-                break;
         }
         drupal_json_output($return);
     }
