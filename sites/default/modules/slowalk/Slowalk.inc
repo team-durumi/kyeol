@@ -108,6 +108,10 @@ class Main extends Slowalk
     public function articles(): array
     {
         $articles = array();
+        if(empty($this->featureIds)) {
+            $this->features();
+        }
+
         if(!empty($this->featureIds)) {
             $data = array(
                 'vol' => $this->vol,

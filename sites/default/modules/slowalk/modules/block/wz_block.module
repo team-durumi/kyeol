@@ -13,7 +13,13 @@ function wz_block_block_info()
 {
     $blocks = array();
     $blocks['wz_main_slide'] = array(
-        'info' => t('메인 슬라이드')
+        'info' => t('메인 슬라이드'),
+    );
+    $blocks['wz_main_features'] = array(
+        'info' => t('메인 주요 기사')
+    );
+    $blocks['wz_main_articles'] = array(
+        'info' => t('메인 기타 기사')
     );
     return $blocks;
 }
@@ -45,6 +51,12 @@ function wz_block_block_view($delta = '')
         case 'wz_main_slide':
             $block['content'] = wz_main_slide_block_view();
             break;
+        case 'wz_main_features':
+            $block['content'] = wz_main_features_block_view();
+            break;
+        case 'wz_main_articles':
+            $block['content'] = wz_main_articles_block_view();
+            break;
     }
 
     return $block;
@@ -70,6 +82,59 @@ function wz_main_slide_block_view()
 
     $block = array(
         'slide' => array(
+            '#type' => 'markup',
+            '#markup' => $html
+        )
+    );
+
+    return $block;
+}
+
+function wz_main_features_block_view()
+{
+    $main = new Main();
+    $features = $main->features();
+    $html = '<div id="features">';
+    foreach($features as $i => $item) {
+        $html .= '<dl>';
+        $html .= '<dt>'.$main->featureLabel[$i].'</dt>';
+        $html .= '<dd>';
+        $html .= '<img src="'.$item['img'].'">';
+        $html .= '<div class="content"><h2><a href="/node/'.$item['nid'].'">'.$item['title'].'</a></h2><span>'.$item['body'].'</span></div>';
+        $html .= '</dd>';
+        $html .= '</dl>';
+    }
+    $html .= '</div>';
+
+    $block = array(
+        'features' => array(
+            '#type' => 'markup',
+            '#markup' => $html
+        )
+    );
+
+    return $block;
+}
+
+function wz_main_articles_block_view()
+{
+    $main = new Main();
+    $articles = $main->articles();
+    $html = '<ul id="articles">';
+    foreach($articles as $item) {
+        $html .= '<li>';
+        $html .= '<img src="'.$item['img'].'">';
+        $html .= '<div class="content">';
+        $html .= '<span class="category">'.$item['category'].'</span>';
+        $html .= '<h2><a href="/node/'.$item['nid'].'">'.$item['title'].'</a></h2>';
+        $html .= '<span>'.$item['body'].'</span>';
+        $html .= '</div>';
+        $html .= '</li>';
+    }
+    $html .= '</ul>';
+
+    $block = array(
+        'articles' => array(
             '#type' => 'markup',
             '#markup' => $html
         )
