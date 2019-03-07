@@ -10,3 +10,6 @@ sites/*/private
 
 # Ignore deploy.php
 /deploy.php
+
+# Ignore Phpstorm .idea folder
+.idea
