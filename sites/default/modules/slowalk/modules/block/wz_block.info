@@ -1,0 +1,7 @@
+name = Webzine Blocks
+description = "웹진 커스텀 블록 모듈입니다."
+core = 7.x
+version = 1.0
+package = Webzine
+
+dependencies[] = slowalk

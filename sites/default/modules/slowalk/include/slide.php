@@ -38,6 +38,7 @@ function wz_slide_callback($form, &$form_state)
             '#type' => 'managed_file',
             '#title' => '이미지',
             '#default_value' => variable_get('slide_'.$i.'_image', ''),
+            '#upload_location' => 'public://mainslide/',
         );
 
         $form['fieldset-'.$i.'-slide']['slide_'.$i.'_link'] = array(
@@ -65,7 +66,6 @@ function wz_slide_callback_validate($form, &$form_state)
     for($i = 1; $i < $start; $i++) {
         $file = file_load($form_state['values']['slide_'.$i.'_image']);
         $ref = file_usage_list($file);
-        dpm($ref);
         if(empty($ref)) {
             dpm('empty');
             file_usage_add($file, 'slowalk', 'mainslide', $i);

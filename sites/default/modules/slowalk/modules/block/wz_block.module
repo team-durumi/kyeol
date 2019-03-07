@@ -1,0 +1,79 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: js
+ * Date: 2019-03-07
+ * Time: 14:31
+ */
+
+/**
+ * Implements hook_block_info().
+ */
+function wz_block_block_info()
+{
+    $blocks = array();
+    $blocks['wz_main_slide'] = array(
+        'info' => t('메인 슬라이드')
+    );
+    return $blocks;
+}
+
+/**
+ * Implements hook_block_configure().
+ */
+function wz_block_block_configure($delta = '')
+{
+
+}
+
+/**
+ * Implements hook_block_save().
+ */
+function wz_block_block_save($delta = '', $edit = array())
+{
+
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function wz_block_block_view($delta = '')
+{
+    $block = array();
+
+    switch ($delta) {
+        case 'wz_main_slide':
+            $block['content'] = wz_main_slide_block_view();
+            break;
+    }
+
+    return $block;
+}
+
+function wz_main_slide_block_view()
+{
+    $main = new Main();                 //메인페이지
+    $slide = $main->slide();            //슬라이드
+    $html = '<ul class="slide">';
+    foreach($slide as $item) {
+        $file = file_load($item['fid']);
+        $img = image_style_url('large', $file->uri);
+        $html .= '<li>';
+        $html .= '<img src="'.$img.'" uri="'.$file->uri.'">';
+        $html .= '<div class="box">';
+        $html .= '<h1>'.$item['title'].'</h1>';
+        $html .= '<span class="desc">'.nl2br($item['body']).'</span>';
+        $html .= '</div>';
+        $html .= '</li>';
+    }
+    $html .='</ul>';
+
+    $block = array(
+        'slide' => array(
+            '#type' => 'markup',
+            '#markup' => $html
+        )
+    );
+
+    return $block;
+}
