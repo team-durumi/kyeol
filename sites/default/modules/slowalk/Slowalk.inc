@@ -92,15 +92,17 @@ class Main extends Slowalk
     public function features(): array
     {
         $features = array();
-        for($i = 0; $i < 2; $i++) {
-            $data = array(
-                'vol' => $this->vol,
-                'category' => $this->category[$i],
-                'type' => 'features'
-            );
-            $request = $this->getData($data);
-            $this->featureIds[] = $request['nid'];
-            $features[] = $request;
+        if($this->vol) {
+            for($i = 0; $i < 2; $i++) {
+                $data = array(
+                    'vol' => $this->vol,
+                    'category' => $this->category[$i],
+                    'type' => 'features'
+                );
+                $request = $this->getData($data);
+                $this->featureIds[] = $request['nid'];
+                $features[] = $request;
+            }
         }
         return $features;
     }
@@ -112,7 +114,7 @@ class Main extends Slowalk
             $this->features();
         }
 
-        if(!empty($this->featureIds)) {
+        if(!empty($this->featureIds) && $this->vol) {
             $data = array(
                 'vol' => $this->vol,
                 'nid' => $this->featureIds,

@@ -11,16 +11,14 @@
  */
 function wz_block_block_info()
 {
-    $blocks = array();
-    $blocks['wz_main_slide'] = array(
-        'info' => t('메인 슬라이드'),
+    $blocks = array(
+        'wz_main_slide' =>  array('info' => t('메인 슬라이드')),
+        'wz_main_features' => array('info' => t('메인 주요 기사')),
+        'wz_main_articles' => array('info' => t('메인 기타 기사')),
+        'wz_main_newsletter' => array('info' => t('메인 뉴스레터')),
+        'wz_footer' => array('info' => t('웹진 푸터'))
     );
-    $blocks['wz_main_features'] = array(
-        'info' => t('메인 주요 기사')
-    );
-    $blocks['wz_main_articles'] = array(
-        'info' => t('메인 기타 기사')
-    );
+
     return $blocks;
 }
 
@@ -29,7 +27,25 @@ function wz_block_block_info()
  */
 function wz_block_block_configure($delta = '')
 {
+    $form = array();
 
+    switch ($delta) {
+        case 'wz_main_newsletter':
+            $form['newsletter_text'] = array(
+                '#type' => 'textarea',
+                '#title' => '안내문',
+                '#default_value' => variable_get('newsletter_text', '')
+            );
+        case 'wz_footer':
+            $form['wz_footer'] = array(
+                '#type' => 'text_format',
+                '#title' => '문구',
+                '#default_value' => variable_get('wz_footer', '')
+            );
+            break;
+    }
+
+    return $form;
 }
 
 /**
@@ -37,7 +53,14 @@ function wz_block_block_configure($delta = '')
  */
 function wz_block_block_save($delta = '', $edit = array())
 {
-
+    switch ($delta) {
+        case 'wz_main_newsletter':
+            variable_set('newsletter_text', $edit['newsletter_text']);
+            break;
+        case 'wz_footer':
+            variable_set('wz_footer', $edit['wz_footer']['value']);
+            break;
+    }
 }
 
 /**
@@ -56,6 +79,15 @@ function wz_block_block_view($delta = '')
             break;
         case 'wz_main_articles':
             $block['content'] = wz_main_articles_block_view();
+            break;
+        case 'wz_main_newsletter':
+            $block['content'] = wz_main_newsletter_block_view();
+            break;
+        case 'wz_footer':
+            $block['content'] = array(
+                '#type' => 'markup',
+                '#markup' => variable_get('wz_footer', '')
+            );
             break;
     }
 
@@ -137,6 +169,26 @@ function wz_main_articles_block_view()
         'articles' => array(
             '#type' => 'markup',
             '#markup' => $html
+        )
+    );
+
+    return $block;
+}
+
+function wz_main_newsletter_block_view()
+{
+    $block = array(
+        'newsletter_description' => array(
+            '#type' => 'markup',
+            '#markup' => '<div class="description">'.nl2br(variable_get('newsletter_text')).'</div>'
+        ),
+        'newsletter' => array(
+            '#type' => 'textfield',
+            '#attributes' => array('placeholder' => '이메일을 입력하세요')
+        ),
+        'submit' => array(
+            '#type' => 'submit',
+            '#value' => '뉴슬레터 신청하기'
         )
     );
 
