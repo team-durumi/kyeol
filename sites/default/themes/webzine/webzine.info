@@ -2,6 +2,3 @@ name = "웹진"
 description = "드루팔 일본윈안부연구소 웹진 테마입니다."
 core = 7.x
 version = 1.0
-
-stylesheets[all][] = css/style.css
-scripts[] = js/script.js
