@@ -16,3 +16,6 @@ sites/*/private
 
 # Ignore .htpasswd
 .htpasswd
+
+# Ignore .htaccess
+.htaccess
