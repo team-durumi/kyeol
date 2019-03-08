@@ -103,8 +103,10 @@ class Main extends Slowalk
                     'type' => 'features'
                 );
                 $request = $this->getData($data);
-                $this->featureIds[] = $request['nid'];
-                $features[] = $request;
+                if($request) {
+                    $this->featureIds[] = $request['nid'];
+                    $features[] = $request;
+                }
             }
         }
         return $features;
