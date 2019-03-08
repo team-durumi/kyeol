@@ -6,6 +6,8 @@
  * Time: 14:31
  */
 
+define('__WZ_BLOCK__', drupal_get_path('module', 'wz_block'));
+
 /**
  * Implements hook_block_info().
  */
@@ -36,6 +38,7 @@ function wz_block_block_configure($delta = '')
                 '#title' => '안내문',
                 '#default_value' => variable_get('newsletter_text', '')
             );
+            break;
         case 'wz_footer':
             $form['wz_footer'] = array(
                 '#type' => 'text_format',
@@ -177,18 +180,35 @@ function wz_main_articles_block_view()
 
 function wz_main_newsletter_block_view()
 {
+    global $base_url;
+
     $block = array(
+        '#type' => 'form',
+        '#action' => $base_url . '/ajax/webzine',
         'newsletter_description' => array(
             '#type' => 'markup',
-            '#markup' => '<div class="description">'.nl2br(variable_get('newsletter_text')).'</div>'
+            '#markup' => '<div id="newsletter-description" class="description">'.nl2br(variable_get('newsletter_text')).'</div>'
         ),
         'newsletter' => array(
             '#type' => 'textfield',
+            '#name' => 'email',
             '#attributes' => array('placeholder' => '이메일을 입력하세요')
+        ),
+        'type' => array(
+            '#type' => 'hidden',
+            '#name' => 'type',
+            '#value' => 'newsletter'
         ),
         'submit' => array(
             '#type' => 'submit',
-            '#value' => '뉴슬레터 신청하기'
+            '#value' => '뉴스레터 신청하기'
+        ),
+        '#attached' => array(
+            'library' => array(array('system', 'jquery.form')),
+            'js' => array(__WZ_BLOCK__ . '/js/wz_block.js' => array('type' => 'file', 'scope' => 'footer'))
+        ),
+        '#attributes' => array(
+            'id' => 'newsletter-form'
         )
     );
 

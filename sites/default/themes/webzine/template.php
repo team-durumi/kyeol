@@ -19,8 +19,7 @@ function webzine_js_alter(&$javascript)
 function webzine_preprocess_page(&$variables)
 {
     //호수 템플릿 설정
-    if(isset($variables['page']['content']['system_main']['term_heading']['term']['#bundle']) &&
-        $variables['page']['content']['system_main']['term_heading']['term']['#bundle'] === 'vol') {
-        $variables['theme_hook_suggestions'][] = 'page__vol';
+    if(isset($variables['page']['content']['system_main']['term_heading']['term']['#bundle'])) {
+        $variables['theme_hook_suggestions'][] = 'page__' . $variables['page']['content']['system_main']['term_heading']['term']['#bundle'];
     }
 }
