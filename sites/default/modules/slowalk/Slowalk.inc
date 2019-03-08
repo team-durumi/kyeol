@@ -58,7 +58,6 @@ class Slowalk
             'method' => 'POST',
             'data' => http_build_query($data)
         ));
-        dpm($request);
         if(isset($request->data)) {
             return drupal_json_decode($request->data);
         } else {
