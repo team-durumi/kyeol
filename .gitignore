@@ -13,3 +13,6 @@ sites/*/private
 
 # Ignore Phpstorm .idea folder
 .idea
+
+# Ignore .htpasswd
+.htpasswd
