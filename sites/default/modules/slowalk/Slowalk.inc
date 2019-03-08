@@ -149,3 +149,15 @@ class Writer extends Slowalk
 {
 
 }
+
+class Search extends Slowalk
+{
+    public $key;
+
+    public function search()
+    {
+        if($this->key) {
+            $result = db_select('search_index', 'si')->fields('si', array('sid'))->condition('word', $this->key)->execute()
+        }
+    }
+}

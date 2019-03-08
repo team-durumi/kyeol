@@ -20,5 +20,6 @@ function wz_devel()
     dpm($features);
     dpm('Articles');
     dpm($articles);
+
     return '';
 }
