@@ -4,4 +4,4 @@ core = 7.x
 version = 1.0
 
 stylesheets[all][] = css/style.css
-scripts[] = script.js
+scripts[] = js/script.js
