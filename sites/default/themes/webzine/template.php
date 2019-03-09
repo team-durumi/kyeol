@@ -45,4 +45,8 @@ function webzine_preprocess_page(&$variables)
         drupal_add_css('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css', array('type' => 'external', 'group' => CSS_THEME));
         drupal_add_css('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css', array('type' => 'external', 'group' => CSS_THEME));
     }
+
+    //호수 노출
+    $main = new Slowalk();
+    $variables['vol'] = sprintf('%02d', $main->vol());
 }

@@ -221,15 +221,15 @@ function wz_main_newsletter_block_view()
                     '#type' => 'submit',
                     '#value' => '뉴스레터 신청하기',
                     '#attributes' => array('class' => array('btn'))
-                ),
-                '#attached' => array(
-                    'library' => array(array('system', 'jquery.form')),
-                    'js' => array(__WZ_BLOCK__ . '/js/wz_block.js' => array('type' => 'file', 'scope' => 'footer'))
-                ),
-                '#attributes' => array(
-                    'id' => 'newsletter-form',
-                    'class' => array('cf02')
                 )
+            ),
+            '#attributes' => array(
+                'id' => 'newsletter-form',
+                'class' => array('cf02')
+            ),
+            '#attached' => array(
+                'library' => array(array('system', 'jquery.form')),
+                'js' => array(__WZ_BLOCK__ . '/js/wz_block.js' => array('type' => 'file', 'scope' => 'footer'))
             )
         )
     );

@@ -11,8 +11,8 @@
     <header>
         <div class="inner">
             <div class="lg01">
-                <a href="/">일본군'위안부'문제연구소-웹진-결</a>
-                <em><b>02</b><i>.vol</i></em>
+                <a href="<?php print $front_page;?>"><?php print $site_name;?></a>
+                <em><b><?php print $vol;?></b><i>.vol</i></em>
             </div>
             <ul class="ng01">
                 <li class="search"><a href="#" title="검색창 열기"><i class="xi-search"></i></a></li>
@@ -36,26 +36,11 @@
     <!-- 메인 컨텐츠 영역 -->
     <div class="fc01" id="main-content">
         <?php print render($page['content']); ?>
-        <!-- 뉴스레터 -->
-        <div class="fc01_03">
-            <div class="inner">
-                <h2 class="th02">일본군'위안부'문제연구소의 <br/>새로운 소식을 받아보세요</h2>
-                <form class="cf02" method="post">
-                    <fieldset>
-                        <label for="letter_email">이메일</label>
-                        <input type="email" name="letter_email" id="letter_email" placeholder="이메일을 입력하세요"/>
-                        <button>뉴스레터 신청하기</button>
-                    </fieldset>
-                </form>
-
-            </div>
-        </div>
-        <!-- //뉴스레터 -->
     </div>
     <!-- //메인 컨텐츠 영역 -->
     <footer>
         <div class="inner">
-            <p class="cpr">Copyright 2019 일본군위안부문제연구소웹진. All Rights Reserved.</p>
+            <?php print render($page['footer']);?>
         </div>
     </footer>
 </div>
