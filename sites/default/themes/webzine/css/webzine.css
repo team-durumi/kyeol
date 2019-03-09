@@ -211,6 +211,9 @@ body.front .lg01 em b{color:#fff}
 .ng01 li a:hover{background:#9f865f}
 body.front .ng01 li a{width:73px;height:73px;line-height:73px;border-radius:36.5px}
 body.front .ng01 li a i{font-size:2rem;line-height:73px}
+/*모아보기 지역 지도*/
+.map01{margin-top:40px}
+.map01 iframe{width:100%;height:446px}
 /*태그리스트*/
 .ng02{margin-top:40px}
 .ng02 h3{font-size:1.25rem;font-weight:600;line-height:2.125rem;margin-bottom:10px}
