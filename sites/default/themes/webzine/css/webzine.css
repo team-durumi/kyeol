@@ -74,6 +74,11 @@ footer p.cpr{color:#888}
 .fc01_03 h2{float:left;width:50%;font-size:28px;line-height:40px;color:#fff;font-family:'Iropke Batang',sans-serif}
 .fc01_03 .cf02{float:right;width:50%;margin-top:6px}
 
+.fc02 .inner{overflow:hidden}
+.fc02 nav{padding:20px 0 56px;text-align:right}
+.fc02 aside{float:left;width:17.148%}
+.fc02 section{float:right;width:72.256%}
+
 /**** objects ****/
 
 /*헤더 메뉴*/
@@ -83,6 +88,20 @@ footer p.cpr{color:#888}
 #secondary-menu li{display:inline;margin-left:20px}
 #secondary-menu li:first-child{margin-left:0}
 #secondary-menu li a{font-size:20px;color:#fff;text-decoration:none;line-height:26px;border-bottom:2px solid #fff}
+/*브레드크럼*/
+.breadcrumb a{display:inline-block;font-size:0.875rem;color:#888}
+.breadcrumb a:after{content:">";margin:0 0px 0 5px;color:#999}
+.breadcrumb a.active{font-size:0.875rem;color:#111}
+.breadcrumb a.active:after, .breadcrumb a:last-child:after{content:none;margin:0}
+/*사이드메뉴*/
+.sidebar h2{font-size:28px;line-height:34px;height:60px;font-family:'Iropke Batang',sans-serif;border-bottom:2px solid #ddd}
+.sidebar ul.menu li{border-bottom:1px solid #ddd;padding:10px 10px}
+.sidebar ul.menu li a{font-size:18px;line-height:34px;color:#444}
+.sidebar ul.menu li.active a{color:#9f865f;font-weight:500}
+.sidebar ul.menu li a:hover{color:#9f865f;text-decoration:none}
+/*컨텐트 타이틀*/
+section h1.title{font-size:38px;line-height:50px;padding-bottom:24px;font-family:'Iropke Batang',sans-serif;border-bottom:2px solid #111}
+
 /*버튼*/
 .btn_icon01 i{font-size:38px;font-weight:bold;color:#fff}
 /*헤더 검색창*/
