@@ -29,6 +29,10 @@ function webzine_css_alter(&$css)
     unset($css['modules/system/system.theme.css']);
 }
 
+/**
+ * hook_preprocess_page().
+ * @param $variables
+ */
 function webzine_preprocess_page(&$variables)
 {
     //호수 템플릿 설정
@@ -47,4 +51,15 @@ function webzine_preprocess_page(&$variables)
     //호수 노출
     $main = new Slowalk();
     $variables['vol'] = sprintf('%02d', $main->vol());
+}
+
+function get_writers($field_writer)
+{
+    if(isset($field_writer['#items'])) {
+        $writers = array();
+        foreach($field_writer['#items'] as $item) {
+            $writers[] = $item['taxonomy_term']->name;
+        }
+        return implode(', ', $writers);
+    }
 }
