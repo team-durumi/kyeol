@@ -1,0 +1,47 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: js
+ * Date: 2018-12-24
+ * Time: 21:14
+ */
+
+/**
+ * Implements MODULE_preprocess_html(); adds conditional JS from the .info file.
+ */
+function conditional_scripts_preprocess_html(&$vars, $hook) {
+  // Make a list of base themes and the current theme.
+  $base_url = $GLOBALS['base_url'];
+  $themes = $GLOBALS['base_theme_info'];
+  $themes[] = $GLOBALS['theme_info'];
+  foreach (array_keys($themes) as $key) {
+    $theme_path = $base_url . '/' . dirname($themes[$key]->filename) . '/';
+    if (isset($themes[$key]->info['scripts-conditional'])) {
+      foreach (array_keys($themes[$key]->info['scripts-conditional']) as $condition) {
+        foreach (array_keys($themes[$key]->info['scripts-conditional'][$condition]) as $media) {
+          foreach ($themes[$key]->info['scripts-conditional'][$condition][$media] as $script) {
+            $ie_script = array(
+              '#browsers' => array('IE' => $condition, '!IE' => strpos($condition, '!IE') === FALSE ? FALSE : TRUE),
+              '#tag' => 'script',
+              '#attributes' => array(
+                'type' => 'text/javascript',
+                'src' => $theme_path . $script
+              ),
+              '#pre_render' => array('drupal_pre_render_conditional_comments'),
+              '#weight' => 999
+            );
+            drupal_add_html_head($ie_script, 'scripts_conditional');
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements MODULE_preprocess_maintenance_page().
+ */
+function conditional_scripts_preprocess_maintenance_page(&$vars, $hook) {
+  conditional_scripts_preprocess_html($vars, $hook);
+}
+

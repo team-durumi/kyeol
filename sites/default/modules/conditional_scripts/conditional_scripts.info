@@ -1,0 +1,12 @@
+name = "Conditional Scripts"
+description = "Allows themes to add conditional scripts."
+
+core = 7.x
+
+files[] = conditional_scripts.module
+
+; Information added by drupal.org packaging script on 2013-07-11
+version = "7.x-2.2"
+core = "7.x"
+project = "conditional_scripts"
+datestamp = "1373559072"
