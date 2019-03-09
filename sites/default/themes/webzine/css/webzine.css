@@ -94,7 +94,8 @@ footer .infoA li span, footer .infoA li a{color:#fff}
 .fc_box01_01{padding:24px 32px}
 .fc_box01_01 .leftF{float:left;line-height:46px}
 .fc_box01_01 .rightF{float:right}
-
+.fc_box01_01.tags .tagA{clear:both}
+.fc_box01_01.tags .tagA .btn03{margin-top:10px}
 
 /**** objects ****/
 
@@ -136,13 +137,13 @@ section h1.title{font-size:38px;line-height:50px;padding-bottom:24px;font-family
 .pager li.pager-last a:hover{background-color:#edf0f5}
 
 /*버튼*/
-.btn01{display:inline-block;height:44px;line-height:44px;border:1px solid #444;padding:0 24px}
+.btn01{display:inline-block;height:46px;line-height:46px;border:1px solid #444;padding:0 24px;box-sizing:border-box}
 .btn01:hover{background-color:#4a4a4a;color:#fff;text-decoration:none}
-.btn02{display:inline-block;height:28px;line-height:28px;border:1px solid #4a4a4a;padding:0 14px;font-size:0.875rem}
+.btn02{display:inline-block;height:30px;line-height:30px;border:1px solid #4a4a4a;padding:0 16px;font-size:0.875rem;box-sizing:border-box}
 .btn02:hover{background-color:#4a4a4a;color:#fff;text-decoration:none}
 .btn02.mention{border:1px solid #9f865f;color:#9f865f}
 .btn02.mention:hover{background-color:#9f865f;color:#fff}
-.btn03{display:inline-block;height:38px;line-height:38px;border:1px solid #ddd;padding:0 16px;border-radius:19px}
+.btn03{display:inline-block;height:40px;line-height:40px;border:1px solid #ddd;padding:0 16px;border-radius:20px;box-sizing:border-box;background-color:#fff}
 .btn03:hover{border-color:#a18963;color:#a18963;text-decoration:none}
 .btn_icon01 i{font-size:38px;font-weight:bold;color:#fff}
 /*헤더 검색창*/
@@ -212,9 +213,10 @@ body.front .ng01 li a{width:73px;height:73px;line-height:73px;border-radius:36.5
 body.front .ng01 li a i{font-size:2rem;line-height:73px}
 /*태그리스트*/
 .ng02{margin-top:40px}
-.ng02 dt{font-size:1.25rem;font-weight:600;line-height:2.125rem;margin-bottom:10px}
-.ng02 dd{overflow:hidden}
-.ng02 dd .btn03{float:left;margin:8px 16px 0 0}
+.ng02 h3{font-size:1.25rem;font-weight:600;line-height:2.125rem;margin-bottom:10px}
+.ng02 .tagA{overflow:hidden}
+.ng02 .tagA br{clear:both}
+.ng02 .tagA .btn03{float:left;margin:8px 16px 0 0}
 
 /*메인 첫번째 헤드라인 리스트*/
 .tc01{overflow:hidden}
