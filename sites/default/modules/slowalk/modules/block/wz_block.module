@@ -104,14 +104,14 @@ function wz_main_slide_block_view()
     $html = '<ul class="slide">';
     foreach($slide as $item) {
         $file = file_load($item['fid']);
-        $img = image_style_url('large', $file->uri);
-        $html .= '<li>';
-        $html .= '<img src="'.$img.'" uri="'.$file->uri.'">';
-        $html .= '<div class="box">';
-        $html .= '<h1>'.$item['title'].'</h1>';
-        $html .= '<span class="desc">'.nl2br($item['body']).'</span>';
-        $html .= '</div>';
-        $html .= '</li>';
+        $img = image_style_url('main_slide', $file->uri);
+        $html .= '<li class="type01">
+                    <img src="'.$img.'" alt="'.$item['title'].'"/>
+                    <dl>
+                        <dt>'.$item['title'].'</dt>
+                        <dd>'.nl2br($item['body']).'</dd>
+                    </dl>
+                </li>';
     }
     $html .='</ul>';
 
@@ -129,15 +129,23 @@ function wz_main_features_block_view()
 {
     $main = new Main();
     $features = $main->features();
-    $html = '<div id="features">';
+    $html = '<div class="inner">';
     foreach($features as $i => $item) {
-        $html .= '<dl>';
-        $html .= '<dt>'.$main->featureLabel[$i].'</dt>';
-        $html .= '<dd>';
-        $html .= '<img src="'.$item['img'].'">';
-        $html .= '<div class="content"><h2><a href="/node/'.$item['nid'].'">'.$item['title'].'</a></h2><span>'.$item['body'].'</span></div>';
-        $html .= '</dd>';
-        $html .= '</dl>';
+        $class = ($i === 0) ? 'leftA' : 'rightA';
+        $html .= '<div class="'.$class.'">
+                    <dl class="th01">
+                        <dt>'.$main->featureLabel[$i].'</dt>
+                        <dd><a href="#" class="btn_icon02" title="더보기"><i class="xi-plus"></i></a></dd>
+                    </dl>
+                    <div class="tc01">
+                        <a href="/node/'.$item['nid'].'" class="thumb"><img src="'.$item['img'].'" alt=""/></a>
+                        <dl class="conA">
+                            <dt><a href="/node/'.$item['nid'].'">'.$item['title'].'</a></dt>
+                            <dd>'.$item['body'].'</dd>
+                        </dl>
+
+                    </div>
+                </div>';
     }
     $html .= '</div>';
 
@@ -155,19 +163,23 @@ function wz_main_articles_block_view()
 {
     $main = new Main();
     $articles = $main->articles();
-    $html = '<ul id="articles">';
+    $html = '<div class="inner">';
+    $html .= '<ul class="lc01">';
+    $i = 1;
     foreach($articles as $item) {
-        $html .= '<li>';
-        $html .= '<img src="'.$item['img'].'">';
-        $html .= '<div class="content">';
-        $html .= '<span class="category">'.$item['category'].'</span>';
-        $html .= '<h2><a href="/node/'.$item['nid'].'">'.$item['title'].'</a></h2>';
-        $html .= '<span>'.$item['body'].'</span>';
-        $html .= '</div>';
-        $html .= '</li>';
+        $html .= '<li class="l'.$i++.'">
+                        <a href="/node/'.$item['nid'].'" class="thumb"><span><img src="'.$item['img'].'" alt="'.$item['title'].'"/></span></a>
+                        <dl class="conA">
+                            <dt>
+                                <i>'.$item['category'].'</i>
+                                <a href="/node/'.$item['nid'].'">'.$item['title'].'</a>
+                            </dt>
+                            <dd>'.$item['body'].'</dd>
+                        </dl>
+                    </li>';
     }
     $html .= '</ul>';
-
+    $html .= '</div>';
     $block = array(
         'articles' => array(
             '#type' => 'markup',
@@ -183,32 +195,42 @@ function wz_main_newsletter_block_view()
     global $base_url;
 
     $block = array(
-        '#type' => 'form',
-        '#action' => $base_url . '/ajax/webzine',
-        'newsletter_description' => array(
+        '#prefix' => '<div class="inner">',
+        '#suffix' => '</div>',
+        'h2' => array(
             '#type' => 'markup',
-            '#markup' => '<div id="newsletter-description" class="description">'.nl2br(variable_get('newsletter_text')).'</div>'
+            '#markup' => '<h2>'.nl2br(variable_get('newsletter_text')).'</h2>'
         ),
-        'newsletter' => array(
-            '#type' => 'textfield',
-            '#name' => 'email',
-            '#attributes' => array('placeholder' => '이메일을 입력하세요')
-        ),
-        'type' => array(
-            '#type' => 'hidden',
-            '#name' => 'type',
-            '#value' => 'newsletter'
-        ),
-        'submit' => array(
-            '#type' => 'submit',
-            '#value' => '뉴스레터 신청하기'
-        ),
-        '#attached' => array(
-            'library' => array(array('system', 'jquery.form')),
-            'js' => array(__WZ_BLOCK__ . '/js/wz_block.js' => array('type' => 'file', 'scope' => 'footer'))
-        ),
-        '#attributes' => array(
-            'id' => 'newsletter-form'
+        'form' => array(
+            '#type' => 'form',
+            '#action' => $base_url . '/ajax/webzine',
+            'fieldset' => array(
+                '#type' => 'fieldset',
+                'newsletter' => array(
+                    '#type' => 'textfield',
+                    '#title' => '이메일',
+                    '#name' => 'email',
+                    '#attributes' => array('placeholder' => '이메일을 입력하세요')
+                ),
+                'type' => array(
+                    '#type' => 'hidden',
+                    '#name' => 'type',
+                    '#value' => 'newsletter'
+                ),
+                'submit' => array(
+                    '#type' => 'submit',
+                    '#value' => '뉴스레터 신청하기',
+                    '#attributes' => array('class' => array('btn'))
+                )
+            ),
+            '#attributes' => array(
+                'id' => 'newsletter-form',
+                'class' => array('cf02')
+            ),
+            '#attached' => array(
+                'library' => array(array('system', 'jquery.form')),
+                'js' => array(__WZ_BLOCK__ . '/js/wz_block.js' => array('type' => 'file', 'scope' => 'footer'))
+            )
         )
     );
 

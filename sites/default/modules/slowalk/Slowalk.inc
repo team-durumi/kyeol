@@ -64,6 +64,16 @@ class Slowalk
             return array();
         }
     }
+
+    public function vol()
+    {
+        if($this->vol) {
+            $term = taxonomy_term_load($this->vol);
+            return $term->name;
+        } else {
+            return 0;
+        }
+    }
 }
 
 class Main extends Slowalk

@@ -67,7 +67,6 @@ function wz_slide_callback_validate($form, &$form_state)
         $file = file_load($form_state['values']['slide_'.$i.'_image']);
         $ref = file_usage_list($file);
         if(empty($ref)) {
-            dpm('empty');
             file_usage_add($file, 'slowalk', 'mainslide', $i);
         }
     }
