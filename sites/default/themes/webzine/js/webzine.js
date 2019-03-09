@@ -108,13 +108,13 @@ function form_validation(){
 	//뉴스레터
 	$(".cf02").validate({
         rules: {
-            letter_email: {
+            email: {
                 required: true,
                 email: true
             }
          },
         messages: {
-            letter_email: "올바른 이메일 주소를 입력하세요"
+            email: "올바른 이메일 주소를 입력하세요"
          }
     });
 

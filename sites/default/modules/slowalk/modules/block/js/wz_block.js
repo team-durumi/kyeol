@@ -8,12 +8,8 @@
         $('#newsletter-form').ajaxForm(options);
     });
 
-    function showRequest(formData, jqForm, options) {
-        let form = jqForm[0];
-        if(!form.email.value) {
-            alert('이메일을 입력하세요.');
-            return false;
-        }
+    function showRequest() {
+        return $('.cf02').valid();
     }
 
     function showResponse(responseText, statusText, xhr, $form) {
