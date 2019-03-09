@@ -58,7 +58,7 @@ header.menuOpened:after, header.searchOpened:after{content:"";display:block;posi
 header .cf01{position:fixed;top:-255px;left:0;z-index:10;width:100%;height:255px;background-color:#9f865f;box-sizing:border-box;z-index:10;transition:top 0.5s ease-in-out}
 header.searchOpened .cf01{top:0}
 
-footer{overflow:hidden;padding:40px 0;background-color:#4a4a4a}
+footer{overflow:hidden;padding:40px 0 80px;background-color:#4a4a4a}
 footer .addrA{float:left;width:50%;height:58px;padding-left:38px;padding-top:4px;box-sizing:border-box;background:url(../images/logo_footer.png) no-repeat 0 0}
 footer .addrA address{color:#fff}
 footer .addrA .cpr{color:#c7c7c7;font-size:0.875rem}
@@ -90,12 +90,19 @@ footer .infoA li span, footer .infoA li a{color:#fff}
 .fc02 aside{float:left;width:17.148%}
 .fc02 section{float:right;width:72.256%}
 
+.fc03 .inner{overflow:hidden;padding-bottom:100px}
+.fc03 nav{padding:20px 0 56px;text-align:right}
+
+
 .fc_box01{padding:32px;background-color:#f5f5f5;margin-top:30px;overflow:hidden}
 .fc_box01_01{padding:24px 32px}
 .fc_box01_01 .leftF{float:left;line-height:46px}
 .fc_box01_01 .rightF{float:right}
 .fc_box01_01.tags .tagA{clear:both}
 .fc_box01_01.tags .tagA .btn03{margin-top:10px}
+
+.fc_box02{margin-top:60px}
+.fc_box02 > h2{font-size:28px;line-height:28px;color:#111}
 
 /**** objects ****/
 
@@ -185,6 +192,14 @@ section h1.title{font-size:38px;line-height:50px;padding-bottom:24px;font-family
 .lc01 li dt i{display:block;margin:0 0 4px;font-style:normal;color:#9f865f;font-weight:600}
 .lc01 li dt a{font-size:20px;line-height:32px;color:#111;font-weight:600;max-height:64px;display:block;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}
 .lc01 li dd{max-height:58px;display:block;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}
+/*지난호 보기 리스트*/
+.lc01_01{margin-top:40px}
+.lc01_01 li:first-child .thumb:after{content:none}
+.lc01_01 li dl{height:158px;padding:16px 0 0;box-sizing:border-box}
+.lc01_01 li dt{margin-bottom:8px}
+.lc01_01 li dt a{font-size:28px;line-height:50px;color:#111;font-family:'Iropke Batang',sans-serif}
+.lc01_01 li dd p{margin-bottom:5px;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden}
+.lc01_01 li dd em{color:#888}
 /*기본 리스트*/
 .lc02 li{overflow:hidden;padding:40px 0;border-bottom:1px solid #ddd}
 .lc02 li .thumb{float:left;height:201px;width:267px;overflow:hidden;margin-right:40px}
@@ -246,6 +261,7 @@ body.front .ng01 li a i{font-size:2rem;line-height:73px}
 
 .td01{font-size:1.125rem;color:#231815}
 .td01 em{color:#9f865f;font-weight:600}
+.td01 i{display:inline-block;width:30px;height:30px;line-height:30px;text-align:center;background-color:#4a4a4a;border-radius:15px;color:#fff;font-style:normal;margin-right:5px}
 
 /*
 .fc01{}
