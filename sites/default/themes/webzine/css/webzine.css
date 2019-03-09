@@ -90,6 +90,12 @@ footer .infoA li span, footer .infoA li a{color:#fff}
 .fc02 aside{float:left;width:17.148%}
 .fc02 section{float:right;width:72.256%}
 
+.fc_box01{padding:32px;background-color:#f5f5f5;margin-top:30px;overflow:hidden}
+.fc_box01_01{padding:24px 32px}
+.fc_box01_01 .leftF{float:left;line-height:46px}
+.fc_box01_01 .rightF{float:right}
+
+
 /**** objects ****/
 
 /*헤더 메뉴*/
@@ -130,6 +136,14 @@ section h1.title{font-size:38px;line-height:50px;padding-bottom:24px;font-family
 .pager li.pager-last a:hover{background-color:#edf0f5}
 
 /*버튼*/
+.btn01{display:inline-block;height:44px;line-height:44px;border:1px solid #444;padding:0 24px}
+.btn01:hover{background-color:#4a4a4a;color:#fff;text-decoration:none}
+.btn02{display:inline-block;height:28px;line-height:28px;border:1px solid #4a4a4a;padding:0 14px;font-size:0.875rem}
+.btn02:hover{background-color:#4a4a4a;color:#fff;text-decoration:none}
+.btn02.mention{border:1px solid #9f865f;color:#9f865f}
+.btn02.mention:hover{background-color:#9f865f;color:#fff}
+.btn03{display:inline-block;height:38px;line-height:38px;border:1px solid #ddd;padding:0 16px;border-radius:19px}
+.btn03:hover{border-color:#a18963;color:#a18963;text-decoration:none}
 .btn_icon01 i{font-size:38px;font-weight:bold;color:#fff}
 /*헤더 검색창*/
 .cf01 .btn_icon01{position:absolute;right:45px;top:40px}
@@ -142,7 +156,7 @@ section h1.title{font-size:38px;line-height:50px;padding-bottom:24px;font-family
 .cf02{position:relative}
 .cf02 label{display:block;width:0;height:0;text-indent:-9999px;overflow:hidden}
 .cf02 input{float:left;width:70%;background-color:#fff;border:none;height:66px;color:#888;text-indent:1rem}
-.cf02 input.btn{float:left;width:30%;background-color:#2d1900;border:none;height:66px;color:#fff;font-size:1rem;cursor:pointer}
+.cf02 button, .cf02 input.btn{float:left;width:30%;text-align:center;background-color:#2d1900;border:none;height:66px;color:#fff;font-size:1rem;cursor:pointer}
 .cf02 label.error{display:block;width:auto;height:auto;text-indent:0;position:absolute;left:0;bottom:-30px}
 /*메인 슬라이더 배너*/
 .ib01{position:relative}
@@ -171,15 +185,16 @@ section h1.title{font-size:38px;line-height:50px;padding-bottom:24px;font-family
 .lc01 li dt a{font-size:20px;line-height:32px;color:#111;font-weight:600;max-height:64px;display:block;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}
 .lc01 li dd{max-height:58px;display:block;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}
 /*기본 리스트*/
-.lc02{}
 .lc02 li{overflow:hidden;padding:40px 0;border-bottom:1px solid #ddd}
 .lc02 li .thumb{float:left;height:201px;width:267px;overflow:hidden;margin-right:40px}
 .lc02 li .thumb img{width:100%;min-height:267px;display:block}
 .lc02 li dt{margin-bottom:10px}
-.lc02 li dt a{font-size:20px;line-height:32px;color:#111;font-weight:600;max-height:64px;display:block;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}
-.lc02 li dd p.summury{max-height:86px;display:block;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;margin-bottom:10px}
+.lc02 li dt > a{font-size:20px;line-height:32px;color:#111;font-weight:600;max-height:64px;display:block;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}
+.lc02 li dd p.summury{max-height:86px;display:block;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;margin-bottom:8px}
 .lc02 li dd p.meta{color:#888}
 .lc02 li dd p.meta span:after{content:"|";margin:0 5px 0 9px;color:#ddd}
+.lc02_01 li dt .category{display:block;margin-bottom:10px}
+.lc02_01 li dd p.summury{max-height:58px;-webkit-line-clamp:2}
 /*로고*/
 .lg01 a{display:inline-block;width:280px;height:52px;background:url(../images/logo_sub.png) no-repeat 0 0;text-indent:-9999px;vertical-align:top}
 .lg01 em{color:#554531;line-height:2.3rem;font-family:'Iropke Batang',sans-serif;margin-left:10px;position:relative}
@@ -195,6 +210,11 @@ body.front .lg01 em b{color:#fff}
 .ng01 li a:hover{background:#9f865f}
 body.front .ng01 li a{width:73px;height:73px;line-height:73px;border-radius:36.5px}
 body.front .ng01 li a i{font-size:2rem;line-height:73px}
+/*태그리스트*/
+.ng02{margin-top:40px}
+.ng02 dt{font-size:1.25rem;font-weight:600;line-height:2.125rem;margin-bottom:10px}
+.ng02 dd{overflow:hidden}
+.ng02 dd .btn03{float:left;margin:8px 16px 0 0}
 
 /*메인 첫번째 헤드라인 리스트*/
 .tc01{overflow:hidden}
@@ -210,6 +230,9 @@ body.front .ng01 li a i{font-size:2rem;line-height:73px}
 .th01 dd a{display:block;width:40px;height:40px;line-height:40px;border-radius:20px;text-align:center;background:url(../images/bg_more.png) no-repeat 0 0;margin-left:10px}
 .th01 dd a i{font-size:1.5rem;line-height:40px;color:#fff}
 .th01 dd a:hover{background:#9f865f}
+
+.td01{font-size:1.125rem;color:#231815}
+.td01 em{color:#9f865f;font-weight:600}
 
 /*
 .fc01{}
