@@ -78,6 +78,40 @@ $(document).ready(function() {
 	$('header nav a.btn_icon01').click(function(){
 		$('header').removeClass('menuOpened');
 	});
+	//뷰화면 툴팁 오브제 효과
+	$(".tt01").click(function(){
+		$(".tooltip",$(this)).toggle();
+		return false;
+	});
+	$(".tt01 .tooltip a.close").click(function(){
+		$(this).parent().hide();
+		return false;
+	});
+	$(document).mouseup(function(e) {
+        var container = $('.tt01');
+        if(container.has(e.target).length === 0) {
+            $(".tooltip",container).hide();
+        }
+    });
+	//뷰화면 공유기능
+	$(".ng03 .share").click(function(){
+		$(this).siblings('dl').toggle();
+		return false;
+	});
+	$(document).mouseup(function(e) {
+        var container = $('.ng03');
+        if(container.has(e.target).length === 0) {
+            $("dl",container).hide();
+            $("button",container).text('링크복사');
+        }
+    });
+	$(".ng03 dl dd button").click(function(){
+		$(this).siblings('input').select(); 
+		document.execCommand('copy'); 
+		$(this).text('완료');
+		$(this).append($('<i class="xi-check-min"></i>'));
+
+	});
 
 	form_validation();
 
