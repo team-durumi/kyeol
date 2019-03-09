@@ -53,6 +53,10 @@ function webzine_preprocess_page(&$variables)
     $variables['vol'] = sprintf('%02d', $main->vol());
 }
 
+/**
+ * @param $field_writer
+ * @return string
+ */
 function get_writers($field_writer)
 {
     if(isset($field_writer['#items'])) {
@@ -61,5 +65,26 @@ function get_writers($field_writer)
             $writers[] = $item['taxonomy_term']->name;
         }
         return implode(', ', $writers);
+    }
+}
+
+/**
+ * @param $term
+ * @param array $options
+ */
+function get_term_link($term, $options = array())
+{
+    if(isset($term['#items'])) {
+        $html[] = '';
+        $classes = '';
+        if($options) {
+            $classes = $options['class'] ?? '';
+        }
+        foreach($term['#items'] as $item) {
+            $name = isset($options['type']) ? sprintf($options['type'], $item['taxonomy_term']->name) : $item['taxonomy_term']->name;
+            if(isset($options['suffix'])) $name .= $options['suffix'];
+            $html[] = '<a class="'.$classes.'" href="'.drupal_get_path_alias('/taxonomy/term/'.$item['tid']).'">'.$name.'</a>';
+        }
+        return implode('', $html);
     }
 }
