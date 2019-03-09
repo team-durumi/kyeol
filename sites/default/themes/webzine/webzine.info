@@ -8,3 +8,4 @@ stylesheets[all][] = css/responsive.css
 stylesheets-conditional[IE][all][] = css/ie.css
 
 scripts[] = js/webzine.js
+scripts-conditional[lt IE 9][all][] = js/html5.js
