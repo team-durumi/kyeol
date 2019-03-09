@@ -100,31 +100,40 @@
         </div>
         <?php print render($page['header']); ?>
     </header>
-    <!-- 사이드바 영역 -->
-    <?php if ($page['sidebar_first']): ?>
-        <div id="sidebar-first" class="column sidebar">
-            <div class="section">
-                <?php print render($page['sidebar_first']); ?>
-            </div>
-        </div>
-    <?php endif; ?>
-    <!-- //사이드바 영역 -->
 
-    <!-- 메인 컨텐츠 영역 -->
-    <div class="fc01" id="main-content">
-        <?php print $messages; ?>
-        <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
-        <a id="main-content"></a>
-        <?php print render($title_prefix); ?>
-        <?php if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
-        <?php print render($title_suffix); ?>
-        <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
-        <?php print render($page['help']); ?>
-        <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
-        <?php print render($page['content']); ?>
-        <?php print $feed_icons; ?>
+    <!-- 서브 컨텐츠 영역 -->
+    <div class="fc02" id="main-content">
+        <div class="inner">
+            <nav>
+                <?php print $breadcrumb;?>
+            </nav>
+            <aside>
+                <!-- 사이드바 영역 -->
+                <?php if ($page['sidebar_first']): ?>
+                    <div id="sidebar-first" class="column sidebar">
+                        <div class="section">
+                            <?php print render($page['sidebar_first']); ?>
+                        </div>
+                    </div>
+                <?php endif; ?>
+                <!-- //사이드바 영역 -->
+            </aside>
+            <section>
+                <div class="header">
+                    <?php print render($title_prefix); ?>
+                    <?php if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
+                    <?php print render($title_suffix); ?>
+                </div>
+                <div class="cBody">
+                    <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
+                    <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
+                    <?php print render($page['content']); ?>
+                    <?php print $feed_icons; ?>
+                </div>
+            </section>
+        </div>
     </div>
-    <!-- //메인 컨텐츠 영역 -->
+    <!-- //서브 컨텐츠 영역 -->
     <footer>
         <div class="inner">
             <?php print render($page['footer']);?>
