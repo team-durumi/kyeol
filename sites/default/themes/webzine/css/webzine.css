@@ -86,8 +86,8 @@ footer .infoA li span, footer .infoA li a{color:#fff}
 .fc01_03 .cf02{float:right;width:50%;margin-top:6px}
 
 .fc02 .inner{overflow:hidden}
-.fc02 nav{padding:20px 0 56px;text-align:right}
-.fc02 aside{float:left;width:17.148%}
+.fc02 nav{padding:20px 0 50px;text-align:right}
+.fc02 aside{float:left;width:17.148%;padding-top:3px}
 .fc02 section{float:right;width:72.256%}
 
 /**** objects ****/
