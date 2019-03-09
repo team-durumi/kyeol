@@ -6,7 +6,7 @@ Author: css3studio
 Version:1.0
 */
 @import url(fonts.css);
-
+@import url('http://cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css');
 /**** Common ****/
 html{font-family:'Noto Sans KR',sans-serif;font-size:16px;color:#444444;line-height:1.75rem;}
 html,body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select,menu,a{margin:0;padding:0}
@@ -59,8 +59,11 @@ footer p.cpr{color:#888}
 .fc01_01 .inner{padding:60px 0 65px;border-bottom:1px solid #ddd;overflow:hidden}
 .fc01_01 .leftA{float:left;width:48.5%}
 .fc01_01 .rightA{float:right;width:48.5%}
+.fc01_02{position:relative}
+.fc01_02:before{content:"";display:block;width:292px;height:476px;background:url(../images/bg_pattern_main02.png) no-repeat 0 0;position:absolute;left:0;top:65px}
+.fc01_02:after{content:"";display:block;width:434px;height:333px;background:url(../images/bg_pattern_main03.png) no-repeat 0 0;position:absolute;right:0;bottom:-100px}
 .fc01_02 .inner{padding:65px 0}
-.fc01_03{background:url(../images/bg_pattern_comb02.png)}
+.fc01_03{background:url(../images/bg_pattern_comb02.png);position:relative}
 .fc01_03 .inner{padding:58px 0;overflow:hidden}
 .fc01_03 h2{float:left;width:50%;font-size:28px;line-height:40px;color:#fff;font-family:'Iropke Batang',sans-serif}
 .fc01_03 .cf02{float:right;width:50%;margin-top:6px}
@@ -90,16 +93,18 @@ footer p.cpr{color:#888}
 .cf02 button{float:left;width:30%;background-color:#2d1900;border:none;height:66px;color:#fff;font-size:1rem;cursor:pointer}
 .cf02 label.error{display:block;width:auto;height:auto;text-indent:0;position:absolute;left:0;bottom:-30px}
 /*메인 슬라이더 배너*/
+.ib01{position:relative}
 .ib01 li{position:relative;background-position:center top;background-repeat:no-repeat;background-color:#ddd}
 .ib01 li img{visibility:hidden}
 .ib01 li dl{position:absolute;top:230px;left:50%;margin-left:16px}
-.ib01 li dl dt{font-size:50px;line-height:62px;color:#fff;margin-bottom:1rem;font-family:'Iropke Batang',sans-serif}
+.ib01 li dl dt{font-size:50px;line-height:62px;color:#fff;margin-bottom:1rem;font-family:'Iropke Batang','IropkeBatang',sans-serif}
 .ib01 li dl dd{font-size:18px;line-height:30px;color:#fff;font-weight:300}
 .ib01 .slick-dots{width:auto;top:50%;left:50%;margin-top:-40px;margin-left:554px}
 .ib01 .slick-dots li{background-color:transparent;display:block;margin-bottom:15px}
 .ib01 .slick-dots li button{width:20px;height:20px;border-radius:10px;padding:0;border:1px solid #fff;text-indent:-9999px}
 .ib01 .slick-dots li.slick-active button{background-color:#fff}
 .ib01 .slick-dotted.slick-slider{margin-bottom:0}
+.ib01:after{content:"";display:block;width:311px;height:307px;;background:url(../images/bg_pattern_main01.png) no-repeat 0 0;position:absolute;right:0;bottom:-230px}
 /*메인 두번째 헤드라인 리스트*/
 .lc01{overflow:hidden}
 .lc01 li{float:left;width:31.4%;margin-right:2.9%;margin-bottom:2.9%;background-color:#fff}
