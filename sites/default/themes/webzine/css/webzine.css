@@ -44,6 +44,7 @@ body.front header{position:absolute;top:0;left:0;width:100%;z-index:10}
 
 header nav{position:fixed;right:-548px;top:0;background-color:#a8946c;width:548px;height:100%;box-sizing:border-box;padding:160px 80px 0;z-index:10;transition:right 0.5s ease-in-out}
 header nav .btn_icon01{position:absolute;right:45px;top:40px}
+header nav h2{display: none}
 header.menuOpened nav{right:0}
 header.menuOpened:after, header.searchOpened:after{content:"";display:block;position:fixed;top:0;left:0;bottom:0;right:0;background-color:rgba(0,0,0,0.6)}
 
@@ -91,7 +92,7 @@ footer p.cpr{color:#888}
 .cf02{position:relative}
 .cf02 label{display:block;width:0;height:0;text-indent:-9999px;overflow:hidden}
 .cf02 input{float:left;width:70%;background-color:#fff;border:none;height:66px;color:#888;text-indent:1rem}
-.cf02 button{float:left;width:30%;background-color:#2d1900;border:none;height:66px;color:#fff;font-size:1rem;cursor:pointer}
+.cf02 input.btn{float:left;width:30%;background-color:#2d1900;border:none;height:66px;color:#fff;font-size:1rem;cursor:pointer}
 .cf02 label.error{display:block;width:auto;height:auto;text-indent:0;position:absolute;left:0;bottom:-30px}
 /*메인 슬라이더 배너*/
 .ib01{position:relative}
