@@ -102,26 +102,14 @@
     </header>
 
     <!-- 서브 컨텐츠 영역 -->
-    <div class="fc02" id="main-content">
+    <div class="fc03" id="main-content">
         <div class="inner">
             <nav>
-                <?php print $breadcrumb;?>
             </nav>
-            <aside>
-                <!-- 사이드바 영역 -->
-                <?php if ($page['sidebar_first']): ?>
-                    <div id="sidebar-first" class="column sidebar">
-                        <div class="section">
-                            <?php print render($page['sidebar_first']); ?>
-                        </div>
-                    </div>
-                <?php endif; ?>
-                <!-- //사이드바 영역 -->
-            </aside>
             <section>
                 <div class="header">
                     <?php print render($title_prefix); ?>
-                    <?php if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
+                    <?php if ($title): ?><h1 class="title"><?php print $title;?></h1><?php endif; ?>
                     <?php print render($title_suffix); ?>
                 </div>
                 <div class="cBody">
