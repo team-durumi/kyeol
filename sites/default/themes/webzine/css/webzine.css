@@ -196,6 +196,14 @@ section h1.title{font-size:38px;line-height:50px;padding-bottom:24px;font-family
 .lc02 li dd p.meta span:after{content:"|";margin:0 5px 0 9px;color:#ddd}
 .lc02_01 li dt .category{display:block;margin-bottom:10px}
 .lc02_01 li dd p.summury{max-height:58px;-webkit-line-clamp:2}
+/*필자 리스트*/
+.lc03{border-bottom:1px solid #ddd}
+.lc03 > dl{overflow:hidden;border-bottom:1px solid #111}
+.lc03 > dl:last-child{border-bottom:none}
+.lc03 > dl > dt{float:left;width:14.84%;padding-top:40px;font-size:1.5rem;font-weight:600}
+.lc03 > dl > dt a{font-size:1.5rem;font-weight:600}
+.lc03 > dl > dd{float:right;width:81.43%}
+.lc03 > dl > dd .lc02_01 li:last-child{border-bottom:none}
 /*로고*/
 .lg01 a{display:inline-block;width:280px;height:52px;background:url(../images/logo_sub.png) no-repeat 0 0;text-indent:-9999px;vertical-align:top}
 .lg01 em{color:#554531;line-height:2.3rem;font-family:'Iropke Batang',sans-serif;margin-left:10px;position:relative}
