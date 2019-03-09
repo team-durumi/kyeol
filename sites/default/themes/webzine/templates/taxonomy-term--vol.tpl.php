@@ -41,10 +41,11 @@
  * @ingroup themeable
  */
 ?>
-<a href="#" class="thumb"><span><img src="<?php print __WZ__;?>/images/@lc01.png" alt=""/></span></a>
+
+<a href="<?php print $term_url;?>" class="thumb"><span><img src="<?php print __WZ__;?>/images/@lc01.png" alt=""/></span></a>
 <dl class="conA">
     <dt>
-        <a href="#"><?php print $term_name;?>호</a>
+        <a href="<?php print $term_url;?>"><?php print $term_name;?>호</a>
     </dt>
     <dd>
         <p>탈분단적 시각으로 바라보는 위안부 문제</p>
