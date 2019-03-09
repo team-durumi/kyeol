@@ -49,13 +49,13 @@ body.front header .ng01{float:right;margin-top:19px}
 body.front header{position:absolute;top:0;left:0;width:100%;z-index:10;border-bottom:none}
 body.front header .inner{height:150px;overflow:hidden}
 
-header nav{position:fixed;right:-548px;top:0;background-color:#a8946c;width:548px;height:100%;box-sizing:border-box;padding:160px 80px 0;z-index:10;transition:right 0.5s ease-in-out}
+header nav{position:fixed;right:-548px;top:0;background-color:#9f865f;width:548px;height:100%;box-sizing:border-box;padding:160px 80px 0;z-index:10;transition:right 0.5s ease-in-out}
 header nav .btn_icon01{position:absolute;right:45px;top:40px}
 header nav h2{display: none}
 header.menuOpened nav{right:0}
 header.menuOpened:after, header.searchOpened:after{content:"";display:block;position:fixed;top:0;left:0;bottom:0;right:0;background-color:rgba(0,0,0,0.6)}
 
-header .cf01{position:fixed;top:-255px;left:0;z-index:10;width:100%;height:255px;background-color:#a8946c;box-sizing:border-box;z-index:10;transition:top 0.5s ease-in-out}
+header .cf01{position:fixed;top:-255px;left:0;z-index:10;width:100%;height:255px;background-color:#9f865f;box-sizing:border-box;z-index:10;transition:top 0.5s ease-in-out}
 header.searchOpened .cf01{top:0}
 
 footer{overflow:hidden;padding:40px 0;background-color:#4a4a4a}
@@ -121,11 +121,13 @@ section h1.title{font-size:38px;line-height:50px;padding-bottom:24px;font-family
 .pager li.pager-previous{margin-right:20px}
 .pager li.pager-next{margin-left:20px}
 .pager li.pager-first a{text-indent:-9999px;background:url(../images/btn_first01.png) no-repeat center center;border:1px solid #ddd}
+.pager li.pager-first a:hover{background-color:#edf0f5}
 .pager li.pager-previous a{text-indent:-9999px;background:url(../images/btn_prev01.png) no-repeat center center;border:1px solid #ddd}
 .pager li.pager-previous a:hover{background-color:#edf0f5}
 .pager li.pager-next a{text-indent:-9999px;background:url(../images/btn_next01.png) no-repeat center center;border:1px solid #ddd}
 .pager li.pager-next a:hover{background-color:#edf0f5}
 .pager li.pager-last a{text-indent:-9999px;background:url(../images/btn_last01.png) no-repeat center center;border:1px solid #ddd}
+.pager li.pager-last a:hover{background-color:#edf0f5}
 
 /*버튼*/
 .btn_icon01 i{font-size:38px;font-weight:bold;color:#fff}
@@ -159,15 +161,25 @@ section h1.title{font-size:38px;line-height:50px;padding-bottom:24px;font-family
 .lc01{overflow:hidden}
 .lc01 li{float:left;width:31.4%;margin-right:2.9%;margin-bottom:2.9%;background-color:#fff}
 .lc01 li.l3, .lc01 li.l6, .lc01 li.l9, .lc01 li.l12{margin-right:0}
-.lc01 li .thumb{display:block;height:261;width:100%;position:relative}
-.lc01 li .thumb span{display:block;height:261;width:100%;overflow:hidden}
+.lc01 li .thumb{display:block;height:261px;width:100%;position:relative}
+.lc01 li .thumb span{display:block;height:261px;width:100%;overflow:hidden}
 .lc01 li .thumb img{width:100%;min-height:142px;display:block}
 .lc01 li:first-child .thumb:after{content:"";display:block;height:261px;width:349px;background:url(../images/bg_pattern_comb.png) no-repeat 0 0;position:absolute;top:10px;left:10px}
 .lc01 li dl{height:208px;padding:24px 32px 0;box-sizing:border-box}
 .lc01 li dt{margin-bottom:10px}
-.lc01 li dt i{display:block;margin:0 0 4px;font-style:normal;color:#a8946c;font-weight:600}
+.lc01 li dt i{display:block;margin:0 0 4px;font-style:normal;color:#9f865f;font-weight:600}
 .lc01 li dt a{font-size:20px;line-height:32px;color:#111;font-weight:600;max-height:64px;display:block;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}
 .lc01 li dd{max-height:58px;display:block;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}
+/*기본 리스트*/
+.lc02{}
+.lc02 li{overflow:hidden;padding:40px 0;border-bottom:1px solid #ddd}
+.lc02 li .thumb{float:left;height:201px;width:267px;overflow:hidden;margin-right:40px}
+.lc02 li .thumb img{width:100%;min-height:267px;display:block}
+.lc02 li dt{margin-bottom:10px}
+.lc02 li dt a{font-size:20px;line-height:32px;color:#111;font-weight:600;max-height:64px;display:block;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}
+.lc02 li dd p.summury{max-height:86px;display:block;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;margin-bottom:10px}
+.lc02 li dd p.meta{color:#888}
+.lc02 li dd p.meta span:after{content:"|";margin:0 5px 0 9px;color:#ddd}
 /*로고*/
 .lg01 a{display:inline-block;width:280px;height:52px;background:url(../images/logo_sub.png) no-repeat 0 0;text-indent:-9999px;vertical-align:top}
 .lg01 em{color:#554531;line-height:2.3rem;font-family:'Iropke Batang',sans-serif;margin-left:10px;position:relative}
@@ -180,7 +192,7 @@ body.front .lg01 em b{color:#fff}
 .ng01 li{display:inline-block;margin-left:12px}
 .ng01 li a{display:block;width:60px;height:60px;line-height:60px;border-radius:30px;text-align:center;background:url(../images/bg_header_menu.png) no-repeat center center}
 .ng01 li a i{font-size:1.8rem;line-height:60px;color:#fff}
-.ng01 li a:hover{background:#a8946c}
+.ng01 li a:hover{background:#9f865f}
 body.front .ng01 li a{width:73px;height:73px;line-height:73px;border-radius:36.5px}
 body.front .ng01 li a i{font-size:2rem;line-height:73px}
 
@@ -197,7 +209,7 @@ body.front .ng01 li a i{font-size:2rem;line-height:73px}
 .th01 dd{display:inline-block}
 .th01 dd a{display:block;width:40px;height:40px;line-height:40px;border-radius:20px;text-align:center;background:url(../images/bg_more.png) no-repeat 0 0;margin-left:10px}
 .th01 dd a i{font-size:1.5rem;line-height:40px;color:#fff}
-.th01 dd a:hover{background:#a8946c}
+.th01 dd a:hover{background:#9f865f}
 
 /*
 .fc01{}
