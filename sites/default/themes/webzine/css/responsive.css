@@ -26,6 +26,16 @@ footer .infoA{float:none;width:auto}
 footer .infoA li{padding:4px 10px;font-size:12px}
 footer .infoA li strong{margin-right:3px}
 
+/*메인페이지 프레임*/
+.fc01_01 .inner{padding:30px 0 32px}
+.fc01_01 .leftA{float:none;width:auto;margin-bottom:32px}
+.fc01_01 .rightA{float:none;width:auto}
+.fc01_02:before{width:146px;height:238px;background-size:cover;top:35px}
+.fc01_02:after{width:217px;height:166px;;background-size:cover;bottom:-50px}
+.fc01_02 .inner{padding:32px 0 20px}
+.fc01_03 .inner{padding:30px 0}
+.fc01_03 h2{float:none;width:auto;font-size:19px;line-height:25px;margin-bottom:10px;font-weight:400}
+.fc01_03 .cf02{float:none;width:auto;margin-top:0}
 /*헤더 메뉴*/
 #main-menu{margin-bottom:20px}
 #main-menu li{line-height:40px}
@@ -42,7 +52,33 @@ footer .infoA li strong{margin-right:3px}
 .cf01 input{height:40px;font-size:16px}
 .cf01 button{margin-top:5px}
 .cf01 button i{font-size:25px}
-
+/*뉴스레터 신청*/
+.cf02 input{width:65%;height:32px;text-indent:0.5rem;font-size:13px}
+.cf02 button, .cf02 input.btn{width:35%;height:32px;font-size:13px}
+.cf02 label.error{display:block;width:auto;height:auto;text-indent:0;position:absolute;left:0;bottom:-30px}
+/*메인 슬라이더 배너*/
+.ib01 li{background-position:center top;background-size:auto 100%}
+.ib01 li img{height:450px}
+.ib01 li dl{top:125px;left:15px;margin-left:0}
+.ib01 li dl dt{font-size:30px;line-height:36px;margin-bottom:0.6rem}
+.ib01 li dl dd{font-size:14px;line-height:20px}
+.ib01 .slick-dots{width:100%;top:inherit;bottom:25px;left:0;margin-top:0;margin-left:0;text-align:left;padding-left:12px}
+.ib01 .slick-dots li{display:inline-block;width:10px;height:10px;margin:0 4px}
+.ib01 .slick-dots li button{width:10px;height:10px;border-radius:5px}
+.ib01:after{width:155px;height:153px;background-size:cover;position:absolute;right:0;bottom:-114px}
+/*메인 두번째 헤드라인 리스트*/
+.lc01 li{float:left;width:48%;margin-right:4%;margin-bottom:4%}
+.lc01 li.l3, .lc01 li.l6, .lc01 li.l9, .lc01 li.l12{margin-right:4%}
+.lc01 li.l2, .lc01 li.l4, .lc01 li.l6, .lc01 li.l8, .lc01 li.l10, .lc01 li.l12{margin-right:0}
+.lc01 li .thumb{height:123px}
+.lc01 li .thumb span{height:123px}
+.lc01 li .thumb img{min-height:123px}
+.lc01 li:first-child .thumb:after{content:none}
+.lc01 li dl{height:115px;padding:16px 15px 0}
+.lc01 li dt{margin-bottom:0}
+.lc01 li dt i{margin:0 0 4px;font-size:13px;line-height:19px}
+.lc01 li dt a{font-size:15px;line-height:21px;max-height:64px;display:block;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}
+.lc01 li dd{display:none}
 /*로고*/
 .lg01 a{width:200px;height:36px;background-size:200px 36px}
 .lg01 em{color:#554531;line-height:17.6px;margin-left:5px}
@@ -57,6 +93,19 @@ body.front .lg01 a{width:200px;height:36px;background-size:200px 36px}
 .ng01 li a:active{background:#9f865f}
 body.front .ng01 li a{width:36px;height:36px;line-height:36px;border-radius:18px}
 body.front .ng01 li a i{font-size:16px;line-height:36px}
+/*메인 첫번째 헤드라인 리스트*/
+.tc01 .thumb{width:104px;height:77px;margin-right:16px}
+.tc01 .thumb img{min-height:77px}
+.tc01 dl{padding-top:4px}
+.tc01 dt{margin-bottom:10px}
+.tc01 dt a{font-size:15px;line-height:21px;max-height:40px}
+.tc01 dd{text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden}
+/*메인 소제목*/
+.th01{margin-bottom:21px}
+.th01 dt{font-size:17px;line-height:18px}
+.th01 dd a{width:25px;height:25px;line-height:25px;border-radius:12.5px;background-size:cover;margin-left:5px}
+.th01 dd a i{font-size:1rem;line-height:25px}
+.th01 dd a:active{background:#9f865f}
 
 }
 

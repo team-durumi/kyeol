@@ -86,9 +86,8 @@ footer .infoA li strong{color:#c7c7c7;margin-right:5px}
 footer .infoA li span, footer .infoA li a{color:#fff}
 
 /**** container ****/
-.alignRight{text-align:right}
-.alignCenter{text-align:center}
 
+/*메인페이지 프레임*/
 .fc01_01 .inner{padding:60px 0 65px;border-bottom:1px solid #ddd;overflow:hidden}
 .fc01_01 .leftA{float:left;width:48.5%}
 .fc01_01 .rightA{float:right;width:48.5%}
@@ -100,15 +99,15 @@ footer .infoA li span, footer .infoA li a{color:#fff}
 .fc01_03 .inner{padding:58px 0;overflow:hidden}
 .fc01_03 h2{float:left;width:50%;font-size:28px;line-height:40px;color:#fff;font-family:'Iropke Batang',sans-serif}
 .fc01_03 .cf02{float:right;width:50%;margin-top:6px}
-
+/*서브페이지-사이드메뉴형 프레임*/
 .fc02 .inner{overflow:hidden;padding-bottom:100px}
 .fc02 nav{padding:20px 0 56px;text-align:right}
 .fc02 aside{float:left;width:17.148%}
 .fc02 section{float:right;width:72.256%}
-
+/*서브페이지-일반형 프레임*/
 .fc03 .inner{overflow:hidden;padding-bottom:100px}
 .fc03 nav{padding:20px 0 56px;text-align:right}
-
+/*뷰페이지 프레임*/
 .fc04 .cBody{width:728px;margin:0 auto;padding:100px 0 0;position:relative}
 .fc04 .cBody aside{position:absolute;top:100px;right:-380px;width:190px}
 .fc04 .cBody aside .ng05:last-child{border-bottom:none}
@@ -116,7 +115,7 @@ footer .infoA li span, footer .infoA li a{color:#fff}
 .fc04 .taglistA{border-top:1px solid #ddd;padding:32px 0}
 .fc04 .writerA{background-color:#f5f5f5;padding:32px 0;margin-bottom:64px}
 .fc04 .relateA .lc01 dl{padding:24px 0}
-
+/*공통 박스 프레임*/
 .fc_box01{padding:32px;background-color:#f5f5f5;margin-top:30px;overflow:hidden}
 .fc_box01_01{padding:24px 32px}
 .fc_box01_01 .leftF{float:left;line-height:46px}
@@ -126,6 +125,9 @@ footer .infoA li span, footer .infoA li a{color:#fff}
 
 .fc_box02{margin-top:60px}
 .fc_box02 > h2{font-size:28px;line-height:28px;color:#111}
+
+.alignRight{text-align:right}
+.alignCenter{text-align:center}
 
 /**** objects ****/
 
