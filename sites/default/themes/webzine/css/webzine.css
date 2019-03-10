@@ -28,7 +28,6 @@ input[type=password].error,
 input[type=email].error{border-color:#ff0000;color:#515358}
 textarea.error{border-color:#e31919;color:#e31919}
 
-
 /**** Layout ****/
 
 body{position:relative;overflow-x:hidden}

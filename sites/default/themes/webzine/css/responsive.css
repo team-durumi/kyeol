@@ -4,9 +4,59 @@
 @media screen and (max-width:768px) {
 body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select,menu,a{font-size:13px;line-height:16px}
 
-.inner{position:relative;width:auto;margin:0 15px;padding:0;box-sizing:border-box}
-.slidingA{display:none}
+.inner{width:auto;margin:0 15px;padding:0;box-sizing:border-box}
+/*헤더*/
+header{}
+header .inner{height:70px}
+header .lg01{margin-top:17px}
+body.front header .lg01{margin-top:17px}
+header .ng01{margin-top:19px}
+body.front header .ng01{margin-top:19px}
+body.front header .inner{height:70px}
 
+header nav{right:-250px;width:250px;height:100%;padding:80px 20px 0}
+header nav .btn_icon01{position:absolute;right:15px;top:15px}
+
+header .cf01{top:-150px;height:150px}
+/*푸터*/
+footer{padding:20px 0 40px}
+footer .addrA{float:none;width:auto;height:32px;padding-left:20px;padding-top:2px;background-size: auto 100%;margin-bottom:20px}
+footer .addrA .cpr{font-size:11px;line-height:13px}
+footer .infoA{float:none;width:auto}
+footer .infoA li{padding:4px 10px;font-size:12px}
+footer .infoA li strong{margin-right:3px}
+
+/*헤더 메뉴*/
+#main-menu{margin-bottom:20px}
+#main-menu li{line-height:40px}
+#main-menu li a{font-size:20px}
+#secondary-menu li{margin-left:15px}
+#secondary-menu li a{font-size:13px;line-height:16px}
+
+/*버튼*/
+.btn_icon01 i{font-size:25px}
+
+/*헤더 검색창*/
+.cf01 .btn_icon01{right:15px;top:15px}
+.cf01 fieldset{width:auto;height:40px;margin:60px 15px 0}
+.cf01 input{height:40px;font-size:16px}
+.cf01 button{margin-top:5px}
+.cf01 button i{font-size:25px}
+
+/*로고*/
+.lg01 a{width:200px;height:36px;background-size:200px 36px}
+.lg01 em{color:#554531;line-height:17.6px;margin-left:5px}
+.lg01 em b{font-size:17.6px}
+.lg01 em i{font-size:7px}
+body.front .lg01 a{width:200px;height:36px;background-size:200px 36px}
+
+/*헤더 메뉴*/
+.ng01 li{margin-left:4px}
+.ng01 li a{width:36px;height:36px;line-height:36px;border-radius:18px;background-size:cover}
+.ng01 li a i{font-size:16px;line-height:36px}
+.ng01 li a:active{background:#9f865f}
+body.front .ng01 li a{width:36px;height:36px;line-height:36px;border-radius:18px}
+body.front .ng01 li a i{font-size:16px;line-height:36px}
 
 }
 
