@@ -126,7 +126,17 @@ function init_pc(){
 }
 //모바일 버젼 초기화
 function init_mobile(){
-	
+	//모바일용 사이드 메뉴
+	$(".sidebar ul.menu li.active a").click(function(){
+		$(this).parents('ul.menu').toggleClass('opened');
+		return false;
+	});
+	$(document).mouseup(function(e) {
+        var container = $('.sidebar ul.menu');
+        if(container.has(e.target).length === 0) {
+            container.removeClass('opened');
+        }
+    });
 
 }
 //폼 유효성 검사

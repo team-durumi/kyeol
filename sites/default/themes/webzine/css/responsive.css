@@ -36,14 +36,50 @@ footer .infoA li strong{margin-right:3px}
 .fc01_03 .inner{padding:30px 0}
 .fc01_03 h2{float:none;width:auto;font-size:19px;line-height:25px;margin-bottom:10px;font-weight:400}
 .fc01_03 .cf02{float:none;width:auto;margin-top:0}
+/*서브페이지-사이드메뉴형 프레임*/
+.fc02 .inner{overflow:hidden;padding-bottom:50px}
+.fc02 nav{padding:15px 0 25px}
+.fc02 aside{float:none;width:auto}
+.fc02 section{float:none;width:auto}
+.fc02 section .header h1{display:none}
+/*서브페이지-일반형 프레임*/
+.fc03 .inner{padding-bottom:50px}
+.fc03 nav{padding:15px 0 25px}
+.fc03 section .header h1{display:none}
+/*공통 박스 프레임*/
+.fc_box01{padding:24px;margin-top:20px}
+.fc_box01_01{padding:18px 24px}
+.fc_box01_01 .leftF{float:none;line-height:20px;margin-bottom:10px}
+.fc_box01_01 .rightF{float:none}
+.fc_box01_01.tags .tagA .btn03{margin-top:6px}
+.fc_box02{margin-top:30px}
+.fc_box02 > h2{font-size:20px;line-height:20px}
 /*헤더 메뉴*/
 #main-menu{margin-bottom:20px}
 #main-menu li{line-height:40px}
 #main-menu li a{font-size:20px}
 #secondary-menu li{margin-left:15px}
 #secondary-menu li a{font-size:13px;line-height:16px}
-
+/*브레드크럼*/
+.breadcrumb a{font-size:12px}
+.breadcrumb a:after{margin:0 0 0 5px}
+.breadcrumb a.active{font-size:12px}
+/*사이드메뉴*/
+.sidebar h2{font-size:24px;line-height:30px;padding-bottom:20px;border-bottom:none}
+.sidebar ul.menu{position:relative;padding-top:44px}
+.sidebar ul.menu:after{content:"\e941";font-family:xeicon;position:absolute;top:16px;right:15px;color:#fff;font-size:14px}
+.sidebar ul.menu li{display:none;border-bottom:1px solid #ddd;border-left:1px solid #ddd;border-right:1px solid #ddd;padding:0}
+.sidebar ul.menu li.active{display:block;position:absolute;top:0;left:0;width:100%;border:none}
+.sidebar ul.menu li a{display:block;padding:0 15px;font-size:14px;height:44px;line-height:44px;color:#444}
+.sidebar ul.menu li.active a{color:#fff;background-color:#9f865f}
+.sidebar ul.menu li a:active{color:#fff;background-color:#9f865f}
+.sidebar ul.menu.opened li{display:block}
 /*버튼*/
+.btn01{height:36px;line-height:36px;padding:0 14px}
+.btn01:active{background-color:#4a4a4a;color:#fff;text-decoration:none}
+.btn02{height:24px;line-height:24px;padding:0 10px;font-size:12px}
+.btn02:active{background-color:#4a4a4a;color:#fff;text-decoration:none}
+.btn03{height:30px;line-height:30px;padding:0 10px;border-radius:15px}
 .btn_icon01 i{font-size:25px}
 
 /*헤더 검색창*/
@@ -79,12 +115,36 @@ footer .infoA li strong{margin-right:3px}
 .lc01 li dt i{margin:0 0 4px;font-size:13px;line-height:19px}
 .lc01 li dt a{font-size:15px;line-height:21px;max-height:64px;display:block;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}
 .lc01 li dd{display:none}
+/*지난호 보기 리스트*/
+.lc01_01{margin-top:20px}
+.lc01_01 li dl{height:90px;padding:10px 0 0}
+.lc01_01 li dt{margin-bottom:4px}
+.lc01_01 li dt a{font-size:18px;line-height:26px}
+.lc01_01 li dd{display:block}
+/*기본 리스트*/
+.lc02 li{padding:20px 0;border-bottom:1px solid #ddd}
+.lc02 li .thumb{height:77px;width:104px;margin-right:16px}
+.lc02 li .thumb img{min-height:77px}
+.lc02 li dt{margin-bottom:8px}
+.lc02 li dt > a{font-size:15px;line-height:21px;max-height:40px}
+.lc02 li dd p.summury{display:none}
+.lc02_01 li dl{margin-left:120px}
+.lc02_01 li dt .category{display:block;margin-bottom:5px}
+.lc02_01 li dd p.summury{max-height:58px;-webkit-line-clamp:2}
+/*필자 리스트*/
+.lc03 > dl > dt{float:none;width:auto;padding-top:30px;font-size:1.2rem}
+.lc03 > dl > dt a{font-size:1.2rem}
+.lc03 > dl > dd{float:none;width:auto}
+.lc03 > dl > dd .lc02_01 li dl{margin-left:0}
 /*로고*/
 .lg01 a{width:200px;height:36px;background-size:200px 36px}
 .lg01 em{color:#554531;line-height:17.6px;margin-left:5px}
 .lg01 em b{font-size:17.6px}
 .lg01 em i{font-size:7px}
 body.front .lg01 a{width:200px;height:36px;background-size:200px 36px}
+/*모아보기 지역 지도*/
+.map01{margin-top:20px}
+.map01 iframe{height:300px}
 
 /*헤더 메뉴*/
 .ng01 li{margin-left:4px}
@@ -93,6 +153,22 @@ body.front .lg01 a{width:200px;height:36px;background-size:200px 36px}
 .ng01 li a:active{background:#9f865f}
 body.front .ng01 li a{width:36px;height:36px;line-height:36px;border-radius:18px}
 body.front .ng01 li a i{font-size:16px;line-height:36px}
+/*태그리스트*/
+.ng02{margin-top:20px}
+.ng02 h3{margin-bottom:0}
+.ng02 .tagA .btn03{margin:5px 6px 0 0}
+/* 페이징 */
+.pager{margin-top:30px}
+.pager li.pager-item, .pager li.pager-previous, .pager li.pager-next, .pager li.first, .pager li.last{width:2rem;height:2rem}
+.pager li a{height:2rem;line-height:2rem;font-size:13px;width:2rem;width:2rem;border-radius:1rem}
+.pager li.pager-current{margin:0;padding:0;height:2rem;line-height:2rem;font-size:13px;width:2rem;border-radius:1rem}
+.pager li.pager-previous{margin-right:0}
+.pager li.pager-next{margin-left:0}
+.pager li.pager-first a{background-size:auto 9px}
+.pager li.pager-previous a{background-size:auto 9px}
+.pager li.pager-next a{background-size:auto 9px}
+.pager li.pager-last a{background-size:auto 9px}
+
 /*메인 첫번째 헤드라인 리스트*/
 .tc01 .thumb{width:104px;height:77px;margin-right:16px}
 .tc01 .thumb img{min-height:77px}
@@ -100,6 +176,9 @@ body.front .ng01 li a i{font-size:16px;line-height:36px}
 .tc01 dt{margin-bottom:10px}
 .tc01 dt a{font-size:15px;line-height:21px;max-height:40px}
 .tc01 dd{text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden}
+/*검색결과 정보 텍스트*/
+.td01{font-size:1rem;line-height:20px}
+.td01 i{width:20px;height:20px;line-height:20px;border-radius:10px;margin-right:3px;font-size:12px;vertical-align:middle}
 /*메인 소제목*/
 .th01{margin-bottom:21px}
 .th01 dt{font-size:17px;line-height:18px}
