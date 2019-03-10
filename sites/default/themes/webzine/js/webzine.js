@@ -20,15 +20,14 @@ $(window).resize(function() {
 	}
 });
 
-/* 메뉴고정 
+/* 메뉴고정 */
 $(window).scroll(function(e){
-
 	if ($(window).scrollTop() > 0) {         
 		$("body.pc").addClass("scrolling");
 	} else {
 		$("body.pc").removeClass("scrolling");
 	}
-});*/
+});
 function viewport() {
     var e = window, a = 'inner';
     if (!('innerWidth' in window )) {
@@ -67,16 +66,20 @@ $(document).ready(function() {
 	//검색창 열기/닫기
 	$('header .ng01 .search a').click(function(){
 		$('header').addClass('searchOpened');
+		return false;
 	});
 	$('header .cf01 a.btn_icon01').click(function(){
 		$('header').removeClass('searchOpened');
+		return false;
 	});
 	//menu 열기/닫기
 	$('header .ng01 .menu a').click(function(){
 		$('header').addClass('menuOpened');
+		return false;
 	});
 	$('header nav a.btn_icon01').click(function(){
 		$('header').removeClass('menuOpened');
+		return false;
 	});
 	//뷰화면 툴팁 오브제 효과
 	$(".tt01").click(function(){
