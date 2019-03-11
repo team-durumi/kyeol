@@ -9,3 +9,6 @@
 
 /*페이징*/
 .pager-ellipsis{display: inline-block}
+
+/*로그인 번튼*/
+#user-login #edit-submit{margin-top:10px;text-align: center;background-color: #2d1900;border: none;height: 66px;color: #fff;font-size: 1rem;cursor: pointer;min-width: 100px;border-radius: 10px;}
