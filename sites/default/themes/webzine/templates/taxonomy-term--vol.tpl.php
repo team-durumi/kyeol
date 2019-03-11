@@ -50,7 +50,7 @@ $img = ($term->field_image) ? image_style_url('main_article', $term->field_image
         <a href="<?php print $term_url;?>"><?php print $term_name;?>호</a>
     </dt>
     <dd>
-        <p><?php print $term->description;?></p>
+        <?php print $term->description;?>
         <em><?php print back_issues_date($term->tid);?></em>
     </dd>
 </dl>
