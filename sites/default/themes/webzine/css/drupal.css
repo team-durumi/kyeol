@@ -3,3 +3,6 @@
 .tabs.primary li a{border:3px solid #9f865f;min-width:100px;margin:1em 0.5em;display:block;padding:0.5em;text-decoration:none;text-align:center;color:#9f865f}
 .tabs.primary li:nth-child(1) a{margin-left:0}
 .tabs.primary li a:hover{background-color:#9f865f;color:white}
+
+/*지난호 보기*/
+.lc01 li.views-row-3, .lc01 li.views-row-6, .lc01 li.views-row-9, .lc01 li.views-row-12{margin-right:0}
