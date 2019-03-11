@@ -51,6 +51,7 @@ function webzine_preprocess_page(&$variables)
         }
         if(isset($variables['node'])) {
             if($variables['node']->type === 'article') {
+                $main->vol = $variables['node']->field_vol['und'][0]['tid'];
                 $variables['main_class'] = 'fc04';
                 $cat_tid = $variables['node']->field_category['und'][0]['tid'];
                 $variables['category'] = $main->catLabel[$cat_tid];
@@ -60,7 +61,7 @@ function webzine_preprocess_page(&$variables)
                 $variables['writer_info'] = ($writer->field_position) ? strip_tags($writer->field_position['und'][0]['value']) : '';
                 $image = ($variables['node']->field_image) ? image_style_url('article', $variables['node']->field_image['und'][0]['uri']) : '';
                 $variables['image'] = ($image) ? ' style="background-image:url('.$image.')"' : '';
-                $variables['vol_path'] = '/vol/' . $main->vol;
+                $variables['vol_path'] = '/vol/' . $main->vol();
                 $variables['category_path'] = '/category/' . $main->machine_name[$cat_tid];
                 $variables['url'] = $main->baseUrl . request_uri();
             }

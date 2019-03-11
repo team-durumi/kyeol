@@ -156,7 +156,7 @@ class Webzines extends Slowalk
             foreach($opinion as $item) {
                 $rows[] = array(
                     '{{ img }}' => $item->field_image ? image_style_url('main_article', $item->field_image['und'][0]['uri']) : file_create_url('public://default_images/noimage_default.png'),
-                    '{{ vol_path }}' => '/vol/'.$item->field_vol['und'][0]['tid'],
+                    '{{ vol_path }}' => '/vol/'.$this->vol(),
                     '{{ vol }}' => sprintf('%02d', $this->vol()),
                     '{{ category_path }}' => '/category/' . $this->machine_name[$category],
                     '{{ category }}' => $this->catLabel[$category],
