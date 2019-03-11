@@ -4,6 +4,7 @@ core = 7.x
 version = 1.0
 
 stylesheets[all][] = css/webzine.css
+stylesheets[all][] = css/drupal.css
 stylesheets[all][] = css/responsive.css
 stylesheets-conditional[IE][all][] = css/ie.css
 
