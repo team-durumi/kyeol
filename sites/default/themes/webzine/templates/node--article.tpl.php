@@ -183,35 +183,22 @@
         </div>
     <?php endif;?>
 
+    <?php if(render($content['field_related_article'])): ?>
     <div class="relateA">
         <ul class="lc01 inner">
-            <li class="l1">
-                <a href="#" class="thumb"><span><img src="../images/@lc01.png" alt=""/></span></a>
-                <dl class="conA">
-                    <dt>
-                        <a href="#">탈분단적 시각으로 바라보는 위안부 문제 - 첫번째 시간 탈분단적 시각으로 바라보는 위안부 문제 - 첫번째 시간</a>
-                    </dt>
-                    <dd>탈분단적 시각으로 바라보는 위안부 문제를 연구소에서 탈분단적 시각으로 바라봤다.탈분단적 시각으로 바라보는 위안부 문제를 연구소에서 탈분단적 시각으로 바라봤다.</dd>
-                </dl>
-            </li>
-            <li class="l2">
-                <a href="#" class="thumb"><span><img src="../images/noimage_default.png" alt=""/></span></a>
-                <dl class="conA">
-                    <dt>
-                        <a href="#">탈분단적 시각으로 바라보는 위안부 문제 - 첫번째 시간 탈분단적 시각으로 바라보는 위안부 문제 - 첫번째 시간</a>
-                    </dt>
-                    <dd>탈분단적 시각으로 바라보는 위안부 문제를 연구소에서 탈분단적 시각으로 바라봤다.탈분단적 시각으로 바라보는 위안부 문제를 연구소에서 탈분단적 시각으로 바라봤다.</dd>
-                </dl>
-            </li>
-            <li class="l3">
-                <a href="#" class="thumb"><span><img src="../images/@lc01.png" alt=""/></span></a>
-                <dl class="conA">
-                    <dt>
-                        <a href="#">탈분단적 시각으로 바라보는 위안부 문제 - 첫번째 시간 탈분단적 시각으로 바라보는 위안부 문제 - 첫번째 시간</a>
-                    </dt>
-                    <dd>탈분단적 시각으로 바라보는 위안부 문제를 연구소에서 탈분단적 시각으로 바라봤다.탈분단적 시각으로 바라보는 위안부 문제를 연구소에서 탈분단적 시각으로 바라봤다.</dd>
-                </dl>
-            </li>
+            <?php $i=1; foreach($content['field_related_article']['#items'] as $article): ?>
+                <?php $img = ($article['node']->field_image) ? image_style_url('main_article', $article['node']->field_image['und'][0]['uri']) : file_create_url('public://default_images/noimage_default.png');?>
+                <li class="l<?php print $i++;?>">
+                    <a href="/node/<?php print $article['node']->nid;?>" class="thumb"><span><img src="<?php print $img;?>" alt="<?php print $article['node']->title;?>"/></span></a>
+                    <dl class="conA">
+                        <dt>
+                            <a href="/node/<?php print $article['node']->nid;?>"><?php print $article['node']->title;?></a>
+                        </dt>
+                        <dd><?php print text_summary($article['node']->body['und'][0]['value'], 'plain_text', '100');?></dd>
+                    </dl>
+                </li>
+            <?php endforeach;?>
         </ul>
     </div>
+    <?php endif;?>
 <?php endif;?>
