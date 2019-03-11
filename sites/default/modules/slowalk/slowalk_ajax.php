@@ -39,7 +39,7 @@ function webzine_ajax_callback()
                         'nid' => $nid,
                         'url' => '/node/'.$nid,
                         'title' => $node->title,
-                        'img' => image_style_url('main_feature', $node->field_image['und'][0]['uri']),
+                        'img' => ($node->field_image) ? image_style_url('main_feature', $node->field_image['und'][0]['uri']) : file_create_url('public://default_images/noimage_default.png'),
                         'body' => text_summary($node->body['und'][0]['value'], 'plain_text', 100)
                     );
                 }
