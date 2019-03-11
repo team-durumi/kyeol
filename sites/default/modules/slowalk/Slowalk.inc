@@ -8,7 +8,7 @@
 
 class Slowalk
 {
-    public $vol, $catLabel, $category, $webzines, $person, $location, $years, $writer, $featureIds, $featureLabel, $baseUrl;
+    public $vol, $catLabel, $category, $years, $featureIds, $featureLabel, $baseUrl;
 
     public function __construct()
     {
@@ -35,20 +35,8 @@ class Slowalk
             $this->catLabel[$this->category[1]]
         );
 
-        //지난호 보기
-        $this->webzines = '';
-
-        //모아보기 - 인물
-        $this->person = '';
-
-        //모아보기 - 지역
-        $this->location = '';
-
-        //모아보기 - 시기
-        $this->years = '';
-
-        //모아보기 - 필자
-        $this->writer = '';
+        //시기
+        $this->years = array();
     }
 
     protected function getData($data)
@@ -60,9 +48,8 @@ class Slowalk
         ));
         if(isset($request->data)) {
             return drupal_json_decode($request->data);
-        } else {
-            return array();
         }
+        return array();
     }
 
     public function vol()
@@ -70,9 +57,8 @@ class Slowalk
         if($this->vol) {
             $term = taxonomy_term_load($this->vol);
             return $term->name;
-        } else {
-            return 0;
         }
+        return 0;
     }
 }
 
@@ -144,38 +130,7 @@ class Main extends Slowalk
 
 class Webzines extends Slowalk
 {
-    //연구자의 말
-    function opinion()
-    {
-        return $this->getWebzine(2);
-    }
-    //자료해제
-    function annotation()
-    {
-        return $this->getWebzine(5);
-    }
-    //연구자와 지원단체
-    function personnel()
-    {
-        return $this->getWebzine(6);
-    }
-    //논평
-    function review()
-    {
-        return $this->getWebzine(3);
-    }
-    //에세이
-    function essay()
-    {
-        return $this->getWebzine(4);
-    }
-    //인터뷰
-    function interview()
-    {
-        return $this->getWebzine(7);
-    }
-
-    private function getWebzine($category)
+    public function getWebzine($category)
     {
         $machine_names = array(
             2 => 'opinion',
@@ -200,7 +155,7 @@ class Webzines extends Slowalk
             $rows = array();
             foreach($opinion as $item) {
                 $rows[] = array(
-                    '{{ img }}' => ($item->field_image) ? image_style_url('main_article', $item->field_image['und'][0]['uri']) : fiel_create_url('public://default_images/noimage_default.png'),
+                    '{{ img }}' => $item->field_image ? image_style_url('main_article', $item->field_image['und'][0]['uri']) : file_create_url('public://default_images/noimage_default.png'),
                     '{{ vol_path }}' => '/vol/'.$item->field_vol['und'][0]['tid'],
                     '{{ vol }}' => sprintf('%02d', $this->vol()),
                     '{{ category_path }}' => '/category/' . $machine_names[$category],
@@ -213,11 +168,12 @@ class Webzines extends Slowalk
                 );
             }
             $options['rows'] = $rows;
+            return $this->template($options);
         }
-        return $this->template($options);
+        return false;
     }
 
-    private function template($options)
+    private function template($options): string
     {
         $html = '<div class="fc_box02">
                     <h2>'.$options['category'].'</h2>
@@ -251,7 +207,7 @@ class Webzines extends Slowalk
         return $html;
     }
 
-    private function writer($writers)
+    private function writer($writers): string
     {
         $return = array();
         foreach($writers as $writer) {
@@ -261,7 +217,7 @@ class Webzines extends Slowalk
         return implode(', ', $return);
     }
 
-    public function total()
+    public function total(): ?int
     {
         $query = new EntityFieldQuery();
         $result = $query->entityCondition('entity_type', 'node')
@@ -271,25 +227,122 @@ class Webzines extends Slowalk
             ->execute();
         if(isset($result['node'])) {
             return count($result['node']);
-        } else {
-            return 0;
         }
+        return 0;
     }
 }
 
-class Location extends Slowalk
+class Archive extends Slowalk
 {
+    protected function query($machine_name, $condition)
+    {
+        $start = $condition['start'];
+        $end = $condition['end'];
+        $vid = $this->vid($machine_name);
+        $term = db_select('taxonomy_term_data', 't')->fields('t', array('name'))->condition('vid', $vid)->condition('name', $start, '>=');
+        if($end) {
+            $term->condition('name', $end, '<');
+        }
+        $result = $term->execute()->fetchCol();
+        return $result;
+    }
 
-}
+    protected function total($machine_name)
+    {
+        $vid = $this->vid($machine_name);
+        return db_select('taxonomy_term_data', 't')->fields('t', array('name'))->condition('vid', $vid)->execute()->rowCount();
+    }
 
-class Years extends Slowalk
-{
+    private function vid($machine_name)
+    {
+        return db_select('taxonomy_vocabulary', 'v')->fields('v', array('vid'))->condition('machine_name', $machine_name)->execute()->fetchField();
+    }
 
-}
+    private function index($machine_name)
+    {
+        if($machine_name === 'years') {
+            $index = $this->yearsQeury();
+        } else {
+            $index = array(
+                $this->query($machine_name, array('start' => '가', 'end' => '아')),
+                $this->query($machine_name, array('start' => '아', 'end' => '')),
+                $this->query($machine_name, array('start' => 'A', 'end' => 'ㄱ'))
+            );
+        }
 
-class Writer extends Slowalk
-{
+        return array('total' => $this->total($machine_name), 'index' => $index);
+    }
 
+    private function yearsQeury()
+    {
+        $vid = $this->vid('years');
+        $parentQ = db_select('taxonomy_term_data', 't');
+        $parentQ->leftJoin('taxonomy_term_hierarchy', 'h', 'h.tid = t.tid');
+        $parentQ->fields('t', array('tid', 'name'));
+        $parents = $parentQ->condition('t.vid', $vid)->condition('h.parent', 0)->execute()->fetchAll();
+        $data = array();
+        foreach($parents as $parent) {
+            $data[$parent->tid]['name'] = $parent->name;
+            $tid = $parent->tid;
+            $childQ = db_select('taxonomy_term_data', 't');
+            $childQ->leftJoin('taxonomy_term_hierarchy', 'h', 'h.tid = t.tid');
+            $child = $childQ->fields('t', array('name'))->condition('h.parent', $parent->tid)->execute()->fetchCol();
+            $data[$parent->tid]['child'] = $child;
+        }
+        $this->years = $data;
+        return $data;
+    }
+
+    public function template($machine_name)
+    {
+        $data = $this->index($machine_name);
+        $html = '<div class="fc_box01"><p class="td01">총 <em>'.$data['total'].'개</em>의 태그가 있습니다.</p></div>';
+        if($machine_name === 'years') {
+            $html .= '<div class="ng02"><div class="tagA">';
+            foreach($data['index'] as $index) {
+                $html .= '<a class="btn03" href="/archive/'.$machine_name.'/?search=' . $index['name'] . '">#' . $index['name'] . '</a>';
+                foreach($index['child'] as $child) {
+                    $html .= '<a class="btn03" href="/archive/'.$machine_name.'/?search=' . $child . '">#' . $child . '</a>';
+                }
+                $html .= '<br />';
+            }
+            $html .= '</div></div>';
+        } else {
+            foreach($data['index'] as $i => $index) {
+                if($index) {
+                    if($i === 0) {
+                        $h3 = 'ㄱ~ㅅ';
+                    } elseif($i === 1) {
+                        $h3 = 'ㅇ~ㅎ';
+                    } else {
+                        $h3 = 'A~Z';
+                    }
+                    $html .= '<div class="ng02"><h3>'.$h3.'</h3><div class="tagA">';
+                    foreach($index as $term) {
+                        $html .= '<a class="btn03" href="/archive/'.$machine_name.'/?search=' . $term . '">#' . $term . '</a>';
+                    }
+                    $html .= '</div></div>';
+                }
+            }
+        }
+        return $html;
+    }
+
+    public function getYears($machine_name)
+    {
+        $term = taxonomy_get_term_by_name($_GET['search'], $machine_name);
+        $tid = key($term);
+        $parent = taxonomy_get_parents($tid);
+        if(empty($parent)) {$pid = $tid;}
+        else {$pid = key($parent);}
+        $this->yearsQeury();
+        $html = '';
+        $html .= '<a class="btn03" href="/archive/years/?search=' . $this->years[$pid]['name'] . '">#' . $this->years[$pid]['name'] . '</a>';
+        foreach($this->years[$pid]['child'] as $child) {
+            $html .= '<a class="btn03" href="/archive/years/?search=' . $child . '">#' . $child . '</a>';
+        }
+        return $html;
+    }
 }
 
 class Search extends Slowalk

@@ -26,9 +26,21 @@
  *
  * @ingroup views_templates
  */
+
+$voca = arg(1);
+$archive = new Archive();
 ?>
 
 <?php if(isset($_GET['search'])): ?>
+
+    <div class="fc_box01 fc_box01_01 tags">
+        <p class="td01 leftF"><b>"<?php print $_GET['search'];?>"</b>에 관련된 기사는 <em><?php print $view->total_rows;?></em>건입니다.</p>
+        <a class="btn01 rightF" href="/<?php print request_path();?>">목록 보기</a>
+        <?php if($voca === 'years') : ?>
+            <div class="tagA"><?php print $archive->getYears($voca);?></div>
+        <?php endif;?>
+    </div>
+
     <div class="<?php print $classes; ?>">
         <?php print render($title_prefix); ?>
         <?php if ($title): ?>
@@ -92,64 +104,6 @@
     </div>
 <?php else: ?>
 
-    <?php
-    $voca = arg(1);
-    ?>
-    <div class="ng02">
-        <h3>ㄱ~ㅅ</h3>
-        <div class="tagA">
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동</a>
-        </div>
-    </div>
-    <div class="ng02">
-        <h3>ㅇ~ㅎ</h3>
-        <div class="tagA">
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동</a>
-        </div>
-    </div>
-    <div class="ng02">
-        <h3>A~Z/1~9</h3>
-        <div class="tagA">
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동김복동</a>
-            <a class="btn03" href="/<?php print current_path();?>/?search=김복동">#김복동</a>
-        </div>
-    </div>
+    <?php print $archive->template($voca);?>
+
 <?php endif;?>

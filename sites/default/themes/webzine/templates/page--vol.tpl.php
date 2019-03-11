@@ -108,12 +108,12 @@ $webzine->vol = arg(2);
                         <p class="td01 leftF"><i><?php print $webzine->vol();?></i>호에 대한 기사가 총 <em><?php print $webzine->total();?>건</em> 있습니다.</p>
                         <a class="btn01 rightF" href="/back-issues">호수 목록 보기</a>
                     </div>
-                    <?php print $webzine->opinion();?>
-                    <?php print $webzine->annotation();?>
-                    <?php print $webzine->personnel();?>
-                    <?php print $webzine->review();?>
-                    <?php print $webzine->essay();?>
-                    <?php print $webzine->interview();?>
+                    <?php print $webzine->getWebzine(2);?>
+                    <?php print $webzine->getWebzine(5);?>
+                    <?php print $webzine->getWebzine(6);?>
+                    <?php print $webzine->getWebzine(3);?>
+                    <?php print $webzine->getWebzine(4);?>
+                    <?php print $webzine->getWebzine(7);?>
                 </div>
             </section>
         </div>

@@ -6,3 +6,6 @@
 
 /*지난호 보기*/
 .lc01 li.views-row-3, .lc01 li.views-row-6, .lc01 li.views-row-9, .lc01 li.views-row-12{margin-right:0}
+
+/*페이징*/
+.pager-ellipsis{display: inline-block}
