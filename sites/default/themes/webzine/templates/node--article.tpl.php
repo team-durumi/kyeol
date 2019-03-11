@@ -176,7 +176,9 @@
                     </dt>
                     <dd>
                         <p><?php print $writer['taxonomy_term']->description;?></p>
-                        <a href="mailto:<?php print $writer['taxonomy_term']->field_contact['und'][0]['value'];?>"><?php print $writer['taxonomy_term']->field_contact['und'][0]['value'];?></a>
+                        <?php if($writer['taxonomy_term']->field_contact): ?>
+                            <a href="mailto:<?php print $writer['taxonomy_term']->field_contact['und'][0]['value'];?>"><?php print $writer['taxonomy_term']->field_contact['und'][0]['value'];?></a>
+                        <?php endif;?>
                     </dd>
                 </dl>
             <?php endforeach;?>
