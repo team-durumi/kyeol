@@ -78,34 +78,67 @@
 
     <!-- 서브 컨텐츠 영역 -->
     <div class="<?php print $main_class;?>" id="main-content">
-        <div class="inner">
-            <nav><?php print $breadcrumb;?></nav>
-            <!-- 사이드바 영역 -->
-            <?php if ($page['sidebar_first']): ?>
-                <aside>
-                    <div id="sidebar-first" class="column sidebar">
-                        <div class="section">
-                            <?php print render($page['sidebar_first']); ?>
-                        </div>
+        <?php if($main_class === 'fc04') : ?>
+            <div class="th02">
+                <div class="inner">
+                    <div class="category">
+                        <a class="btn02 version" href="#">03호</a>
+                        <a class="btn02 category" href="#">에세이</a>
                     </div>
-                </aside>
-            <?php endif; ?>
-            <!-- //사이드바 영역 -->
+                    <h1>위안부 문제가 해결되지 않는 이유</h1>
+                    <p>
+                        <b>글 최영주</b>
+                        <em>&#60;상상의 경계들&#62; 총괄 큐레이터</em>
+                    </p>
+                    <div class="ng03">
+                        <a href="#" class="share"><i class="xi-share-alt-o"></i></a>
+                        <dl>
+                            <dt>게시글을 공유해보세요</dt>
+                            <dd>
+                                <input type="text" name="share_url" value="https://docs.google.com/present"/>
+                                <button>링크복사</button>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
             <section>
-                <div class="header">
-                    <?php print render($title_prefix); ?>
-                    <?php if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
-                    <?php print render($title_suffix); ?>
-                </div>
-                <div class="cBody">
-                    <?php print $messages;?>
+                <div class="inner">
                     <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
-                    <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
-                    <?php print render($page['content']); ?>
-                    <?php print $feed_icons; ?>
+                    <?php print $messages;?>
                 </div>
+                <?php print render($page['content']);?>
             </section>
-        </div>
+        <?php else: ?>
+            <div class="inner">
+                <nav><?php print $breadcrumb;?></nav>
+                <!-- 사이드바 영역 -->
+                <?php if ($page['sidebar_first']): ?>
+                    <aside>
+                        <div id="sidebar-first" class="column sidebar">
+                            <div class="section">
+                                <?php print render($page['sidebar_first']); ?>
+                            </div>
+                        </div>
+                    </aside>
+                <?php endif; ?>
+                <!-- //사이드바 영역 -->
+                <section>
+                    <div class="header">
+                        <?php print render($title_prefix); ?>
+                        <?php if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
+                        <?php print render($title_suffix); ?>
+                    </div>
+                    <div class="cBody">
+                        <?php print $messages;?>
+                        <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
+                        <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
+                        <?php print render($page['content']); ?>
+                        <?php print $feed_icons; ?>
+                    </div>
+                </section>
+            </div>
+        <?php endif;?>
     </div>
     <!-- //서브 컨텐츠 영역 -->
     <footer>

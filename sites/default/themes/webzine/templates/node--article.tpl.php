@@ -96,35 +96,117 @@
         </dd>
     </dl>
 <?php else: ?>
-    <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-
-        <?php print $user_picture; ?>
-
-        <?php print render($title_prefix); ?>
-        <?php if (!$page): ?>
-            <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
-        <?php endif; ?>
-        <?php print render($title_suffix); ?>
-
-        <?php if ($display_submitted): ?>
-            <div class="submitted">
-                <?php print $submitted; ?>
-            </div>
-        <?php endif; ?>
-
-        <div class="content"<?php print $content_attributes; ?>>
-            <?php
-            // We hide the comments and links now so that we can render them later.
-            hide($content['comments']);
-            hide($content['links']);
-            print render($content);
-            ?>
+    <!-- cBody -->
+    <div class="cBody">
+        <!-- postA -->
+        <div class="postA"><?php print render($content['body']);?></div>
+        <!-- //postA -->
+        <!-- attachA -->
+        <div class="attachA">
+            <dl class="ng04 link">
+                <dt>참고문헌</dt>
+                <dd>
+                    <ul>
+                        <?php foreach($content['field_url']['#items'] as $link): ?>
+                            <li><a href="<?php print $link['url'];?>"><?php print $link['title'];?></a></li>
+                        <?php endforeach;?>
+                    </ul>
+                </dd>
+            </dl>
+            <dl class="ng04 file">
+                <dt>도움이 되는 자료</dt>
+                <dd>
+                    <ul>
+                        <?php foreach($content['field_file']['#items'] as $file): ?>
+                            <li><a class="btn03" href="<?php print file_create_url($file['uri']);?>"><i class="xi-paperclip"></i><?php print $file['filename'];?></a></li>
+                        <?php endforeach;?>
+                    </ul>
+                </dd>
+            </dl>
         </div>
+        <!-- //attachA -->
+        <!-- aside -->
+        <aside>
+            <?php if(render($content['field_person'])): ?>
+                <dl class="ng05">
+                    <dt>관련인물</dt>
+                    <dd><?php print get_term_link($content['field_person'], array('class' => 'btn03', 'prefix' => '#'));?></dd>
+                </dl>
+            <?php endif;?>
 
-        <?php print render($content['links']); ?>
+            <?php if(render($content['field_location'])): ?>
+                <dl class="ng05">
+                    <dt>관련지역</dt>
+                    <dd><?php print get_term_link($content['field_location'], array('class' => 'btn03', 'prefix' => '#'));?></dd>
+                </dl>
+            <?php endif;?>
 
-        <?php print render($content['comments']); ?>
-
+            <?php if(render($content['field_years'])): ?>
+                <dl class="ng05">
+                    <dt>관련식</dt>
+                    <dd><?php print get_term_link($content['field_years'], array('class' => 'btn03', 'prefix' => '#'));?></dd>
+                </dl>
+            <?php endif;?>
+        </aside>
+        <!-- //aside -->
     </div>
+    <!-- //cBody -->
 
+    <?php if(render($content['field_tags'])): ?>
+        <div class="taglistA">
+            <dl class="ng06 inner">
+                <dt>Tag</dt>
+                <dd><?php print get_term_link($content['field_tags'], array('class' => 'btn03', 'prefix' => '#'));?></dd>
+            </dl>
+        </div>
+    <?php endif;?>
+
+    <?php if(render($content['field_writer'])): ?>
+        <div class="writerA">
+            <?php foreach($content['field_writer']['#items'] as $writer): ?>
+                <dl class="tc02 inner">
+                    <dt>
+                        <i>글쓴이</i>
+                        <b><?php print $writer['taxonomy_term']->name;?></b>
+                    </dt>
+                    <dd>
+                        <p><?php print $writer['taxonomy_term']->description;?></p>
+                        <a href="mailto:<?php print $writer['taxonomy_term']->field_contact['und'][0]['value'];?>"><?php print $writer['taxonomy_term']->field_contact['und'][0]['value'];?></a>
+                    </dd>
+                </dl>
+            <?php endforeach;?>
+        </div>
+    <?php endif;?>
+
+    <div class="relateA">
+        <ul class="lc01 inner">
+            <li class="l1">
+                <a href="#" class="thumb"><span><img src="../images/@lc01.png" alt=""/></span></a>
+                <dl class="conA">
+                    <dt>
+                        <a href="#">탈분단적 시각으로 바라보는 위안부 문제 - 첫번째 시간 탈분단적 시각으로 바라보는 위안부 문제 - 첫번째 시간</a>
+                    </dt>
+                    <dd>탈분단적 시각으로 바라보는 위안부 문제를 연구소에서 탈분단적 시각으로 바라봤다.탈분단적 시각으로 바라보는 위안부 문제를 연구소에서 탈분단적 시각으로 바라봤다.</dd>
+                </dl>
+            </li>
+            <li class="l2">
+                <a href="#" class="thumb"><span><img src="../images/noimage_default.png" alt=""/></span></a>
+                <dl class="conA">
+                    <dt>
+                        <a href="#">탈분단적 시각으로 바라보는 위안부 문제 - 첫번째 시간 탈분단적 시각으로 바라보는 위안부 문제 - 첫번째 시간</a>
+                    </dt>
+                    <dd>탈분단적 시각으로 바라보는 위안부 문제를 연구소에서 탈분단적 시각으로 바라봤다.탈분단적 시각으로 바라보는 위안부 문제를 연구소에서 탈분단적 시각으로 바라봤다.</dd>
+                </dl>
+            </li>
+            <li class="l3">
+                <a href="#" class="thumb"><span><img src="../images/@lc01.png" alt=""/></span></a>
+                <dl class="conA">
+                    <dt>
+                        <a href="#">탈분단적 시각으로 바라보는 위안부 문제 - 첫번째 시간 탈분단적 시각으로 바라보는 위안부 문제 - 첫번째 시간</a>
+                    </dt>
+                    <dd>탈분단적 시각으로 바라보는 위안부 문제를 연구소에서 탈분단적 시각으로 바라봤다.탈분단적 시각으로 바라보는 위안부 문제를 연구소에서 탈분단적 시각으로 바라봤다.</dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
 <?php endif;?>

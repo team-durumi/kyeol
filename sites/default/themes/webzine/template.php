@@ -47,6 +47,11 @@ function webzine_preprocess_page(&$variables)
             $variables['title'] = '지난호 보기';
             $variables['theme_hook_suggestions'][] = 'page__vol';
         }
+        if(isset($variables['node'])) {
+            if($variables['node']->type === 'article') {
+                $variables['main_class'] = 'fc04';
+            }
+        }
     }
 
     drupal_add_library('system', 'ui.slider');
@@ -91,7 +96,12 @@ function get_term_link($term, $options = array())
         }
         foreach($term['#items'] as $item) {
             $name = isset($options['type']) ? sprintf($options['type'], $item['taxonomy_term']->name) : $item['taxonomy_term']->name;
-            if(isset($options['suffix'])) $name .= $options['suffix'];
+            if(isset($options['prefix'])) {
+                $name = $options['prefix'] . $name;
+            }
+            if(isset($options['suffix'])) {
+                $name .= $options['suffix'];
+            }
             $html[] = '<a class="'.$classes.'" href="'.drupal_get_path_alias('/taxonomy/term/'.$item['tid']).'">'.$name.'</a>';
         }
         return implode('', $html);
