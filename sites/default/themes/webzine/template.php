@@ -35,6 +35,8 @@ function webzine_css_alter(&$css)
  */
 function webzine_preprocess_page(&$variables)
 {
+    $main = new Slowalk();
+
     //호수 템플릿 설정
     if(isset($variables['page']['content']['system_main']['term_heading']['term']['#bundle'])) {
         $variables['theme_hook_suggestions'][] = 'page__' . $variables['page']['content']['system_main']['term_heading']['term']['#bundle'];
@@ -50,6 +52,14 @@ function webzine_preprocess_page(&$variables)
         if(isset($variables['node'])) {
             if($variables['node']->type === 'article') {
                 $variables['main_class'] = 'fc04';
+                $cat_tid = $variables['node']->field_category['und'][0]['tid'];
+                $variables['category'] = $main->catLabel[$cat_tid];
+                $wid = $variables['node']->field_writer['und'][0]['tid'];
+                $writer = taxonomy_term_load($wid);
+                $variables['writer'] = $writer->name;
+                $variables['writer_info'] = ($writer->field_position) ? strip_tags($writer->field_position['und'][0]['value']) : '';
+                $image = ($variables['node']->field_image) ? image_style_url('article', $variables['node']->field_image['und'][0]['uri']) : '';
+                $variables['image'] = ($image) ? ' style="background-image:url('.$image.')"' : '';
             }
         }
     }
@@ -63,7 +73,6 @@ function webzine_preprocess_page(&$variables)
     drupal_add_css('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css', array('type' => 'external', 'group' => CSS_THEME));
 
     //호수 노출
-    $main = new Slowalk();
     $variables['vol'] = sprintf('%02d', $main->vol());
 }
 

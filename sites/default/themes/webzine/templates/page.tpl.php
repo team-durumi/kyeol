@@ -79,16 +79,16 @@
     <!-- 서브 컨텐츠 영역 -->
     <div class="<?php print $main_class;?>" id="main-content">
         <?php if($main_class === 'fc04') : ?>
-            <div class="th02">
+            <div class="th02"<?php print $image;?>>
                 <div class="inner">
                     <div class="category">
-                        <a class="btn02 version" href="#">03호</a>
-                        <a class="btn02 category" href="#">에세이</a>
+                        <a class="btn02 version" href="#"><?php print $vol;?>호</a>
+                        <a class="btn02 category" href="#"><?php print $category;?></a>
                     </div>
-                    <h1>위안부 문제가 해결되지 않는 이유</h1>
+                    <h1><?php print $title;?></h1>
                     <p>
-                        <b>글 최영주</b>
-                        <em>&#60;상상의 경계들&#62; 총괄 큐레이터</em>
+                        <b>글 <?php print $writer;?></b>
+                        <em><?php print $writer_info;?></em>
                     </p>
                     <div class="ng03">
                         <a href="#" class="share"><i class="xi-share-alt-o"></i></a>
