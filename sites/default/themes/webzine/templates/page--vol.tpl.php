@@ -71,6 +71,9 @@
  *
  * @ingroup themeable
  */
+
+$webzine = new Webzines();
+$webzine->vol = arg(2);
 ?>
 
 <div id="main_wrap" class="mainPage">
@@ -102,153 +105,15 @@
                     <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
                     <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
                     <div class="fc_box01 fc_box01_01">
-                        <p class="td01 leftF"><i>2</i>호에 대한 기사가 총 <em>15건</em> 있습니다.</p>
-                        <a class="btn01 rightF" href="#">호수 목록 보기</a>
+                        <p class="td01 leftF"><i><?php print $webzine->vol();?></i>호에 대한 기사가 총 <em><?php print $webzine->total();?>건</em> 있습니다.</p>
+                        <a class="btn01 rightF" href="/back-issues">호수 목록 보기</a>
                     </div>
-                    <div class="fc_box02">
-                        <h2>연구자의 말</h2>
-                        <ul class="lc02 lc02_01">
-                            <li>
-                                <a href="#" class="thumb"><span><img src="/<?php print __WZ__;?>/images/@lc01.png" alt=""/></span></a>
-                                <dl class="conA">
-                                    <dt>
-										<span class="category">
-											<a class="btn02 version" href="#">03호</a>
-											<a class="btn02 mention" href="#">연구자의 말</a>
-										</span>
-                                        <a href="#">탈분단적 시각으로 바라보는 위안부 문제 - 첫번째 시간 탈분단적 시각으로 바라보는 위안부 문제 - 첫번째 시간</a>
-                                    </dt>
-                                    <dd>
-                                        <p class="summury">이는 이상 우리 수 그와 칼이다. 만물은 전인 품고 사랑의 싶이 긴지라 못하다 있으랴? 천자만홍이 남는 사는가 가치를 같은 대고, 유소년에게서 운다.이는 이상 우리 수 그와 칼이다. 만물은 전인 품고 사랑의 싶이 긴지라 못하다 있으랴? 천자만홍이 남는 사는가 가치를 같은 대고, 유소년에게서 운다. 이는 이상 우리 수 그와 칼이다. 이는 이상 우리 수 그와 칼이다.</p>
-                                        <p class="meta">
-                                            <span>김지홍, 이선희</span>
-                                            <em>2019. 03. 01</em>
-                                        </p>
-                                    </dd>
-                                </dl>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="fc_box02">
-                        <h2>자료해제</h2>
-                        <ul class="lc02 lc02_01">
-                            <li>
-                                <a href="#" class="thumb"><span><img src="/<?php print __WZ__;?>/images/@lc01.png" alt=""/></span></a>
-                                <dl class="conA">
-                                    <dt>
-										<span class="category">
-											<a class="btn02 version" href="#">03호</a>
-											<a class="btn02 mention" href="#">연구자의 말</a>
-										</span>
-                                        <a href="#">탈분단적 시각으로 바라보는 위안부 문제 - 첫번째 시간 탈분단적 시각으로 바라보는 위안부 문제 - 첫번째 시간</a>
-                                    </dt>
-                                    <dd>
-                                        <p class="summury">이는 이상 우리 수 그와 칼이다. 만물은 전인 품고 사랑의 싶이 긴지라 못하다 있으랴? 천자만홍이 남는 사는가 가치를 같은 대고, 유소년에게서 운다.이는 이상 우리 수 그와 칼이다. 만물은 전인 품고 사랑의 싶이 긴지라 못하다 있으랴? 천자만홍이 남는 사는가 가치를 같은 대고, 유소년에게서 운다. 이는 이상 우리 수 그와 칼이다. 이는 이상 우리 수 그와 칼이다.</p>
-                                        <p class="meta">
-                                            <span>김지홍, 이선희</span>
-                                            <em>2019. 03. 01</em>
-                                        </p>
-                                    </dd>
-                                </dl>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="fc_box02">
-                        <h2>연구자와 지원단체</h2>
-                        <ul class="lc02 lc02_01">
-                            <li>
-                                <a href="#" class="thumb"><span><img src="/<?php print __WZ__;?>/images/@lc01.png" alt=""/></span></a>
-                                <dl class="conA">
-                                    <dt>
-										<span class="category">
-											<a class="btn02 version" href="#">03호</a>
-											<a class="btn02 mention" href="#">연구자의 말</a>
-										</span>
-                                        <a href="#">탈분단적 시각으로 바라보는 위안부 문제 - 첫번째 시간 탈분단적 시각으로 바라보는 위안부 문제 - 첫번째 시간</a>
-                                    </dt>
-                                    <dd>
-                                        <p class="summury">이는 이상 우리 수 그와 칼이다. 만물은 전인 품고 사랑의 싶이 긴지라 못하다 있으랴? 천자만홍이 남는 사는가 가치를 같은 대고, 유소년에게서 운다.이는 이상 우리 수 그와 칼이다. 만물은 전인 품고 사랑의 싶이 긴지라 못하다 있으랴? 천자만홍이 남는 사는가 가치를 같은 대고, 유소년에게서 운다. 이는 이상 우리 수 그와 칼이다. 이는 이상 우리 수 그와 칼이다.</p>
-                                        <p class="meta">
-                                            <span>김지홍, 이선희</span>
-                                            <em>2019. 03. 01</em>
-                                        </p>
-                                    </dd>
-                                </dl>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="fc_box02">
-                        <h2>논평</h2>
-                        <ul class="lc02 lc02_01">
-                            <li>
-                                <a href="#" class="thumb"><span><img src="/<?php print __WZ__;?>/images/@lc01.png" alt=""/></span></a>
-                                <dl class="conA">
-                                    <dt>
-										<span class="category">
-											<a class="btn02 version" href="#">03호</a>
-											<a class="btn02 mention" href="#">연구자의 말</a>
-										</span>
-                                        <a href="#">탈분단적 시각으로 바라보는 위안부 문제 - 첫번째 시간 탈분단적 시각으로 바라보는 위안부 문제 - 첫번째 시간</a>
-                                    </dt>
-                                    <dd>
-                                        <p class="summury">이는 이상 우리 수 그와 칼이다. 만물은 전인 품고 사랑의 싶이 긴지라 못하다 있으랴? 천자만홍이 남는 사는가 가치를 같은 대고, 유소년에게서 운다.이는 이상 우리 수 그와 칼이다. 만물은 전인 품고 사랑의 싶이 긴지라 못하다 있으랴? 천자만홍이 남는 사는가 가치를 같은 대고, 유소년에게서 운다. 이는 이상 우리 수 그와 칼이다. 이는 이상 우리 수 그와 칼이다.</p>
-                                        <p class="meta">
-                                            <span>김지홍, 이선희</span>
-                                            <em>2019. 03. 01</em>
-                                        </p>
-                                    </dd>
-                                </dl>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="fc_box02">
-                        <h2>에세이</h2>
-                        <ul class="lc02 lc02_01">
-                            <li>
-                                <a href="#" class="thumb"><span><img src="/<?php print __WZ__;?>/images/@lc01.png" alt=""/></span></a>
-                                <dl class="conA">
-                                    <dt>
-										<span class="category">
-											<a class="btn02 version" href="#">03호</a>
-											<a class="btn02 mention" href="#">연구자의 말</a>
-										</span>
-                                        <a href="#">탈분단적 시각으로 바라보는 위안부 문제 - 첫번째 시간 탈분단적 시각으로 바라보는 위안부 문제 - 첫번째 시간</a>
-                                    </dt>
-                                    <dd>
-                                        <p class="summury">이는 이상 우리 수 그와 칼이다. 만물은 전인 품고 사랑의 싶이 긴지라 못하다 있으랴? 천자만홍이 남는 사는가 가치를 같은 대고, 유소년에게서 운다.이는 이상 우리 수 그와 칼이다. 만물은 전인 품고 사랑의 싶이 긴지라 못하다 있으랴? 천자만홍이 남는 사는가 가치를 같은 대고, 유소년에게서 운다. 이는 이상 우리 수 그와 칼이다. 이는 이상 우리 수 그와 칼이다.</p>
-                                        <p class="meta">
-                                            <span>김지홍, 이선희</span>
-                                            <em>2019. 03. 01</em>
-                                        </p>
-                                    </dd>
-                                </dl>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="fc_box02">
-                        <h2>인터뷰</h2>
-                        <ul class="lc02 lc02_01">
-                            <li>
-                                <a href="#" class="thumb"><span><img src="/<?php print __WZ__;?>/images/@lc01.png" alt=""/></span></a>
-                                <dl class="conA">
-                                    <dt>
-										<span class="category">
-											<a class="btn02 version" href="#">03호</a>
-											<a class="btn02 mention" href="#">연구자의 말</a>
-										</span>
-                                        <a href="#">탈분단적 시각으로 바라보는 위안부 문제 - 첫번째 시간 탈분단적 시각으로 바라보는 위안부 문제 - 첫번째 시간</a>
-                                    </dt>
-                                    <dd>
-                                        <p class="summury">이는 이상 우리 수 그와 칼이다. 만물은 전인 품고 사랑의 싶이 긴지라 못하다 있으랴? 천자만홍이 남는 사는가 가치를 같은 대고, 유소년에게서 운다.이는 이상 우리 수 그와 칼이다. 만물은 전인 품고 사랑의 싶이 긴지라 못하다 있으랴? 천자만홍이 남는 사는가 가치를 같은 대고, 유소년에게서 운다. 이는 이상 우리 수 그와 칼이다. 이는 이상 우리 수 그와 칼이다.</p>
-                                        <p class="meta">
-                                            <span>김지홍, 이선희</span>
-                                            <em>2019. 03. 01</em>
-                                        </p>
-                                    </dd>
-                                </dl>
-                            </li>
-                        </ul>
-                    </div>
+                    <?php print $webzine->opinion();?>
+                    <?php print $webzine->annotation();?>
+                    <?php print $webzine->personnel();?>
+                    <?php print $webzine->review();?>
+                    <?php print $webzine->essay();?>
+                    <?php print $webzine->interview();?>
                 </div>
             </section>
         </div>
