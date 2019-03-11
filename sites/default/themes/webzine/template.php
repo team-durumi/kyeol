@@ -40,6 +40,15 @@ function webzine_preprocess_page(&$variables)
         $variables['theme_hook_suggestions'][] = 'page__' . $variables['page']['content']['system_main']['term_heading']['term']['#bundle'];
     }
 
+    $variables['main_class'] = 'fc02';
+    if(empty($variables['page']['sidebar_first'])) {
+        $variables['main_class'] = 'fc03';
+        if(strpos(request_uri(), 'vol') !== false) {
+            $variables['title'] = '지난호 보기';
+            $variables['theme_hook_suggestions'][] = 'page__vol';
+        }
+    }
+
     drupal_add_library('system', 'ui.slider');
     drupal_add_js('https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.min.js', array('type' => 'external', 'scope' => 'header', 'group' => JS_LIBRARY ));
     drupal_add_js('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js', array('type' => 'external', 'scope' => 'header', 'group' => JS_THEME ));
