@@ -8,7 +8,7 @@
 
 class Slowalk
 {
-    public $vol, $catLabel, $category, $years, $featureIds, $featureLabel, $baseUrl;
+    public $vol, $catLabel, $category, $years, $featureIds, $featureLabel, $baseUrl, $machine_name;
 
     public function __construct()
     {
@@ -25,6 +25,14 @@ class Slowalk
             5 => '자료해제',
             6 => '연구자와 지원단체',
             7 => '인터뷰'
+        );
+        $this->machine_name = array(
+            2 => 'opinion',
+            3 => 'review',
+            4 => 'essay',
+            5 => 'annotation',
+            6 => 'personnel',
+            7 => 'interview'
         );
         $this->category = array(
             variable_get('wz_main_first_feature', ''),
@@ -132,14 +140,6 @@ class Webzines extends Slowalk
 {
     public function getWebzine($category)
     {
-        $machine_names = array(
-            2 => 'opinion',
-            3 => 'review',
-            4 => 'essay',
-            5 => 'annotation',
-            6 => 'personnel',
-            7 => 'interview'
-        );
         $options['category'] = $this->catLabel[$category];
         $query = new EntityFieldQuery();
         $result = $query->entityCondition('entity_type', 'node')
@@ -158,7 +158,7 @@ class Webzines extends Slowalk
                     '{{ img }}' => $item->field_image ? image_style_url('main_article', $item->field_image['und'][0]['uri']) : file_create_url('public://default_images/noimage_default.png'),
                     '{{ vol_path }}' => '/vol/'.$item->field_vol['und'][0]['tid'],
                     '{{ vol }}' => sprintf('%02d', $this->vol()),
-                    '{{ category_path }}' => '/category/' . $machine_names[$category],
+                    '{{ category_path }}' => '/category/' . $this->machine_names[$category],
                     '{{ category }}' => $this->catLabel[$category],
                     '{{ node_url }}' => '/node/' . $item->nid,
                     '{{ title }}' => $item->title,

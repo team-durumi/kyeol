@@ -60,6 +60,8 @@ function webzine_preprocess_page(&$variables)
                 $variables['writer_info'] = ($writer->field_position) ? strip_tags($writer->field_position['und'][0]['value']) : '';
                 $image = ($variables['node']->field_image) ? image_style_url('article', $variables['node']->field_image['und'][0]['uri']) : '';
                 $variables['image'] = ($image) ? ' style="background-image:url('.$image.')"' : '';
+                $variables['vol_path'] = '/vol/' . $main->vol;
+                $variables['category_path'] = '/category/' . $main->machine_name[$cat_tid];
             }
         }
     }
