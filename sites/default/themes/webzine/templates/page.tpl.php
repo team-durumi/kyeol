@@ -95,7 +95,7 @@
                         <dl>
                             <dt>게시글을 공유해보세요</dt>
                             <dd>
-                                <input type="text" name="share_url" value="https://docs.google.com/present"/>
+                                <input type="text" name="share_url" value="<?php print $url;?>"/>
                                 <button>링크복사</button>
                             </dd>
                         </dl>
