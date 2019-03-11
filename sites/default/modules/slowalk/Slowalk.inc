@@ -343,6 +343,14 @@ class Archive extends Slowalk
         }
         return $html;
     }
+
+    public function getMap()
+    {
+        $term = taxonomy_get_term_by_name($_GET['search'], 'location');
+        $term = array_shift($term);
+        $view = taxonomy_term_view($term);
+        return render($view);
+    }
 }
 
 class Search extends Slowalk
