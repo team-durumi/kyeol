@@ -73,3 +73,25 @@ function slowalk_permission()
         )
     );
 }
+
+/**
+ * @param $tid
+ */
+function back_issues_date($tid)
+{
+    $query = new EntityFieldQuery();
+    $result = $query->entityCondition('entity_type', 'node')
+        ->entityCondition('bundle', 'article')
+        ->propertyCondition('status', 1)
+        ->fieldCondition('field_vol', 'tid', $tid)
+        ->fieldOrderBy('field_category', 'tid', 'ASC')
+        ->propertyOrderBy('created', 'DESC')
+        ->range(0,1)
+        ->execute();
+    if(isset($result['node'])) {
+        $nids = array_keys($result['node']);
+        $nodes = entity_load('node', $nids);
+        $node = array_shift($nodes);
+        return format_date($node->created, 'custom', 'Y.m.d');
+    }
+}

@@ -40,15 +40,17 @@
  *
  * @ingroup themeable
  */
+
+$img = ($term->field_image) ? image_style_url('main_article', $term->field_image['und'][0]['urri']) : file_create_url('public://default_images/noimage_default.png');
 ?>
 
-<a href="<?php print $term_url;?>" class="thumb"><span><img src="<?php print __WZ__;?>/images/@lc01.png" alt=""/></span></a>
+<a href="<?php print $term_url;?>" class="thumb"><span><img src="<?php print $img;?>" alt="<?php print $term->description;?>"/></span></a>
 <dl class="conA">
     <dt>
         <a href="<?php print $term_url;?>"><?php print $term_name;?>호</a>
     </dt>
     <dd>
-        <p>탈분단적 시각으로 바라보는 위안부 문제</p>
-        <em>2019. 03. 01</em>
+        <p><?php print $term->description;?></p>
+        <em><?php print back_issues_date($term->tid);?></em>
     </dd>
 </dl>
