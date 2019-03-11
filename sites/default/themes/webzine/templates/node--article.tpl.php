@@ -82,7 +82,7 @@
 ?>
 
 <?php if($teaser): ?>
-    <a href="<?php print $node_url;?>" class="thumb"><span><img src="<?php print image_style_url('main_article', $content['field_image'][0]['#item']['uri']);?>" alt="<?php print $title;?>"/></span></a>
+    <a href="<?php print $node_url;?>" class="thumb"><span><img src="<?php print image_style_url('article_thumbnail', $content['field_image'][0]['#item']['uri']);?>" alt="<?php print $title;?>"/></span></a>
     <dl class="conA">
         <dt>
             <a href="<?php print $node_url;?>"><?php print $title;?></a>

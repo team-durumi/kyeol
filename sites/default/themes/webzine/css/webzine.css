@@ -228,7 +228,7 @@ section h1.title{font-size:38px;line-height:50px;padding-bottom:24px;font-family
 /*기본 리스트*/
 .lc02 li{overflow:hidden;padding:40px 0;border-bottom:1px solid #ddd}
 .lc02 li .thumb{float:left;height:201px;width:267px;overflow:hidden;margin-right:40px}
-.lc02 li .thumb img{width:100%;min-height:267px;display:block}
+.lc02 li .thumb img{width:100%;min-height:201px;display:block}
 .lc02 li dt{margin-bottom:10px}
 .lc02 li dt > a{font-size:20px;line-height:32px;color:#111;font-weight:600;max-height:64px;display:block;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}
 .lc02 li dd p.summury{max-height:86px;display:block;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;margin-bottom:8px}
