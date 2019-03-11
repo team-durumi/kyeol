@@ -103,26 +103,31 @@
         <!-- //postA -->
         <!-- attachA -->
         <div class="attachA">
-            <dl class="ng04 link">
-                <dt>참고문헌</dt>
-                <dd>
-                    <ul>
-                        <?php foreach($content['field_url']['#items'] as $link): ?>
-                            <li><a href="<?php print $link['url'];?>"><?php print $link['title'];?></a></li>
-                        <?php endforeach;?>
-                    </ul>
-                </dd>
-            </dl>
-            <dl class="ng04 file">
-                <dt>도움이 되는 자료</dt>
-                <dd>
-                    <ul>
-                        <?php foreach($content['field_file']['#items'] as $file): ?>
-                            <li><a class="btn03" href="<?php print file_create_url($file['uri']);?>"><i class="xi-paperclip"></i><?php print $file['filename'];?></a></li>
-                        <?php endforeach;?>
-                    </ul>
-                </dd>
-            </dl>
+            <?php if(render($content['field_url'])): ?>
+                <dl class="ng04 link">
+                    <dt>참고문헌</dt>
+                    <dd>
+                        <ul>
+                            <?php foreach($content['field_url']['#items'] as $link): ?>
+                                <li><a href="<?php print $link['url'];?>"><?php print $link['title'];?></a></li>
+                            <?php endforeach;?>
+                        </ul>
+                    </dd>
+                </dl>
+            <?php endif;?>
+
+            <?php if(render($content['field_file'])): ?>
+                <dl class="ng04 file">
+                    <dt>도움이 되는 자료</dt>
+                    <dd>
+                        <ul>
+                            <?php foreach($content['field_file']['#items'] as $file): ?>
+                                <li><a class="btn03" href="<?php print file_create_url($file['uri']);?>"><i class="xi-paperclip"></i><?php print $file['filename'];?></a></li>
+                            <?php endforeach;?>
+                        </ul>
+                    </dd>
+                </dl>
+            <?php endif;?>
         </div>
         <!-- //attachA -->
         <!-- aside -->
