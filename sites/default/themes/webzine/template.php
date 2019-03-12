@@ -138,7 +138,8 @@ function countWriters()
 function webzine_breadcrumb($variables) {
     $breadcrumb = $variables['breadcrumb'];
     if (!empty($breadcrumb)) {
-
+        $breadcrumb = str_replace('Taxonomy term', '태그', $breadcrumb);
+        $breadcrumb = str_replace('Search', '키워드 검색', $breadcrumb);
         // Provide a navigational heading to give context for breadcrumb links to
         // screen-reader users. Make the heading invisible with .element-invisible.
         $output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
