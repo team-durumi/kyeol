@@ -338,6 +338,7 @@ body.front .ng01 li a i{font-size:2rem;line-height:73px}
 
 .fc04 .writerA .tc02{margin-top:16px;padding-top:16px;border-top:1px solid #ddd}
 .fc04 .writerA .tc02:first-child{margin-top:0;padding-top:0;border-top:none}
+.fc04 .writerA ul li {margin-bottom:.5em;}
 
 /*검색결과 정보 텍스트*/
 .td01{font-size:1.125rem;color:#231815}
