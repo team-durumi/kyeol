@@ -243,3 +243,8 @@ html{font-size:13px}
 
 }
 
+/* Excerpt - View페이지 상단 1108 픽셀 이하일때 예외처리 */
+@media screen and (max-width:1108px) {
+	left:inherit;
+	margin-left:inherit;
+}
