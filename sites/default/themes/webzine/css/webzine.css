@@ -308,7 +308,7 @@ body.front .ng01 li a i{font-size:2rem;line-height:73px}
 .ng03 dl dd button{height:36px;border:none;background-color:#9f865f;color:#fff;font-size:0.875rem;float:left;width:25%;cursor:pointer}
 /*뷰화면 참고문헌, 도움이되는 자료*/
 .ng04{margin-bottom:40px}
-.ng04 li{margin-bottom:.5rem;}
+.ng04.link li{margin-bottom:.5rem;background: #f5f1e9;padding: .5rem 1rem;}
 .ng04 dt{color:#444;font-weight:600;margin-bottom:4px}
 .ng04 dd a{color:#9f865f}
 .ng04 dd a.btn03{min-width:250px;margin-bottom:8px}
