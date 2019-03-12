@@ -154,12 +154,12 @@ $(document).ready(function() {
 		autoplaySpeed:6000,
 		arrows:true,
 		dots:true,
-		asNavFor: 'ng04.slide ul.slider-nav'
+		asNavFor: '.ng04.slide ul.slider-nav'
 	});
 	$('.ng04.slide ul.slider-nav').slick({
-		//slidesToShow: 3,
-		//slidesToScroll: 1,
-		asNavFor: 'ng04.slide ul.slider',
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		asNavFor: '.ng04.slide ul.slider',
 		dots: true,
 		centerMode: true,
 		focusOnSelect: true
