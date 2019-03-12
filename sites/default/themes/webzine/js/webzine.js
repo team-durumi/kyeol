@@ -151,8 +151,8 @@ $(document).ready(function() {
 		speed:500,
 		adaptiveHeight: true,
 		autoplaySpeed:6000,
-		arrows:false,
-		dots:true,
+		arrows:true,
+		dots:false,
 		asNavFor: '.ng04.slide ul.slider-nav'
 	});
 	$('.ng04.slide ul.slider-nav').slick({
