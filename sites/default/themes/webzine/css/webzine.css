@@ -5,8 +5,6 @@ Description: Webzine THEME
 Author: css3studio
 Version:1.0
 */
-@import url(fonts.css);
-@import url('http://cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css');
 @import url(post.css);
 /**** Common ****/
 html{font-family:'Noto Sans KR',sans-serif;font-size:16px;color:#444444;line-height:1.75rem;}
