@@ -152,13 +152,14 @@ $(document).ready(function() {
 		adaptiveHeight: true,
 		autoplaySpeed:6000,
 		arrows:false,
-		dots:false,
+		dots:true,
 		asNavFor: '.ng04.slide ul.slider-nav'
 	});
 	$('.ng04.slide ul.slider-nav').slick({
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		asNavFor: '.ng04.slide ul.slider',
+		arrows:true,
 		dots: true,
 		centerMode: true,
 		focusOnSelect: true
