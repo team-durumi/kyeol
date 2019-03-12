@@ -146,24 +146,6 @@ $(document).ready(function() {
 	}
 
 	//기사페이지 이미지 슬라이드
-	$('.ng04.slide ul.slider').slick({
-		autoplay:true,
-		fade:true,
-		speed:1400,
-		adaptiveHeight: true,
-		autoplaySpeed:6000,
-		arrows:true,
-		dots:true,
-		asNavFor: 'ng04.slide ul.slider-nav'
-	});
-	$('ng04.slide ul.slider-nav').slick({
-		//slidesToShow: 3,
-		//slidesToScroll: 1,
-		asNavFor: 'ng04.slide ul.slider',
-		dots: true,
-		centerMode: true,
-		focusOnSelect: true
-	});
 });
 
 //PC버젼 초기화
