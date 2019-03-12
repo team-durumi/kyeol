@@ -131,7 +131,17 @@ $(document).ready(function() {
         } else {
             location.replace(thisURL);
         }
-    })
+    });
+
+    //검색 페이지 접근시 검색 결과 Ajax
+	if($('body').hasClass('page-search')) {
+		let status = (window.location.pathname === '/search') ? 'keyword' : 'term';
+		let searchParam = new URLSearchParams(window.location.search);
+		let key = searchParam.get('key');
+		$.post('/ajax/webzine', {type:'search', status:status, key:key}).done(function (res) {
+
+		});
+	}
 });
 
 //PC버젼 초기화
