@@ -409,5 +409,5 @@ body.front .ng01 li a i{font-size:2rem;line-height:73px}
 
 /* 기사 - 이미지 슬라이더 */
 .slider-nav .slick-slide{margin:0 1%;}
-.slider-nav .slick-slide.slick-current{border:solid 3px #9f865f;box-sizing:border-box;}
+.slider-nav .slick-slide.slick-current img{border:solid 3px #9f865f;box-sizing:border-box;}
 
