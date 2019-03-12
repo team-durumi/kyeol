@@ -157,12 +157,12 @@ $(document).ready(function() {
 		asNavFor: 'ng04.slide ul.slide-nav'
 	});
 	$('ng04.slide ul.slide-nav').slick({
-	  slidesToShow: 3,
-	  slidesToScroll: 1,
-	  asNavFor: 'ng04.slide ul.slide',
-	  dots: true,
-	  centerMode: true,
-	  focusOnSelect: true
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		asNavFor: 'ng04.slide ul.slide',
+		dots: true,
+		centerMode: true,
+		focusOnSelect: true
 	});
 });
 
