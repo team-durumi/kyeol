@@ -1,0 +1,26 @@
+# Korean translation of Node Reference URL Widget (7.x-1.12)
+# Copyright (c) 2015 by the Korean translation team
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Node Reference URL Widget (7.x-1.12)\n"
+"POT-Creation-Date: 2015-03-08 19:28+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Language-Team: Korean\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+msgid "- None -"
+msgstr "- 없음 -"
+msgid "Fields"
+msgstr "필드"
+msgid "Contains"
+msgstr "포함"
+msgid "Autocomplete matching"
+msgstr "자동 완성 일치 방식"
+msgid "Starts with"
+msgstr "...로 시작"
+msgid "Link title"
+msgstr "링크 제목"
