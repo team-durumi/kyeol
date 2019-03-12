@@ -154,9 +154,9 @@ $(document).ready(function() {
 		autoplaySpeed:6000,
 		arrows:true,
 		dots:true,
-		asNavFor: 'ng04.slide ul.slider-nav'
+		asNavFor: 'ng04.slide ul.slide-nav'
 	});
-	$('ng04.slide ul.slider-nav').slick({
+	$('ng04.slide ul.slide-nav').slick({
 	  slidesToShow: 3,
 	  slidesToScroll: 1,
 	  asNavFor: 'ng04.slide ul.slide',
