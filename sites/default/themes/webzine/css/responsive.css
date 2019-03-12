@@ -248,7 +248,7 @@ body.front .ng01 li a i{font-size:16px;line-height:36px}
 
 /* 기사 제목 영역 */
 @media screen and (max-width: 1108px) {
-.th02 .inner{left:inherit;margin-left:inherit;}
+.th02 .inner{left:inherit;margin-left:15px;}
 }
 
 /* 태블릿 가로 */
