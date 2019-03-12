@@ -27,6 +27,7 @@ function webzine_css_alter(&$css)
 {
     unset($css['modules/system/system.menus.css']);
     unset($css['modules/system/system.theme.css']);
+    dpm($css);
 }
 
 /**
@@ -78,7 +79,7 @@ function webzine_preprocess_page(&$variables)
     drupal_add_css('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css', array('type' => 'external', 'group' => CSS_THEME));
     drupal_add_css('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css', array('type' => 'external', 'group' => CSS_THEME));
     drupal_add_css('https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css', array('type' => 'external', 'group' => CSS_THEME));
-    drupal_add_css(drupal_get_path('module', 'ckeditor') . '/plugins/cavacnote/css/cavacnote.css', array('type' => 'file', 'gorup' => CSS_THEME));
+    drupal_add_css(drupal_get_path('module', 'ckeditor') . '/plugins/cavacnote/css/cavacnote.css', array('type' => 'file', 'group' => CSS_THEME));
 
     //호수 노출
     $variables['vol'] = sprintf('%02d', $main->vol());
