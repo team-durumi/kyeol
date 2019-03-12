@@ -19,7 +19,7 @@
 .cke_editable blockquote, .postA blockquote{font-size:1.25rem;font-style:italic;color:#444;line-height:2rem;font-family:'Iropke Batang',sans-serif;margin-left:0;padding-top:40px;background:url(../images/bg_quotation.png) no-repeat 0 0}
 .cke_editable .box, .postA .box{border:1px solid #ddd;padding:20px 28px}
 .cke_editable .box p:last-child, .postA .box p:last-child{margin-bottom:0}
-.cke_editable .box02, .postA .box02{background:url(../images/bg_pattern_comb.png) no-repeat 0 0;}
+.cke_editable .box02, .postA .box02{background:url(../images/bg_pattern_comb.png) repeat;padding:20px 28px}
 
 .cke_editable ol, .postA ol{margin:0.8rem 0 0.8rem 1rem;list-style-type:decimal}
 .cke_editable ol>li, .postA ol>li{position:relative;padding-left:0.3rem}
