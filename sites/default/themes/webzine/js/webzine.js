@@ -161,7 +161,6 @@ $(document).ready(function() {
 		asNavFor: '.ng04.slide ul.slider',
 		arrows:true,
 		dots: true,
-		centerMode: true,
 		focusOnSelect: true
 	});
 });
