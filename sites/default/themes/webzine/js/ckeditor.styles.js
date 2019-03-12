@@ -23,12 +23,12 @@ if (typeof(CKEDITOR) !== 'undefined') {
             } 
         },
         { name: '단락', element: 'div' },
-        { name: '제목1', element: 'h1' },
+        //{ name: '제목1', element: 'h1' },
         { name: '제목2', element: 'h2' },
         { name: '제목3', element: 'h3' },
         { name: '제목4', element: 'h4' },
         { name: '제목5', element: 'h5' },
-        { name: '제목6', element: 'h6' },
+        //{ name: '제목6', element: 'h6' },
         //             { name : 'Address'			, element : 'address' },
 
         /*
@@ -72,24 +72,25 @@ if (typeof(CKEDITOR) !== 'undefined') {
                     { name : 'Language: LTR'	, element : 'span', attributes : { 'dir' : 'ltr' } },
         */
 
-        /* Object Styles 
+        /* Object Styles */
 
         {
-            name: 'div.box01',
+            name: '테두리 상자',
             element: 'div',
             attributes: {
-                'class': 'box01'
+                'class': 'box'
             }
         },
 
         {
-            name: 'div.box02',
+            name: '배경미색 상자',
             element: 'div',
             attributes: {
                 'class': 'box02'
             }
         },
 
+        /*
         {
             name: 'div.box03',
             element: 'div',
