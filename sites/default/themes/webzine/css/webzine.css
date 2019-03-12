@@ -347,7 +347,7 @@ body.front .ng01 li a i{font-size:2rem;line-height:73px}
 /*서브 뷰 타이틀*/
 .th02{background:url(../images/bg_view_title.png) no-repeat center center;background-size:auto 100%;position:relative;min-height:440px;}
 .th02:before{content:"";display:block;background-color:rgba(0,0,0,0.3);position:absolute;top:0;left:0;bottom:0;right:0}
-.th02 .inner{box-sizing:border-box;position:absolute;bottom:30px;margin:0 auto;}
+.th02 .inner{box-sizing:border-box;position:absolute;bottom:30px;margin-left:-554px;}
 .th02 h1{display:block;font-size:48px;line-height:60px;color:#fff;font-weight:500;font-family:'Iropke Batang',sans-serif;margin-bottom:38px}
 .th02 .category{margin-bottom:10px}
 .th02 .category .btn02{border-color:#fff;color:#fff;margin-right:5px}
@@ -355,7 +355,7 @@ body.front .ng01 li a i{font-size:2rem;line-height:73px}
 .th02 .category .btn02.category{background-color:#fff;color:#444}
 .th02 p{color:#fff}
 .th02 p b{color:#fff;margin-right:3px}
-.th02 .ng03{position:absolute;bottom:-28px;right:0}
+.th02 .ng03{position:absolute;bottom:-58px;right:0}
 
 .tt01{position:relative;cursor:pointer;text-decoration:none;text-align:left}
 .tt01 .text{color:#9f865f;border-bottom:1px solid #444}
