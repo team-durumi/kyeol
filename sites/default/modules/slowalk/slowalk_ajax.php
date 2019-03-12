@@ -83,6 +83,18 @@ function webzine_ajax_callback()
                     $return = array('error' => '이메일 주소가 정확하지 않습니다. 확인해 주세요.');
                 }
                 break;
+            case 'search':
+                if(isset($_POST['status'])) {
+                    $status = $_POST['status'];
+                    $key = $_POST['key'];
+                    if($status === 'keyword') {
+                        $query = "SELECT COUNT(*) AS expression FROM (SELECT 1 AS expression FROM search_api_db_default_node_index_text t WHERE (word IN ('$key')) AND (field_name IN ('body:summary', 'body:value', 'title')) GROUP BY t.item_id) subquery";
+                    } else {
+                        $query = "SELECT COUNT(*) AS expression FROM (SELECT 1 AS expression FROM search_api_db_default_node_index_text t WHERE (word IN ('$key')) AND (field_name IN ('field_area:name', 'field_category:name', 'field_person:description', 'field_person:field_lifetime', 'field_person:name', 'field_tags:name', 'field_vol:name', 'field_writer:description', 'field_writer:field_contact', 'field_writer:field_position', 'field_writer:name', 'field_years:name')) GROUP BY t.item_id) subquery";
+                    }
+                    $return = db_query($query)->fetchField();
+                }
+                break;
         }
         drupal_json_output($return);
     } else {
