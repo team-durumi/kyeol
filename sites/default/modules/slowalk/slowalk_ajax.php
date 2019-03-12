@@ -63,7 +63,7 @@ function webzine_ajax_callback()
                     foreach($nodes as $node) {
                         $tid = $node->field_category['und'][0]['tid'];
                         $nid = $node->nid;
-                        $img_uri = ($node->field_image['und'][0]['uri']) ? image_style_url('main_article', $node->field_image['und'][0]['uri']) : file_create_url('public://default_images/noimage_default.png');
+                        $img_uri = ($node->field_image) ? image_style_url('main_article', $node->field_image['und'][0]['uri']) : file_create_url('public://default_images/noimage_default.png');
                         $return[] = array(
                             'nid' => $nid,
                             'url' => '/node/'.$nid,
