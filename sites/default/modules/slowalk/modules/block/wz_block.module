@@ -202,6 +202,8 @@ function wz_main_articles_block_view()
 
 function wz_main_newsletter_block_view()
 {
+    global $base_url;
+
     $block = array(
         '#prefix' => '<div class="inner">',
         '#suffix' => '</div>',
@@ -233,8 +235,11 @@ function wz_main_newsletter_block_view()
             ),
             '#attributes' => array(
                 'id' => 'newsletter-form',
-                'class' => array('cf02'),
-                'target' => '_blank'
+                'class' => array('cf02')
+            ),
+            '#attached' => array(
+                'library' => array(array('system', 'jquery.form')),
+                'js' => array(__WZ_BLOCK__ . '/newsletter.js' => array('type' => 'file', 'scope' => 'footer', 'group' => JS_THEME))
             )
         )
     );
