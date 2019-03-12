@@ -27,7 +27,6 @@ function webzine_css_alter(&$css)
 {
     unset($css['modules/system/system.menus.css']);
     unset($css['modules/system/system.theme.css']);
-    dpm($css);
 }
 
 /**
