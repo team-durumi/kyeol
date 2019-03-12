@@ -72,24 +72,25 @@ if (typeof(CKEDITOR) !== 'undefined') {
                     { name : 'Language: LTR'	, element : 'span', attributes : { 'dir' : 'ltr' } },
         */
 
-        /* Object Styles 
+        /* Object Styles */
 
         {
-            name: 'div.box01',
+            name: '테두리 상자',
             element: 'div',
             attributes: {
-                'class': 'box01'
+                'class': 'box'
             }
         },
 
         {
-            name: 'div.box02',
+            name: '배경미색 상자',
             element: 'div',
             attributes: {
                 'class': 'box02'
             }
         },
 
+        /*
         {
             name: 'div.box03',
             element: 'div',
