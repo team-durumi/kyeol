@@ -246,6 +246,11 @@ body.front .ng01 li a i{font-size:16px;line-height:36px}
 .fc04 .cBody aside{position:relative;top:inherit;right:inherit;width:inherit;}
 }
 
+/* 기사 제목 영역 */
+@media screen and (max-width: 1108px) {
+.th02 .inner{left:inherit;margin-left:inherit;}
+}
+
 /* 태블릿 가로 */
 @media all and (min-width: 768px) and (max-width: 1170px) {
 html{font-size:13px}
