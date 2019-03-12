@@ -139,7 +139,8 @@ $(document).ready(function() {
 		let searchParam = new URLSearchParams(window.location.search);
 		let key = searchParam.get('key');
 		$.post('/ajax/webzine', {type:'search', status:status, key:key}).done(function (res) {
-
+			$("div.menu-name-menu-search ul.menu li a:eq(0)").append(' ('+res.keyword+')');
+			$("div.menu-name-menu-search ul.menu li a:eq(1)").append(' ('+res.term+')');
 		});
 	}
 });
