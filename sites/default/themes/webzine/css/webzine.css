@@ -49,9 +49,13 @@ body.front header .ng01{float:right;margin-top:19px}
 body.front header{position:absolute;top:0;left:0;width:100%;z-index:10;border-bottom:none}
 body.front header .inner{height:150px;overflow:hidden}
 
-header nav{position:fixed;right:-548px;top:0;background-color:#9f865f;width:548px;height:100%;box-sizing:border-box;padding:160px 80px 0;z-index:60;transition:right 0.5s ease-in-out;overflow-y:auto;-ms-overflow-style:none;}
+header nav{position:fixed;right:-548px;top:0;background-color:#9f865f;width:548px;height:100%;box-sizing:border-box;padding:160px 80px 80px 80px;z-index:60;transition:right 0.5s ease-in-out;overflow-y:auto;-ms-overflow-style:none;overflow-y:scroll;
+	-ms-overflow-style: none;
+	&::-webkit-scrollbar{ display: none !important; // 윈도우 크롬 등}
+}
 header nav .btn_icon01{position:absolute;right:45px;top:40px}
 header nav h2{display: none}
+header nav #secondary-menu{margin-bottom:80px}
 header.menuOpened nav{right:0}
 header.menuOpened:after, header.searchOpened:after{content:"";display:block;position:fixed;top:0;left:0;bottom:0;right:0;background-color:rgba(0,0,0,0.6);z-index:5}
 
