@@ -117,7 +117,7 @@ footer .infoA li strong{margin-right:3px}
 .lc01 li .thumb{height:123px}
 .lc01 li .thumb span{height:123px}
 .lc01 li .thumb img{min-height:123px}
-.lc01 li:first-child .thumb:after{content:none}
+.lc01 li:hover .thumb:after{content:none}
 .lc01 li dl{height:115px;padding:16px 15px 0}
 .lc01 li dt{margin-bottom:0}
 .lc01 li dt i{margin:0 0 4px;font-size:13px;line-height:19px}
@@ -224,11 +224,11 @@ body.front .ng01 li a i{font-size:16px;line-height:36px}
 .th01 dd a i{font-size:1rem;line-height:25px}
 .th01 dd a:active{background:#9f865f}
 /*서브 뷰 타이틀*/
-.th02{background-image:url(../images/bg_view_title_m.png);background-size:100% auto}
-.th02 .inner{width:auto;height:420px;padding-top:220px}
+.th02{background-image:url(../images/bg_view_title_m.png);background-size:100% auto;display:table}
+.th02 .inner{position:relative;left:0;bottom:0;margin:0;padding:0 15px;width:auto;height:420px;display:table-cell;vertical-align:bottom;padding-bottom:20px}
 .th02 h1{display:block;font-size:29px;line-height:35px;margin-bottom:20px}
 .th02 .category{margin-bottom:5px}
-.th02 .ng03{position:absolute;bottom:-20px;right:0}
+.th02 .ng03{position:absolute;bottom:-20px;right:15px}
 
 }
 
