@@ -22,6 +22,20 @@ if (typeof(CKEDITOR) !== 'undefined') {
             'class' : 'big-text'
             } 
         },
+        { 
+            name: '사진 설명', 
+            element: 'p', 
+            attributes: {
+            'class' : 'origin'
+            } 
+        },
+        { 
+            name: '본문(인용)', 
+            element: 'p', 
+            attributes: {
+            'class' : 'indent'
+            } 
+        },
         { name: '단락', element: 'div' },
         //{ name: '제목1', element: 'h1' },
         { name: '제목2', element: 'h2' },
