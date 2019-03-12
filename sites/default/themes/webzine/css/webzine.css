@@ -25,7 +25,7 @@ input[type=text].error,
 input[type=password].error,
 input[type=email].error{border-color:#ff0000;color:#515358}
 textarea.error{border-color:#e31919;color:#e31919}
-
+.feed-icon{display:none;}
 /**** Layout ****/
 
 body{position:relative;overflow-x:hidden}
@@ -177,7 +177,7 @@ section h1.title{font-size:38px;line-height:50px;padding-bottom:24px;font-family
 .btn02:hover{background-color:#4a4a4a;color:#fff;text-decoration:none}
 .btn02.mention{border:1px solid #9f865f;color:#9f865f}
 .btn02.mention:hover{background-color:#9f865f;color:#fff}
-.btn03{display:inline-block;height:40px;line-height:40px;border:1px solid #ddd;padding:0 16px;border-radius:20px;box-sizing:border-box;background-color:#fff}
+.btn03{display:inline-block;height:40px;line-height:40px;border:1px solid #ddd;padding:0 16px;border-radius:20px;box-sizing:border-box;background-color:#fff;margin:0 0 7px 5px;}
 .btn03:hover{border-color:#a18963;color:#a18963;text-decoration:none}
 .btn_icon01 i{font-size:38px;font-weight:bold;color:#fff}
 /*헤더 검색창*/
@@ -308,6 +308,7 @@ body.front .ng01 li a i{font-size:2rem;line-height:73px}
 .ng03 dl dd button{height:36px;border:none;background-color:#9f865f;color:#fff;font-size:0.875rem;float:left;width:25%;cursor:pointer}
 /*뷰화면 참고문헌, 도움이되는 자료*/
 .ng04{margin-bottom:40px}
+.ng04 li{margin-bottom:.5rem;}
 .ng04 dt{color:#444;font-weight:600;margin-bottom:4px}
 .ng04 dd a{color:#9f865f}
 .ng04 dd a.btn03{min-width:250px;margin-bottom:8px}
@@ -319,7 +320,6 @@ body.front .ng01 li a i{font-size:2rem;line-height:73px}
 /*뷰화면 태그리스트*/
 .ng06{overflow:hidden}
 .ng06 dt{float:left;height:40px;line-height:40px;margin-right:20px;color:#111}
-.ng06 dd .btn03{margin-right:5px}
 /*메인 첫번째 헤드라인 리스트*/
 .tc01{overflow:hidden}
 .tc01 .thumb{float:left;width:189px;height:142px;overflow:hidden;margin-right:24px}

@@ -58,8 +58,9 @@ $(document).ready(function() {
 	});
 	$('.ib01 .slide').slick({
 		autoplay:true,
-		speed:1000,
-		autoplaySpeed:8000,
+		fade:true,
+		speed:1400,
+		autoplaySpeed:6000,
 		arrows:false,
 		dots:true
 	});
