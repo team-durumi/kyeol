@@ -9,6 +9,7 @@ CKEDITOR.plugins.add('cavacnote', {
             command: 'cavacnote',
             toolbar: 'insert'
         });
+        editor.addContentsCss(this.path + 'css/cavacnote.css');
         CKEDITOR.dialog.add( 'cavacNoteDialog', this.path + 'dialogs/cavacnote.js' );
         
         // Context menu for editing existing notes
