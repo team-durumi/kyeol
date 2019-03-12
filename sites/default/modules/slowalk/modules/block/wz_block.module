@@ -105,12 +105,15 @@ function wz_main_slide_block_view()
     foreach($slide as $item) {
         $file = file_load($item['fid']);
         $img = image_style_url('main_slide', $file->uri);
+        $target = ($item['blank']) ? ' target="_blank"' : '';
         $html .= '<li class="type01">
-                    <img src="'.$img.'" alt="'.$item['title'].'"/>
-                    <dl>
-                        <dt>'.$item['title'].'</dt>
-                        <dd>'.nl2br($item['body']).'</dd>
-                    </dl>
+                    <a href="'.$item['link'].'"'.$target.'>
+                        <img src="'.$img.'" alt="'.$item['title'].'"/>
+                        <dl>
+                            <dt>'.$item['title'].'</dt>
+                            <dd>'.nl2br($item['body']).'</dd>
+                        </dl>
+                    </a>
                 </li>';
     }
     $html .='</ul>';
