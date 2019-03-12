@@ -120,6 +120,18 @@ $(document).ready(function() {
 
 	//cavac note
 	$("span.cavacnote").cavacnote();
+
+	//검색 사이드바 클릭시 검색어와 함께 redirect
+    $("div.menu-name-menu-search ul.menu li a").click(function (e) {
+        e.preventDefault();
+        let thisURL = $(this).attr('href');
+        let searchParam = new URLSearchParams(window.location.search);
+        if(searchParam.has('key')) {
+            location.replace(thisURL+'?key='+searchParam.get('key'));
+        } else {
+            location.replace(thisURL);
+        }
+    })
 });
 
 //PC버젼 초기화
