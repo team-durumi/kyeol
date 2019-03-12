@@ -43,6 +43,8 @@ function webzine_preprocess_page(&$variables)
         if(strpos(request_uri(), 'vol') !== false) {
             $variables['title'] = '지난호 보기';
             $variables['theme_hook_suggestions'][] = 'page__vol';
+        } elseif (arg(0) === 'taxonomy') {
+            drupal_add_css('#page-title:before{content:"#"}', 'inline');
         }
         if(isset($variables['node'])) {
             if($variables['node']->type === 'article') {
