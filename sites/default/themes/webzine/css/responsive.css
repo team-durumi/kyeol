@@ -237,16 +237,6 @@ body.front .ng01 li a i{font-size:16px;line-height:36px}
 .con01 > dl > dt{width:auto;float:none;font-size:26px;line-height:36px;margin-bottom:35px}
 .con01 > dl > dd{width:auto;float:none}
 
-
-}
-
-/* 뷰페이지 사이드영역 크기별 대응 */
-@media screen and (max-width: 1440px) {
-position:relative;
-top:inherit;
-right:inherit;
-width:inherit;
-margin-bottom:4rem;
 }
 
 /* 태블릿 가로 */
