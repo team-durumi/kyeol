@@ -3,6 +3,7 @@
 
 .cke_editable img, .postA img{width:100%;max-width:100%;height:auto;}
 .cke_editable p, .postA p{font-size:1rem;line-height:2rem;margin-bottom:2rem;word-break:keep-all;}
+.cke_editable p.big-text, .postA p.big-text{font-size:1.125rem;}
 .cke_editable p.origin, .postA p.origin{font-size:0.875rem;color:#888;line-height:1.5rem}
 .cke_editable p.indent, .postA p.indent{font-style:italic;color:#444;border-left:3px solid #ddd;padding-left:20px;font-weight:200}
 .cke_editable b, .postA b{color:#333;font-weight:500}
