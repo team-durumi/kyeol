@@ -23,14 +23,14 @@ if (typeof(CKEDITOR) !== 'undefined') {
             } 
         },
         { 
-            name: '사진 설명', 
+            name: '캡션', 
             element: 'p', 
             attributes: {
             'class' : 'origin'
             } 
         },
         { 
-            name: '본문(인용)', 
+            name: '인용', 
             element: 'p', 
             attributes: {
             'class' : 'indent'
