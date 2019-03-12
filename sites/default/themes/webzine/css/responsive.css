@@ -241,7 +241,7 @@ body.front .ng01 li a i{font-size:16px;line-height:36px}
 
 /* 뷰페이지 사이드영역 크기별 대응 */
 @media screen and (max-width: 1440px) {
-.fc04 .cBody aside{position:relative;top:inherit;right:inherit;width:inherit;margin-bottom:4rem;}
+.fc04 .cBody aside{position:relative;top:inherit;right:inherit;width:inherit;}
 }
 
 /* 태블릿 가로 */
