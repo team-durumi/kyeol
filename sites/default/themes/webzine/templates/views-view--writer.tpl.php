@@ -28,7 +28,7 @@
  */
 ?>
 <div class="fc_box01">
-    <p class="td01">총 <em>164명</em>의 필자가 참여했습니다.</p>
+    <p class="td01">총 <em><?php print countWriters();?>명</em>의 필자가 참여했습니다.</p>
 </div>
 
 <div class="<?php print $classes; ?>">

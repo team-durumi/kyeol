@@ -37,17 +37,14 @@ function webzine_preprocess_page(&$variables)
 {
     $main = new Slowalk();
 
-    //호수 템플릿 설정
-    if(isset($variables['page']['content']['system_main']['term_heading']['term']['#bundle'])) {
-        $variables['theme_hook_suggestions'][] = 'page__' . $variables['page']['content']['system_main']['term_heading']['term']['#bundle'];
-    }
-
     $variables['main_class'] = 'fc02';
     if(empty($variables['page']['sidebar_first'])) {
         $variables['main_class'] = 'fc03';
         if(strpos(request_uri(), 'vol') !== false) {
             $variables['title'] = '지난호 보기';
             $variables['theme_hook_suggestions'][] = 'page__vol';
+        } elseif (arg(0) === 'taxonomy') {
+            drupal_add_css('#page-title:before{content:"#"}', 'inline');
         }
         if(isset($variables['node'])) {
             if($variables['node']->type === 'article') {
@@ -68,13 +65,15 @@ function webzine_preprocess_page(&$variables)
         }
     }
 
-    drupal_add_library('system', 'ui.slider');
+    drupal_add_js('https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js', array('type' => 'external', 'scope' => 'header', 'group' => JS_LIBRARY));
     drupal_add_js('https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.min.js', array('type' => 'external', 'scope' => 'header', 'group' => JS_LIBRARY ));
     drupal_add_js('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js', array('type' => 'external', 'scope' => 'header', 'group' => JS_THEME ));
+    drupal_add_js(drupal_get_path('module', 'ckeditor') . '/plugins/cavacnote/jquery/jquery.cavacnote.js', array('type' => 'file', 'scope' => 'header', 'group' => JS_LIBRARY));
     drupal_add_css('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css', array('type' => 'external', 'group' => CSS_THEME));
     drupal_add_css('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css', array('type' => 'external', 'group' => CSS_THEME));
-
     drupal_add_css('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css', array('type' => 'external', 'group' => CSS_THEME));
+    drupal_add_css('https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css', array('type' => 'external', 'group' => CSS_THEME));
+    drupal_add_css(drupal_get_path('module', 'ckeditor') . '/plugins/cavacnote/css/cavacnote.css', array('type' => 'file', 'group' => CSS_THEME));
 
     //호수 노출
     $variables['vol'] = sprintf('%02d', $main->vol());
@@ -115,8 +114,35 @@ function get_term_link($term, $options = array())
             if(isset($options['suffix'])) {
                 $name .= $options['suffix'];
             }
-            $html[] = '<a class="'.$classes.'" href="'.drupal_get_path_alias('/taxonomy/term/'.$item['tid']).'">'.$name.'</a>';
+            $html[] = '<a class="'.$classes.'" href="/'.drupal_get_path_alias('taxonomy/term/'.$item['tid']).'">'.$name.'</a>';
         }
         return implode('', $html);
+    }
+}
+
+/**
+ * @return mixed
+ */
+function countWriters()
+{
+    $cnt = db_query("select distinct(field_writer_tid) from field_data_field_writer")->rowCount();
+    return $cnt;
+}
+
+/**
+ * hook_breadcrumb()
+ * @param $variables
+ * @return string
+ */
+function webzine_breadcrumb($variables) {
+    $breadcrumb = $variables['breadcrumb'];
+    if (!empty($breadcrumb)) {
+        $breadcrumb = str_replace('Taxonomy term', '태그', $breadcrumb);
+        $breadcrumb = str_replace('Search', '키워드 검색', $breadcrumb);
+        // Provide a navigational heading to give context for breadcrumb links to
+        // screen-reader users. Make the heading invisible with .element-invisible.
+        $output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
+        $output .= '<div class="breadcrumb">' . implode(' ', $breadcrumb) . '</div>';
+        return $output;
     }
 }

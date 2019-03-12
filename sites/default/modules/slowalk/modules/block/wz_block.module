@@ -131,11 +131,12 @@ function wz_main_features_block_view()
     $features = $main->features();
     $html = '<div class="inner">';
     foreach($features as $i => $item) {
+        $url = drupal_get_path_alias('taxonomy/term/' . $main->category[$i], 'ko');
         $class = ($i === 0) ? 'leftA' : 'rightA';
         $html .= '<div class="'.$class.'">
                     <dl class="th01">
                         <dt>'.$main->featureLabel[$i].'</dt>
-                        <dd><a href="#" class="btn_icon02" title="더보기"><i class="xi-plus"></i></a></dd>
+                        <dd><a href="/'.$url.'" class="btn_icon02" title="더보기"><i class="xi-plus"></i></a></dd>
                     </dl>
                     <div class="tc01">
                         <a href="/node/'.$item['nid'].'" class="thumb"><img src="'.$item['img'].'" alt=""/></a>

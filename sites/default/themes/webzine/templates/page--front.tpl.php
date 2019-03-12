@@ -12,6 +12,7 @@
     <!-- 메인 컨텐츠 영역 -->
     <div class="fc01" id="main-content">
         <?php print render($page['content']); ?>
+        <?php print $messages;?>
     </div>
     <!-- //메인 컨텐츠 영역 -->
     <footer>

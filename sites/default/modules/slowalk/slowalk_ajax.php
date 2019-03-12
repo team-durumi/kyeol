@@ -35,12 +35,13 @@ function webzine_ajax_callback()
                 if($result['node']) {
                     $nid = key($result['node']);
                     $node = node_load($nid);
+                    $body = field_view_field('node', $node, 'body', 'teaser');
                     $return = array(
                         'nid' => $nid,
                         'url' => '/node/'.$nid,
                         'title' => $node->title,
                         'img' => ($node->field_image) ? image_style_url('main_feature', $node->field_image['und'][0]['uri']) : file_create_url('public://default_images/noimage_default.png'),
-                        'body' => text_summary($node->body['und'][0]['value'], 'plain_text', 100)
+                        'body' => strip_tags(render($body))
                     );
                 }
                 break;
@@ -64,13 +65,14 @@ function webzine_ajax_callback()
                         $tid = $node->field_category['und'][0]['tid'];
                         $nid = $node->nid;
                         $img_uri = ($node->field_image) ? image_style_url('main_article', $node->field_image['und'][0]['uri']) : file_create_url('public://default_images/noimage_default.png');
+                        $body = field_view_field('node', $node, 'body', 'teaser');
                         $return[] = array(
                             'nid' => $nid,
                             'url' => '/node/'.$nid,
                             'title' => $node->title,
                             'category' => $catLabel[$tid],
                             'img' => $img_uri,
-                            'body' => text_summary($node->body['und'][0]['value'], 'plain_text', 100)
+                            'body' => strip_tags(render($body))
                         );
                     }
                 }

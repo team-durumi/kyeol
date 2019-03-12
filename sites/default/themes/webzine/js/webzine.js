@@ -118,6 +118,8 @@ $(document).ready(function() {
 
 	form_validation();
 
+	//cavac note
+	$("span.cavacnote").cavacnote();
 });
 
 //PC버젼 초기화
