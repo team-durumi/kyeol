@@ -107,14 +107,14 @@
                 <dl class="ng04 slide">
                     <dt>이미지</dt>
                     <dd>
-                        <ul class="slide">
+                        <ul class="slider">
                             <?php foreach($content['field_slide']['#items'] as $slide): ?>
                                 <li><img src="<?php print image_style_url('slide', $slide['uri']);?>" alt="<?php print $slide['alt'];?>"></li>
                             <?php endforeach;?>
                         </ul>
                     </dd>
                     <dd>
-                        <ul class="slide-nav">
+                        <ul class="slider-nav">
                             <?php foreach($content['field_slide']['#items'] as $slide): ?>
                                 <li><img src="<?php print image_style_url('slide', $slide['uri']);?>" alt="<?php print $slide['alt'];?>"></li>
                             <?php endforeach;?>
