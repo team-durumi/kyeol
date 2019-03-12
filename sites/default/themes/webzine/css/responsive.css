@@ -243,7 +243,8 @@ body.front .ng01 li a i{font-size:16px;line-height:36px}
 
 /* 모바일 대응 전용 */
 @media screen and (max-width: 425px) {
-footer .infoA li{float:none;border-right:none;}
+footer .infoA li{float:none;border-right:none;width:100%;}
+footer .infoA li.l1, footer .infoA li.l3{border-right:none;}
 }
 
 /* 뷰페이지 사이드영역 크기별 대응 */
