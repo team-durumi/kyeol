@@ -5,7 +5,7 @@
 .tabs.primary li a:hover{background-color:#9f865f;color:white}
 
 /*지난호 보기*/
-.lc01 li.views-row-3, .lc01 li.views-row-6, .lc01 li.views-row-9, .lc01 li.views-row-12{margin-right:0}
+.lc01 li.views-row:nth-child(3n){margin-right:0}
 
 /*페이징*/
 .pager-ellipsis{display: inline-block}

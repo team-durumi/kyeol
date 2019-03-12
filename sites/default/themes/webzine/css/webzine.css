@@ -211,7 +211,7 @@ section h1.title{font-size:38px;line-height:50px;padding-bottom:24px;font-family
 /*메인 두번째 헤드라인 리스트*/
 .lc01{overflow:hidden}
 .lc01 li{float:left;width:31.4%;margin-right:2.9%;margin-bottom:2.9%;background-color:#fff}
-.lc01 li.l3, .lc01 li.l6, .lc01 li.l9, .lc01 li.l12{margin-right:0}
+.lc01 li:nth-child(3n){margin-right:0}
 .lc01 li .thumb{display:block;height:261px;width:100%;position:relative}
 .lc01 li .thumb span{display:block;height:261px;width:100%;overflow:hidden}
 .lc01 li .thumb img{width:100%;min-height:142px;display:block}
