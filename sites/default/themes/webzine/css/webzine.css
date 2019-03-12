@@ -5,8 +5,6 @@ Description: Webzine THEME
 Author: css3studio
 Version:1.0
 */
-@import url(fonts.css);
-@import url('http://cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css');
 @import url(post.css);
 /**** Common ****/
 html{font-family:'Noto Sans KR',sans-serif;font-size:16px;color:#444444;line-height:1.75rem;}
@@ -199,7 +197,7 @@ section h1.title{font-size:38px;line-height:50px;padding-bottom:24px;font-family
 .ib01{position:relative}
 .ib01 li{position:relative;background-position:center top;background-repeat:no-repeat;background-color:#ddd}
 .ib01 li img{visibility:hidden}
-.ib01 li dl{position:absolute;top:230px;left:50%;margin-left:16px}
+.ib01 li dl{position:absolute;top:230px;left:50%;margin-left:16px;max-width:500px;word-break:keep-all;}
 .ib01 li dl dt{font-size:50px;line-height:62px;color:#fff;margin-bottom:1rem;font-family:'Iropke Batang','IropkeBatang',sans-serif}
 .ib01 li dl dd{font-size:18px;line-height:30px;color:#fff;font-weight:300}
 .ib01 .slick-dots{width:auto;top:50%;left:50%;margin-top:-40px;margin-left:554px}
