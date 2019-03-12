@@ -23,12 +23,12 @@ if (typeof(CKEDITOR) !== 'undefined') {
             } 
         },
         { name: '단락', element: 'div' },
-        { name: '제목1', element: 'h1' },
+        //{ name: '제목1', element: 'h1' },
         { name: '제목2', element: 'h2' },
         { name: '제목3', element: 'h3' },
         { name: '제목4', element: 'h4' },
         { name: '제목5', element: 'h5' },
-        { name: '제목6', element: 'h6' },
+        //{ name: '제목6', element: 'h6' },
         //             { name : 'Address'			, element : 'address' },
 
         /*
