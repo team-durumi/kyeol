@@ -113,9 +113,6 @@
                             <?php endforeach;?>
                         </ul>
                     </dd>
-                </dl>
-                <dl class="ng04 slide">
-                    <dt>이미지</dt>
                     <dd>
                         <ul class="slide-nav">
                             <?php foreach($content['field_slide']['#items'] as $slide): ?>
