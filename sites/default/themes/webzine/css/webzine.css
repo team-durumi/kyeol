@@ -355,7 +355,7 @@ body.front .ng01 li a i{font-size:2rem;line-height:73px}
 .th02{background:url(../images/bg_view_title.png) no-repeat center center;background-size:auto 100%;position:relative;min-height:440px;}
 .th02:before{content:"";display:block;background-color:rgba(0,0,0,0.3);position:absolute;top:0;left:0;bottom:0;right:0}
 .th02 .inner{box-sizing:border-box;position:absolute;bottom:30px;left:50%;margin-left:-554px;}
-.th02 h1{display:block;font-size:48px;line-height:60px;color:#fff;font-weight:500;font-family:'Iropke Batang',sans-serif;margin-bottom:38px}
+.th02 h1{display:block;font-size:48px;line-height:60px;color:#fff;font-weight:500;font-family:'Iropke Batang',sans-serif;margin-bottom:38px;word-break:keep-all;}
 .th02 .category{margin-bottom:10px}
 .th02 .category .btn02{border-color:#fff;color:#fff;margin-right:5px}
 .th02 .category .btn02:hover{background-color:#fff;color:#444}
