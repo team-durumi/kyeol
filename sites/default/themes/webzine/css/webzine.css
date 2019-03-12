@@ -190,7 +190,7 @@ section h1.title{font-size:38px;line-height:50px;padding-bottom:24px;font-family
 /*뉴스레터 신청*/
 .cf02{position:relative}
 .cf02 label{display:block;width:0;height:0;text-indent:-9999px;overflow:hidden}
-.cf02 input{float:left;width:70%;background-color:#fff;border:none;height:66px;color:#888;text-indent:1rem}
+.cf02 input{float:left;width:70%;background-color:#fff;border:none;height:66px;color:#888;}
 .cf02 button, .cf02 input.btn{float:left;width:30%;text-align:center;background-color:#2d1900;border:none;height:66px;color:#fff;font-size:1rem;cursor:pointer}
 .cf02 label.error{display:block;width:auto;height:auto;text-indent:0;position:absolute;left:0;bottom:-30px}
 /*메인 슬라이더 배너*/
