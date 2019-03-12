@@ -116,7 +116,7 @@
                     <dd>
                         <ul class="slider-nav">
                             <?php foreach($content['field_slide']['#items'] as $slide): ?>
-                                <li><img src="<?php print image_style_url('slide', $slide['uri']);?>" alt="<?php print $slide['alt'];?>"></li>
+                                <li><img src="<?php print image_style_url('slide_dot', $slide['uri']);?>" alt="<?php print $slide['alt'];?>"></li>
                             <?php endforeach;?>
                         </ul>
                     </dd>
