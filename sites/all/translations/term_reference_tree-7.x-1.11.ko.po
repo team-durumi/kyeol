@@ -1,0 +1,22 @@
+# Korean translation of Taxonomy Term Reference Tree Widget (7.x-1.11)
+# Copyright (c) 2018 by the Korean translation team
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Taxonomy Term Reference Tree Widget (7.x-1.11)\n"
+"POT-Creation-Date: 2018-01-31 18:44+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Language-Team: Korean\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+msgid "Yes"
+msgstr "예"
+msgid "No"
+msgstr "아니오"
+msgid "Fields"
+msgstr "필드"
+msgid "!name field is required."
+msgstr "!name 필드는 반드시 입력해야 합니다."
