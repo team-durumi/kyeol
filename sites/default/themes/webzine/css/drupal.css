@@ -16,3 +16,6 @@
 
 /*message*/
 div.messages{margin-top: 35px}
+
+/*뷰페이지 슬라이드 이미지*/
+dl.ng04.slide ul.slide li img{border-radius: 15px}
