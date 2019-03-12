@@ -118,6 +118,8 @@ footer .infoA li strong{margin-right:3px}
 .lc01 li .thumb span{height:123px}
 .lc01 li .thumb img{min-height:123px}
 .lc01 li:hover .thumb:after{content:none}
+.lc01 li.views-row:nth-child(2n){margin-right:0;}
+.lc01 li.views-row:nth-child(3n){margin-right:4%;}
 .lc01 li dl{height:115px;padding:16px 15px 0}
 .lc01 li dt{margin-bottom:0}
 .lc01 li dt i{margin:0 0 4px;font-size:13px;line-height:19px}
