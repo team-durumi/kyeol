@@ -144,6 +144,16 @@ $(document).ready(function() {
 			$("div.menu-name-menu-search ul.menu li a:eq(1)").append(' ('+res.term+')');
 		});
 	}
+
+	//기사페이지 이미지 슬라이드
+	$('.ng04.slide ul.slide').slick({
+		autoplay:true,
+		fade:true,
+		speed:1400,
+		autoplaySpeed:6000,
+		arrows:false,
+		dots:true
+	});
 });
 
 //PC버젼 초기화

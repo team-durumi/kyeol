@@ -103,6 +103,18 @@
         <!-- //postA -->
         <!-- attachA -->
         <div class="attachA">
+            <?php if(render($content['field_slide'])):?>
+                <dl class="ng04 slide">
+                    <dt>이미지</dt>
+                    <dd>
+                        <ul class="slide">
+                            <?php foreach($content['field_slide']['#items'] as $slide): ?>
+                                <li><img src="<?php print image_style_url('slide', $slide['uri']);?>" alt="<?php print $slide['alt'];?>"></li>
+                            <?php endforeach;?>
+                        </ul>
+                    </dd>
+                </dl>
+            <?php endif;?>
             <?php if(render($content['field_url'])): ?>
                 <dl class="ng04 link">
                     <dt>참고문헌</dt>
