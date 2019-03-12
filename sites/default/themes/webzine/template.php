@@ -114,7 +114,7 @@ function get_term_link($term, $options = array())
             if(isset($options['suffix'])) {
                 $name .= $options['suffix'];
             }
-            $html[] = '<a class="'.$classes.'" href="'.drupal_get_path_alias('/taxonomy/term/'.$item['tid']).'">'.$name.'</a>';
+            $html[] = '<a class="'.$classes.'" href="/'.drupal_get_path_alias('taxonomy/term/'.$item['tid']).'">'.$name.'</a>';
         }
         return implode('', $html);
     }
