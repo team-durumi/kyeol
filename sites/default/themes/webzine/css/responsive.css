@@ -231,7 +231,7 @@ body.front .ng01 li a i{font-size:16px;line-height:36px}
 .th02 .ng03{position:absolute;bottom:-20px;right:15px}
 /*소개 페이지*/
 .con01{margin-top:20px}
-.con01 .banner{margin-bottom:30px;height:240px;background-size:auto 100%;background-position:center center}
+.con01 .banner{margin-bottom:30px;height:200px;background-size:cover;background-position:74% center}
 .con01 .banner img{display:none}
 .con01 > dl{padding-bottom:40px;margin-bottom:40px}
 .con01 > dl > dt{width:auto;float:none;font-size:26px;line-height:36px;margin-bottom:35px}
