@@ -150,9 +150,19 @@ $(document).ready(function() {
 		autoplay:true,
 		fade:true,
 		speed:1400,
+		adaptiveHeight: true,
 		autoplaySpeed:6000,
-		arrows:false,
-		dots:true
+		arrows:true,
+		dots:true,
+		asNavFor: 'ng04.slide ul.slider-nav'
+	});
+	$('ng04.slide ul.slider-nav').slick({
+	  slidesToShow: 3,
+	  slidesToScroll: 1,
+	  asNavFor: 'ng04.slide ul.slide',
+	  dots: true,
+	  centerMode: true,
+	  focusOnSelect: true
 	});
 });
 
