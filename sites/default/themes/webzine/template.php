@@ -120,3 +120,9 @@ function get_term_link($term, $options = array())
         return implode('', $html);
     }
 }
+
+function countWriters()
+{
+    $cnt = db_query("select distinct(field_writer_tid) from field_data_field_writer")->rowCount();
+    return $cnt;
+}
