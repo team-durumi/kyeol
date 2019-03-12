@@ -211,7 +211,7 @@ section h1.title{font-size:38px;line-height:50px;padding-bottom:24px;font-family
 .lc01 li .thumb{display:block;height:261px;width:100%;position:relative}
 .lc01 li .thumb span{display:block;height:261px;width:100%;overflow:hidden}
 .lc01 li .thumb img{width:100%;min-height:142px;display:block}
-.lc01 li:first-child .thumb:after{content:"";display:block;height:261px;width:349px;background:url(../images/bg_pattern_comb.png) no-repeat 0 0;position:absolute;top:10px;left:10px}
+.lc01 li:hover .thumb:after{content:"";display:block;height:261px;width:349px;background:url(../images/bg_pattern_comb.png) no-repeat 0 0;position:absolute;top:10px;left:10px}
 .lc01 li dl{height:208px;padding:24px 32px 0;box-sizing:border-box}
 .lc01 li dt{margin-bottom:10px}
 .lc01 li dt i{display:block;margin:0 0 4px;font-style:normal;color:#9f865f;font-weight:600}
