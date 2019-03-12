@@ -148,12 +148,11 @@ $(document).ready(function() {
 	//기사페이지 이미지 슬라이드
 	$('.ng04.slide ul.slider').slick({
 		autoplay:true,
-		fade:true,
-		speed:1400,
+		speed:500,
 		adaptiveHeight: true,
 		autoplaySpeed:6000,
-		arrows:true,
-		dots:true,
+		arrows:false,
+		dots:false,
 		asNavFor: '.ng04.slide ul.slider-nav'
 	});
 	$('.ng04.slide ul.slider-nav').slick({
