@@ -76,13 +76,6 @@ function webzine_ajax_callback()
                     }
                 }
                 break;
-            case 'newsletter':
-                if(isset($_POST['email']) && valid_email_address($_POST['email'])) {
-                    $return = $_POST['email'];
-                } else {
-                    $return = array('error' => '이메일 주소가 정확하지 않습니다. 확인해 주세요.');
-                }
-                break;
             case 'search':
                 if(isset($_POST['key'])) {
                     $key = $_POST['key'];
