@@ -223,7 +223,6 @@ section h1.title{font-size:38px;line-height:50px;padding-bottom:24px;font-family
 .lc01 li dd{max-height:58px;display:block;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}
 /*지난호 보기 리스트*/
 .lc01_01{margin-top:40px}
-.lc01_01 li:first-child .thumb:after{content:none}
 .lc01_01 li dl{height:158px;padding:16px 0 0;box-sizing:border-box}
 .lc01_01 li dt{margin-bottom:8px}
 .lc01_01 li dt a{font-size:28px;line-height:50px;color:#111;font-family:'Iropke Batang',sans-serif}
@@ -392,3 +391,16 @@ body.front .ng01 li a i{font-size:2rem;line-height:73px}
 }
 .tt01 .tooltip a.close{position:absolute;right:10px;top:10px}
 .tt01 .tooltip b{color:#111;font-weight:700}
+
+/*소개 페이지*/
+.con01{margin-top:30px}
+.con01 .banner{margin-bottom:64px}
+.con01 .banner img{display:block;visibility:hidden}
+.con01 > dl{border-bottom:1px solid #ddd;padding-bottom:70px;margin-bottom:70px;overflow:hidden}
+.con01 > dl:last-child{border-bottom:none}
+.con01 > dl > dt{width:34%;float:left;font-size:28px;line-height:36px;color:#111;font-family:'Iropke Batang',sans-serif}
+.con01 > dl > dd{width:66%;float:right}
+.con01 > dl > dd p:last-child{margin-bottom:0}
+
+
+
