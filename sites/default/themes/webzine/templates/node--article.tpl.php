@@ -148,7 +148,7 @@
 
             <?php if(render($content['field_years'])): ?>
                 <dl class="ng05">
-                    <dt>관련식</dt>
+                    <dt>관련시기</dt>
                     <dd><?php print get_term_link($content['field_years'], array('class' => 'btn03', 'prefix' => '#'));?></dd>
                 </dl>
             <?php endif;?>
