@@ -409,7 +409,8 @@ body.front .ng01 li a i{font-size:2rem;line-height:73px}
 .con01 > dl > dd p:last-child{margin-bottom:0}
 
 /* jQuery UI modal */
-.ui-dialog .ui-widget-header{background:transparent;border-color:transparent;border-bottom:solid 1px #ddd;}
+.ui-dialog .ui-widget-header{background:transparent;border-color:transparent;}
+.ui-dialog .ui-widget-header .ui-dialog-title{border-bottom:solid 1px #ededed;}
 .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close{top:30%;border:none;background:none;}
 .ui-dialog.ui-widget.ui-widget-content{border: solid 1px #ddd;border-radius: 2px;box-shadow: 4px 4px 10px 0px rgba(0,0,0,.2);position:relative;}
 .ui-dialog.ui-widget.ui-widget-content:before{content:'';position:absolute;background: transparent;top: -10px;left:10px;width: 0;height: 0;border-left: 10px solid transparent;border-right: 10px solid transparent;border-bottom: 10px solid #fff;}
