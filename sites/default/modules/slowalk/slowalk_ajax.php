@@ -40,7 +40,7 @@ function webzine_ajax_callback()
                         'nid' => $nid,
                         'url' => '/node/'.$nid,
                         'title' => $node->title,
-                        'img' => ($node->field_image) ? image_style_url('main_feature', $node->field_image['und'][0]['uri']) : file_create_url('public://default_images/no-image.png'),
+                        'img' => ($node->field_image) ? image_style_url('main_feature', $node->field_image['und'][0]['uri']) : file_create_url(drupal_get_path('theme', 'webzine').'/images/no-image-square.png'),
                         'body' => strip_tags(render($body))
                     );
                 }
@@ -63,7 +63,7 @@ function webzine_ajax_callback()
                     foreach($nodes as $node) {
                         $tid = $node->field_category['und'][0]['tid'];
                         $nid = $node->nid;
-                        $img_uri = ($node->field_image) ? image_style_url('main_article', $node->field_image['und'][0]['uri']) : file_create_url('public://default_images/no-image.png');
+                        $img_uri = ($node->field_image) ? image_style_url('main_article', $node->field_image['und'][0]['uri']) : file_create_url(drupal_get_path('theme', 'webzine').'/images/no-image-square.png');
                         $body = field_view_field('node', $node, 'body', 'teaser');
                         $return[] = array(
                             'nid' => $nid,

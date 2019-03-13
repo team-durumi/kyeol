@@ -41,7 +41,7 @@
  * @ingroup themeable
  */
 
-$img = ($term->field_image) ? image_style_url('main_article', $term->field_image['und'][0]['uri']) : file_create_url('public://default_images/no-image.png');
+$img = ($term->field_image) ? image_style_url('main_article', $term->field_image['und'][0]['uri']) : file_create_url(drupal_get_path('theme', 'webzine').'/images/no-image-square.png');
 ?>
 
 <a href="<?php print $term_url;?>" class="thumb"><span><img src="<?php print $img;?>" alt="<?php print $term->description;?>"/></span></a>
