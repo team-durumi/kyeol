@@ -28,11 +28,15 @@ var jquery_cavacnote_count = 0;
                         modal: true
             });
             
-            $(obj).click(function() {
+            $(obj).click(function(e) {
+                $('#' + dialogid).dialog("option", "position", {
+                    my: "left",
+                    at: "left",
+                    of: e,
+                    offset: "5 70"
+                });
                 $('#' + dialogid).dialog('open');
                 return false;
-            }).mousemove(function (e) {
-                $('#' + dialogid).dialog("option", { position: [e.pageX+5, e.pageY+5] });
             });
 
         });  
