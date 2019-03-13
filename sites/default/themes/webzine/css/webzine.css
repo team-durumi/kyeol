@@ -63,6 +63,7 @@ header.searchOpened .cf01{top:0}
 /*스크롤 헤더 - 서브*/
 body.pc.scrolling{padding-top:100px}
 body.pc.scrolling header{position:fixed;left:0;top:0;width:100%;background-color:#fff;z-index:60}
+body.pc.scrilling header .lg01 em{padding-left:15px;}
 /*스크롤 헤더 - 메인*/
 body.pc.front.scrolling{padding-top:0}
 body.pc.front.scrolling header .lg01{margin-top:24px}
@@ -70,7 +71,7 @@ body.pc.front.scrolling header .ng01{margin-top:19px}
 body.pc.front.scrolling header{border-bottom:1px solid #ddd}
 body.pc.front.scrolling header .inner{height:100px}
 body.pc.front.scrolling header .lg01 a{width:280px;height:52px;background-image:url(../images/logo_sub.png)}
-body.pc.front.scrolling header .lg01 em{color:#554531;padding-left:15px;}
+body.pc.front.scrolling header .lg01 em{color:#554531;}
 body.pc.front.scrolling header .lg01 em b{color:#554531}
 body.pc.front.scrolling header .ng01 li a{width:60px;height:60px;line-height:60px;border-radius:30px}
 body.pc.front.scrolling header .ng01 li a i{font-size:1.8rem;line-height:60px}
