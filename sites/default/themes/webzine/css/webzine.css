@@ -420,7 +420,8 @@ body.page-archive-person .ui-dialog-title{font-family:'Iropke Batang',sans-serif
 body.page-archive-person .ui-dialog .ui-dialog-content{padding:1rem 2rem;}
 body.page-archive-person .ui-dialog .ui-dialog-titlebar{padding:1rem 2rem;}
 body.page-archive-person .ui-dialog .ui-dialog-titlebar-close span{display:none;}
-body.page-archive-person .ui-dialog .ui-dialog-titlebar-close:before{content:"";font-size:20px;font-family:'xeicon';text-indent:0;display:block;color:#999;width:30px;height:30px;overflow:hidden;}
+body.page-archive-person .ui-dialog .ui-dialog-titlebar-close:before{content:"";font-size:30px;font-family:'xeicon';text-indent:0;display:block;color:#999;}
+body.page-archive-person .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close{border:none;background:none;width:30px;height:30px;overflow:hidden}
 
 /* 툴팁 화살표 
 .ui-dialog.ui-widget.ui-widget-content:before{content:'';position:absolute;background: transparent;top: -10px;left:10px;width: 0;height: 0;border-left: 10px solid transparent;border-right: 10px solid transparent;border-bottom: 10px solid #fff;}
