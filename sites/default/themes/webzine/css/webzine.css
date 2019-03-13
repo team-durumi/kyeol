@@ -419,6 +419,7 @@ body.html .ui-widget-overlay{background:rgba(0,0,0,.5);opacity:inherit}
 body.page-archive-person .ui-dialog-title{font-family:'Iropke Batang',sans-serif;font-size:1.8rem;}
 body.page-archive-person .ui-dialog .ui-dialog-content{padding:1rem 2rem;}
 body.page-archive-person .ui-dialog .ui-dialog-titlebar{padding:1rem 2rem;}
+body.page-archive-person .ui-dialog .ui-dialog-titlebar-close{right:2em;margin-top:-15px;}
 body.page-archive-person .ui-dialog .ui-dialog-titlebar-close span{display:none;}
 body.page-archive-person .ui-dialog .ui-dialog-titlebar-close:before{content:"";font-size:30px;font-family:'xeicon';text-indent:0;display:block;color:#999;}
 body.page-archive-person .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close{border:none;background:none;width:30px;height:30px;overflow:hidden}
