@@ -33,7 +33,7 @@ var jquery_cavacnote_count = 0;
                     my: "left",
                     at: "left",
                     of: e,
-                    offset: "55 170"
+                    offset: "400 400"
                 });
                 $('#' + dialogid).dialog('open');
                 return false;
