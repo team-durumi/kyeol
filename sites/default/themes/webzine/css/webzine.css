@@ -70,7 +70,7 @@ body.pc.front.scrolling header .ng01{margin-top:19px}
 body.pc.front.scrolling header{border-bottom:1px solid #ddd}
 body.pc.front.scrolling header .inner{height:100px}
 body.pc.front.scrolling header .lg01 a{width:280px;height:52px;background-image:url(../images/logo_sub.png)}
-body.pc.front.scrolling header .lg01 em{color:#554531;}
+body.pc.front.scrolling header .lg01 em{color:#554531;padding-left:15px;}
 body.pc.front.scrolling header .lg01 em b{color:#554531}
 body.pc.front.scrolling header .ng01 li a{width:60px;height:60px;line-height:60px;border-radius:30px}
 body.pc.front.scrolling header .ng01 li a i{font-size:1.8rem;line-height:60px}
@@ -251,7 +251,7 @@ section h1.title{font-size:38px;line-height:50px;padding-bottom:24px;font-family
 .lc03 > dl > dd .lc02_01 li:last-child{border-bottom:none}
 /*로고*/
 .lg01 a{display:inline-block;width:280px;height:52px;background:url(../images/logo_sub.png) no-repeat 0 0;text-indent:-9999px;vertical-align:top;transition:all 0.5s}
-.lg01 em{color:#554531;line-height:2.3rem;font-family:'Iropke Batang',sans-serif;margin-left:10px;position:relative;padding-left:20px;border-left:solid 1px #cbcbcb;display:inline-block}
+.lg01 em{color:#554531;line-height:2.3rem;font-family:'Iropke Batang',sans-serif;margin-left:10px;position:relative;padding-left:20px;border-left:solid 1px #cbcbcb;display:inline-block:;}
 .lg01 em b{font-size:2.6875rem}
 .lg01 em i{font-size:1.125rem;font-style:normal}
 body.front .lg01 a{width:366px;height:67px;background-image:url(../images/logo_main.png);background-size:contain;}
