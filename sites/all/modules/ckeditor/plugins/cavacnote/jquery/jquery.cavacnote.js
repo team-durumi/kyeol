@@ -24,7 +24,8 @@ var jquery_cavacnote_count = 0;
             $("<div id='" + dialogid + "' title='" + popuptitle + "'><p>" + popuptext + "</p></div>").insertAfter(obj);
             $('#' + dialogid).dialog({
                         autoOpen: false,
-                        resizable: false
+                        resizable: false,
+                        modal: false
             });
             
             $(obj).click(function(e) {
@@ -32,7 +33,7 @@ var jquery_cavacnote_count = 0;
                     my: "left",
                     at: "left",
                     of: e,
-                    offset: "105 70"
+                    offset: "55 170"
                 });
                 $('#' + dialogid).dialog('open');
                 return false;
