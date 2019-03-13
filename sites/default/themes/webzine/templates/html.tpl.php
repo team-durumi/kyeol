@@ -48,6 +48,7 @@
 <head>
     <?php print $head; ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<meta name="google-site-verification" content="NnfLR0jiAgl9MAW7jzw6HuyyqHQrEalkMHimZTKo6m4" />
     <title><?php print $head_title; ?></title>
     <?php print $styles; ?>
     <?php print $scripts; ?>
