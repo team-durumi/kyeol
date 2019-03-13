@@ -148,7 +148,7 @@ footer .infoA li strong{margin-right:3px}
 .lc03 > dl > dd .lc02_01 li dl{margin-left:0}
 /*로고*/
 .lg01 a{width:200px;height:36px;background-size:200px 36px}
-.lg01 em{color:#554531;line-height:17.6px;margin-left:5px}
+.lg01 em{color:#554531;line-height:17.6px;margin-left:5px;padding-left:10px;}
 .lg01 em b{font-size:17.6px}
 .lg01 em i{font-size:7px}
 body.front .lg01 a{width:200px;height:36px;background-size:200px 36px}
