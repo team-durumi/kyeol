@@ -37,8 +37,7 @@ $archive = new Archive();
         <p class="td01 leftF"><b>"<?php print $_GET['search'];?>"</b>에 관련된 기사는 <em><?php print $view->total_rows;?></em>건입니다.</p>
         <a class="btn01 rightF" href="/<?php print request_path();?>">목록 보기</a>
         <?php if($voca === 'person') : ?>
-            <?php $person = $archive->getPerson();?>
-            <a class="cavacnote btn01 rightF person" popuptext="<?php print $person['description'];?>" popuptitle="<?php print $person['name'].' ('.$person['lifetime'].')';?>">인물 정보</a>
+            <a class="btn01 rightF person" href="/ajax/webzine">인물 정보</a>
         <?php endif;?>
         <?php if($voca === 'years') : ?>
             <div class="tagA"><?php print $archive->getYears($voca);?></div>

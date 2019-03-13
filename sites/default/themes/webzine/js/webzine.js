@@ -120,7 +120,7 @@ $(document).ready(function() {
 	form_validation();
 
 	//cavac note
-	$(".cavacnote").cavacnote();
+	$("span.cavacnote").cavacnote();
 
 	//검색 사이드바 클릭시 검색어와 함께 redirect
     $("div.menu-name-menu-search ul.menu li a").click(function (e) {
@@ -176,11 +176,24 @@ $(document).ready(function() {
 		$(this).siblings('input').focus();
 	});
 
+    //상단 Vol 링크
 	$('#main_wrap>header .lg01 em b').mouseover(function () {
 		$(this).css('cursor', 'pointer');
 	}).click(function () {
 		location.replace(Drupal.settings.Webzine.vol);
 	});
+
+	//모아보기 - 인물 "인물 정보" 클릭 이벤트
+    $('a.person').click(function(e) {
+        e.preventDefault();
+        $.post('/ajax/webzine', {type:'person', search:$('.td01.leftF b').text()}).done(function(res){
+            let box = $('<div />').addClass('person-info-box').append(res.description);
+            let title = res.name + ' ( ' + res.lifetime +' )';
+            box.dialog({
+                title:title
+            });
+        });
+    });
 });
 
 //PC버젼 초기화

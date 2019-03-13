@@ -106,6 +106,10 @@ function webzine_ajax_callback()
                     $return = array('keyword' => $keyword, 'term' => $term);
                 }
                 break;
+            case 'person':
+                $archive = new Archive();
+                $return = $archive->getPerson();
+                break;
         }
         drupal_json_output($return);
     } else {

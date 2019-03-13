@@ -354,12 +354,12 @@ class Archive extends Slowalk
 
     public function getPerson()
     {
-        $person = $_GET['search'];
+        $person = str_replace('"', '', $_POST['search']);
         $term = taxonomy_get_term_by_name($person, 'person');
         $info = array_shift($term);
         return array(
             'name' => $info->name,
-            'description' => strip_tags($info->description),
+            'description' => $info->description,
             'lifetime' => ($info->field_lifetime) ? $info->field_lifetime['und'][0]['value'] : ''
         );
     }
