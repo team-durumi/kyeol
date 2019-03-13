@@ -7,7 +7,7 @@ Version:1.0
 */
 @import url(post.css);
 /**** Common ****/
-html{font-family:'Noto Sans KR',sans-serif;font-size:16px;color:#444444;line-height:1.75rem;}
+html{font-family:'Noto Sans KR',sans-serif;font-size:16px;color:#444444;line-height:1.75;}
 html,body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select,menu,a{margin:0;padding:0}
 header,nav,article,section,footer,address,aside{display:block;}
 b,strong,h1,h2,h3,h4,h5,h6{font-weight:600;color:#231f20}
