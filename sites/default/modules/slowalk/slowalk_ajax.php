@@ -81,24 +81,24 @@ function webzine_ajax_callback()
                     $key = $_POST['key'];
                     if(strpos($key, ' ') !== false) {
                         $keyArr = explode(' ', $key);
-//                        $keyCount = count($keyArr);
-//                        $query = "SELECT COUNT(*) AS expression FROM (SELECT t.item_id AS item_id, SUM(t.score) AS score, 1 AS expression FROM (SELECT t.item_id AS item_id, t.word AS word, SUM(score) AS score FROM search_api_db_default_node_index_text t WHERE (word IN (";
-//                        for($i=0;$i<$keyCount;$i++) {
-//                            if($i !== 0) $query .= ", ";
-//                            $query .= "'".$keyArr[$i]."'";
-//                        }
-//                        $query .= ")) AND (field_name IN ('body:summary', 'body:value', 'title')) GROUP BY t.item_id, t.word) t LEFT OUTER JOIN search_api_db_default_node_index t_2 ON t.item_id = t_2.item_id WHERE (( (t_2.status = '1') )) GROUP BY t.item_id HAVING (COUNT(DISTINCT t.word) >= '$keyCount') ) subquery";
-//                        $keyword = db_query($query)->fetchField();
-                        $query = search_api_query('default_node_index');
-                        $query->condition('type', 'article', '=');
-                        $query->condition('status', 1, '=');
-                        $filter = $query->createFilter('OR');
-                        $filter->condition('title', $keyArr, 'IN');
-                        $filter->condition('body:value', $keyArr, 'IN');
-                        $filter->condition('body:summary', array($kye), 'IN');
-                        $query->filter($filter);
-                        $data = $query->execute();
-                        $keyword = $data['result count'];
+                        $keyCount = count($keyArr);
+                        $query = "SELECT COUNT(*) AS expression FROM (SELECT t.item_id AS item_id, SUM(t.score) AS score, 1 AS expression FROM (SELECT t.item_id AS item_id, t.word AS word, SUM(score) AS score FROM search_api_db_default_node_index_text t WHERE (word IN (";
+                        for($i=0;$i<$keyCount;$i++) {
+                            if($i !== 0) $query .= ", ";
+                            $query .= "'".$keyArr[$i]."'";
+                        }
+                        $query .= ")) AND (field_name IN ('body:summary', 'body:value', 'title')) GROUP BY t.item_id, t.word) t LEFT OUTER JOIN search_api_db_default_node_index t_2 ON t.item_id = t_2.item_id WHERE (( (t_2.status = '1') )) GROUP BY t.item_id HAVING (COUNT(DISTINCT t.word) >= '$keyCount') ) subquery";
+                        $keyword = db_query($query)->fetchField();
+//                        $query = search_api_query('default_node_index');
+//                        $query->condition('type', 'article', '=');
+//                        $query->condition('status', 1, '=');
+//                        $filter = $query->createFilter('OR');
+//                        $filter->condition('title', $keyArr, 'IN');
+//                        $filter->condition('body:value', $keyArr, 'IN');
+//                        $filter->condition('body:summary', array($kye), 'IN');
+//                        $query->filter($filter);
+//                        $data = $query->execute();
+//                        $keyword = $data['result count'];
                     } else {
                         $keyword = db_query("SELECT COUNT(*) AS expression FROM (SELECT 1 AS expression FROM search_api_db_default_node_index_text t WHERE (word IN ('$key')) AND (field_name IN ('body:summary', 'body:value', 'title')) GROUP BY t.item_id) subquery")->fetchField();
                     }
