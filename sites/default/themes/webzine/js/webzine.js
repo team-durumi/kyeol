@@ -175,6 +175,12 @@ $(document).ready(function() {
 		$(this).hide();
 		$(this).siblings('input').focus();
 	});
+
+	$('#main_wrap>header .lg01 em b').mouseover(function () {
+		$(this).css('cursor', 'pointer');
+	}).click(function () {
+		location.replace(Drupal.settings.Webzine.vol);
+	});
 });
 
 //PC버젼 초기화
