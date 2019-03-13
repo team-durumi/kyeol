@@ -163,6 +163,18 @@ $(document).ready(function() {
 		dots: true,
 		focusOnSelect: true
 	});
+
+	//로그인페이지
+	$('#user-login input').focus(function() {
+		$(this).siblings('.description').hide();
+	});
+	$('#user-login input').blur(function() {
+		$(this).siblings('.description').show();
+	});
+	$('#user-login .description').click(function() {
+		$(this).hide();
+		$(this).siblings('input').focus();
+	});
 });
 
 //PC버젼 초기화

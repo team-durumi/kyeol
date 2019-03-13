@@ -17,5 +17,9 @@
 /*message*/
 div.messages{margin-top: 35px}
 
-/*뷰페이지 슬라이드 이미지*/
-dl.ng04.slide ul.slide li img{border-radius: 15px}
+/*로그인 화면*/
+#user-login{margin-top:20px}
+#user-login .form-item{margin-bottom: 20px;position: relative}
+#user-login label{margin-right:1em;min-width:70px;display:inline-block}
+#user-login .form-required{color:#f00}
+#user-login .description{margin: 5px 0;line-height: 1.231em;font-size: 0.923em;color: #8F8F8F;position: absolute;top: 10px;left: 110px}
