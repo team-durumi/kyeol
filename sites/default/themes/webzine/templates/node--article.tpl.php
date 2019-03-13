@@ -105,7 +105,7 @@
         <div class="attachA">
             <?php if(render($content['field_slide'])):?>
                 <dl class="ng04 slide">
-                    <dt>이미지</dt>
+                    <!--dt>이미지</dt-->
                     <dd>
                         <ul class="slider">
                             <?php foreach($content['field_slide']['#items'] as $slide): ?>
