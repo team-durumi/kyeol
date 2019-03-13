@@ -173,13 +173,13 @@ section h1.title{font-size:38px;line-height:50px;padding-bottom:24px;font-family
 .pager li.pager-last a:hover{background-color:#edf0f5}
 
 /*버튼*/
-.btn01{display:inline-block;height:46px;line-height:46px;border:1px solid #444;padding:0 24px;box-sizing:border-box}
+.btn01{display:inline-block;min-height:46px;border:1px solid #444;padding:10px 24px;box-sizing:border-box}
 .btn01:hover{background-color:#4a4a4a;color:#fff;text-decoration:none}
-.btn02{display:inline-block;height:30px;line-height:30px;border:1px solid #4a4a4a;padding:0 16px;font-size:0.875rem;box-sizing:border-box}
+.btn02{display:inline-block;min-height:30px;border:1px solid #4a4a4a;padding:2px 16px;font-size:0.875rem;box-sizing:border-box}
 .btn02:hover{background-color:#4a4a4a;color:#fff;text-decoration:none}
 .btn02.mention{border:1px solid #9f865f;color:#9f865f}
 .btn02.mention:hover{background-color:#9f865f;color:#fff}
-.btn03{display:inline-block;height:40px;line-height:40px;border:1px solid #ddd;padding:0 16px;border-radius:20px;box-sizing:border-box;background-color:#fff;margin:0 0 7px 5px;}
+.btn03{display:inline-block;min-height:40px;border:1px solid #ddd;padding:6px 16px;border-radius:20px;box-sizing:border-box;background-color:#fff;margin:0 0 7px 5px;}
 .btn03:hover{border-color:#a18963;color:#a18963;text-decoration:none}
 .btn_icon01 i{font-size:38px;font-weight:bold;color:#fff}
 /*헤더 검색창*/
