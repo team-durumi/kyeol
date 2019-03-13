@@ -33,8 +33,9 @@ var jquery_cavacnote_count = 0;
                     my: "left top",
                     at: "left bottom",
                     of: e,
-                    offset: [5 30]
+                    offset: "5 30"
                 });
+                console.log(e);
                 $('#' + dialogid).dialog('open');
                 //return false;
             });
