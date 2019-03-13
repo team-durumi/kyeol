@@ -83,11 +83,11 @@ footer .infoA li strong{margin-right:3px}
 .sidebar ul.menu li a:active{color:#fff;background-color:#9f865f}
 .sidebar ul.menu.opened li{display:block}
 /*버튼*/
-.btn01{height:36px;line-height:36px;padding:0 14px}
+.btn01{padding:10px 14px}
 .btn01:active{background-color:#4a4a4a;color:#fff;text-decoration:none}
-.btn02{height:24px;line-height:24px;padding:0 10px;font-size:12px}
+.btn02{padding:2px 10px;font-size:12px}
 .btn02:active{background-color:#4a4a4a;color:#fff;text-decoration:none}
-.btn03{height:30px;line-height:30px;padding:0 10px;border-radius:15px}
+.btn03{padding:6px 10px;border-radius:15px}
 .btn_icon01 i{font-size:25px}
 
 /*헤더 검색창*/
