@@ -30,8 +30,8 @@ var jquery_cavacnote_count = 0;
             
             $(obj).click(function(e) {
                 $('#' + dialogid).dialog("option", "position", {
-                    my: "top",
-                    at: "left",
+                    my: "left top",
+                    at: "left bottom",
                     of: e,
                     offset: "5 10"
                 });
