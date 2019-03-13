@@ -414,7 +414,7 @@ body.front .ng01 li a i{font-size:2rem;line-height:73px}
 .ui-dialog .ui-widget-header{background:transparent;border-color:transparent;border-bottom:solid 1px #ededed;}
 .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close{border:none;background:none;}
 .ui-dialog.ui-widget.ui-widget-content{border: solid 1px #ddd;border-radius: 2px;box-shadow: 4px 4px 10px 0px rgba(0,0,0,.2);position:relative;}
-.ui-front .ui-widget-overlay{background:rgba(0,0,0,.5);}
+.ui-widget-overlay{background:rgba(0,0,0,.5);}
 
 /* 툴팁 화살표 
 .ui-dialog.ui-widget.ui-widget-content:before{content:'';position:absolute;background: transparent;top: -10px;left:10px;width: 0;height: 0;border-left: 10px solid transparent;border-right: 10px solid transparent;border-bottom: 10px solid #fff;}
