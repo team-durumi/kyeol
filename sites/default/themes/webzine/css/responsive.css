@@ -59,7 +59,8 @@ footer .infoA li strong{margin-right:3px}
 .fc_box01_01{padding:18px 24px}
 .fc_box01_01 .leftF{float:none;line-height:20px;margin-bottom:10px}
 .fc_box01_01 .rightF{float:none}
-.fc_box01_01.tags .tagA .btn03{margin-top:6px}
+.fc_box01_01.tags .tagA{margin-top:1em;}
+.fc_box01_01.tags .tagA .btn03{margin-top:0}
 .fc_box02{margin-top:30px}
 .fc_box02 > h2{font-size:20px;line-height:20px}
 /*헤더 메뉴*/
