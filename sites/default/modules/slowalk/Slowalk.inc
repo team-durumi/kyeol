@@ -360,7 +360,7 @@ class Archive extends Slowalk
         return array(
             'name' => $info->name,
             'description' => $info->description,
-            'lifetime' => ($info->field_lifetime) ? $info->field_lifetime['und'][0]['value'] : '인물 정보를 수집중입니다...'
+            'lifetime' => ($info->field_lifetime) ? $info->field_lifetime['und'][0]['value'] : ''
         );
     }
 }
