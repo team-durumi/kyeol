@@ -417,6 +417,10 @@ body.front .ng01 li a i{font-size:2rem;line-height:73px}
 .ui-dialog.ui-widget.ui-widget-content strong{font-weight:normal;}
 body.html .ui-widget-overlay{background:rgba(0,0,0,.5);opacity:inherit}
 body.page-archive-person .ui-dialog-title{font-family:'Iropke Batang',sans-serif;font-size:1.8rem;}
+body.page-archive-person .ui-dialog.ui-widget.ui-widget-content{padding:1rem 2rem;}
+body.page-archive-person .ui-dialog .ui-dialog-titlebar{padding:1rem 2rem;}
+body.page-archive-person .ui-dialog .ui-dialog-titlebar-close span{display:none;}
+body.page-archive-person .ui-dialog .ui-dialog-titlebar-close:before{content:"";font-size:20px;}
 
 /* 툴팁 화살표 
 .ui-dialog.ui-widget.ui-widget-content:before{content:'';position:absolute;background: transparent;top: -10px;left:10px;width: 0;height: 0;border-left: 10px solid transparent;border-right: 10px solid transparent;border-bottom: 10px solid #fff;}

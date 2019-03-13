@@ -188,7 +188,7 @@ $(document).ready(function() {
         e.preventDefault();
         $.post('/ajax/webzine', {type:'person', search:$('.td01.leftF b').text()}).done(function(res){
             let box = $('<div />').addClass('person-info-box').append(res.description);
-            let title = res.name + ' ( ' + res.lifetime +' )';
+            let title = res.name + ' ('+ res.lifetime +')';
             box.dialog({
             	modal: true,
                 title:title,
