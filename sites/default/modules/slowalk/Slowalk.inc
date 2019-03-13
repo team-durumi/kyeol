@@ -162,7 +162,7 @@ class Webzines extends Slowalk
                     '{{ category }}' => $this->catLabel[$category],
                     '{{ node_url }}' => '/node/' . $item->nid,
                     '{{ title }}' => $item->title,
-                    '{{ summary }}' => text_summary($item->body['und'][0]['value'], 'plain_text', 100),
+                    '{{ summary }}' => text_summary(strip_tags($item->body['und'][0]['value']), 'plain_text', 210).'...',
                     '{{ writer }}' => $this->writer($item->field_writer['und']),
                     '{{ date }}' => format_date($item->created, 'custom', 'Y.m.d')
                 );
