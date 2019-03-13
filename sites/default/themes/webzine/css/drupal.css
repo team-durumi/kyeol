@@ -23,3 +23,6 @@ div.messages{margin-top: 35px}
 #user-login label{margin-right:1em;min-width:70px;display:inline-block}
 #user-login .form-required{color:#f00}
 #user-login .description{margin: 5px 0;line-height: 1.231em;font-size: 0.923em;color: #8F8F8F;position: absolute;top: 10px;left: 110px}
+
+/*모아보기-인물*/
+.fc_box01_01 .rightF.person{margin-right:10px;cursor:pointer}

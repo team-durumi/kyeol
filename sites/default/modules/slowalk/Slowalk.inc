@@ -351,6 +351,18 @@ class Archive extends Slowalk
         $view = taxonomy_term_view($term);
         return render($view);
     }
+
+    public function getPerson()
+    {
+        $person = $_GET['search'];
+        $term = taxonomy_get_term_by_name($person, 'person');
+        $info = array_shift($term);
+        return array(
+            'name' => $info->name,
+            'description' => $info->description,
+            'lifetime' => $info->field_lifetime['und'][0]['value']
+        );
+    }
 }
 
 class Search extends Slowalk

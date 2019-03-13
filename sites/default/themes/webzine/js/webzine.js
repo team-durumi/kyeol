@@ -120,7 +120,7 @@ $(document).ready(function() {
 	form_validation();
 
 	//cavac note
-	$("span.cavacnote").cavacnote();
+	$(".cavacnote").cavacnote();
 
 	//검색 사이드바 클릭시 검색어와 함께 redirect
     $("div.menu-name-menu-search ul.menu li a").click(function (e) {
