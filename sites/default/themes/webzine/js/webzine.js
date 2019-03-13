@@ -190,6 +190,7 @@ $(document).ready(function() {
             let box = $('<div />').addClass('person-info-box').append(res.description);
             let title = res.name + ' ('+ res.lifetime +')';
             box.dialog({
+                autoOpen: false,
             	modal: true,
                 title:title,
                 minWidth:500
