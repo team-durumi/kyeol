@@ -359,7 +359,7 @@ class Archive extends Slowalk
         $info = array_shift($term);
         return array(
             'name' => $info->name,
-            'description' => $info->description,
+            'description' => strip_tags($info->description),
             'lifetime' => ($info->field_lifetime) ? $info->field_lifetime['und'][0]['value'] : ''
         );
     }
