@@ -245,6 +245,9 @@ body.front .ng01 li a i{font-size:16px;line-height:36px}
 @media screen and (max-width: 425px) {
 footer .infoA li{float:none;border-right:none;width:100%;border-bottom: 1px solid #7d7d7d;}
 footer .infoA li.l1, footer .infoA li.l3{border-right:none;}
+}
+
+@media screen and (max-width: 350px) {
 header .lg01{margin-top:22px;}
 .lg01 a{width:140px;height:36px;background-size:contain;}
 }
