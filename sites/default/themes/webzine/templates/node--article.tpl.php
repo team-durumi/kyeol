@@ -161,7 +161,7 @@
             <?php if(render($content['field_area'])): ?>
                 <dl class="ng05">
                     <dt>관련지역</dt>
-                    <dd><?php print get_term_link($content['field_location'], array('class' => 'btn03', 'prefix' => '#'));?></dd>
+                    <dd><?php print get_term_link($content['field_area'], array('class' => 'btn03', 'prefix' => '#'));?></dd>
                 </dl>
             <?php endif;?>
 
