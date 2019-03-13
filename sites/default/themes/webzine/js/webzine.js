@@ -193,7 +193,7 @@ $(document).ready(function() {
             	modal: true,
                 title:title,
                 minWidth:500,
-				position: { my: "center", at: "center", of: 'body' }
+				position: { my: "center", at: "center", of: window }
             });
         });
     });
