@@ -2,7 +2,7 @@
 
 /* 모바일 모드 */
 @media screen and (max-width:768px) {
-body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select,menu,a{font-size:13px;line-height:1.3}
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select,menu,a{font-size:13px;line-height:1.6}
 
 .inner{width:auto;margin:0 15px;padding:0;box-sizing:border-box}
 /*헤더*/
