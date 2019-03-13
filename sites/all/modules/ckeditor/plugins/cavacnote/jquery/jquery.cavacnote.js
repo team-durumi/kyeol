@@ -31,6 +31,8 @@ var jquery_cavacnote_count = 0;
             $(obj).click(function() {
                 $('#' + dialogid).dialog('open');
                 return false;
+            }).mousemove(function (e) {
+                $('#' + dialogid).dialog("option", { position: [e.pageX+5, e.pageY+5] });
             });
 
         });  
