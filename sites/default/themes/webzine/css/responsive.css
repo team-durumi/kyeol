@@ -98,8 +98,8 @@ footer .infoA li strong{margin-right:3px}
 .cf01 button{margin-top:5px}
 .cf01 button i{font-size:25px}
 /*뉴스레터 신청*/
-.cf02 input{width:65%;height:32px;text-indent:0.5rem;font-size:13px}
-.cf02 button, .cf02 input.btn{width:35%;height:32px;font-size:13px}
+.cf02 input{width:65%;height:32px;font-size:13px}
+.cf02 button, .cf02 input.btn{width:35%;height:32px;font-size:13px;-webkit-appearance:none;}
 .cf02 label.error{display:block;width:auto;height:auto;text-indent:0;position:absolute;left:0;bottom:-30px}
 /*메인 슬라이더 배너*/
 .ib01 li{background-position:center top;background-size:auto 100%}
