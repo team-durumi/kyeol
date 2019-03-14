@@ -97,7 +97,7 @@
     </dl>
 <?php else: ?>
     <!-- cBody -->
-    <div class="cBody">
+    <div class="cBody <?php print $classes;?>">
         <!-- postA -->
         <div class="postA"><?php print render($content['body']);?></div>
         <!-- //postA -->
