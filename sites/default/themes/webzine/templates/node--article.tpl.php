@@ -135,13 +135,13 @@
                 </dl>
             <?php endif;?>
 
-            <?php if(render($content['field_file'])): ?>
+            <?php if(render($content['field_related_file'])): ?>
                 <dl class="ng04 file">
                     <dt>도움이 되는 자료</dt>
                     <dd>
                         <ul>
-                            <?php foreach($content['field_file']['#items'] as $file): ?>
-                                <li><a class="btn03" href="<?php print file_create_url($file['uri']);?>"><i class="xi-paperclip"></i><?php print $file['filename'];?></a></li>
+                            <?php foreach($content['field_related_file']['#items'] as $file): ?>
+                                <li><a class="btn03" href="<?php print file_create_url($file['node']->field_file['und'][0]['uri']);?>"><i class="xi-paperclip"></i><?php print $file['node']->field_file['und'][0]['filename'];?></a></li>
                             <?php endforeach;?>
                         </ul>
                     </dd>
