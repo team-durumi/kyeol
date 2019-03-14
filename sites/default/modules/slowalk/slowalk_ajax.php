@@ -79,30 +79,8 @@ function webzine_ajax_callback()
             case 'search':
                 if(isset($_POST['key'])) {
                     $key = $_POST['key'];
-                    if(strpos($key, ' ') !== false) {
-                        $keyArr = explode(' ', $key);
-                        $keyCount = count($keyArr);
-                        $query = "SELECT COUNT(*) AS expression FROM (SELECT t.item_id AS item_id, SUM(t.score) AS score, 1 AS expression FROM (SELECT t.item_id AS item_id, t.word AS word, SUM(score) AS score FROM search_api_db_default_node_index_text t WHERE (word IN (";
-                        for($i=0;$i<$keyCount;$i++) {
-                            if($i !== 0) $query .= ", ";
-                            $query .= "'".$keyArr[$i]."'";
-                        }
-                        $query .= ")) AND (field_name IN ('body:summary', 'body:value', 'title')) GROUP BY t.item_id, t.word) t LEFT OUTER JOIN search_api_db_default_node_index t_2 ON t.item_id = t_2.item_id WHERE (( (t_2.status = '1') )) GROUP BY t.item_id HAVING (COUNT(DISTINCT t.word) >= '$keyCount') ) subquery";
-                        $keyword = db_query($query)->fetchField();
-//                        $query = search_api_query('default_node_index');
-//                        $query->condition('type', 'article', '=');
-//                        $query->condition('status', 1, '=');
-//                        $filter = $query->createFilter('OR');
-//                        $filter->condition('title', $keyArr, 'IN');
-//                        $filter->condition('body:value', $keyArr, 'IN');
-//                        $filter->condition('body:summary', array($kye), 'IN');
-//                        $query->filter($filter);
-//                        $data = $query->execute();
-//                        $keyword = $data['result count'];
-                    } else {
-                        $keyword = db_query("SELECT COUNT(*) AS expression FROM (SELECT 1 AS expression FROM search_api_db_default_node_index_text t WHERE (word IN ('$key')) AND (field_name IN ('body:summary', 'body:value', 'title')) GROUP BY t.item_id) subquery")->fetchField();
-                    }
-                    $term = db_query("SELECT COUNT(*) AS expression FROM (SELECT 1 AS expression FROM search_api_db_default_node_index_text t WHERE (word IN ('$key')) AND (field_name IN ('field_area:name', 'field_category:name', 'field_person:description', 'field_person:field_lifetime', 'field_person:name', 'field_tags:name', 'field_vol:name', 'field_writer:description', 'field_writer:field_contact', 'field_writer:field_position', 'field_writer:name', 'field_years:name')) GROUP BY t.item_id) subquery")->fetchField();
+                    $keyword = _slowalk_search('search', 'page', $key);
+                    $term = _slowalk_search('search_term', 'page', $key);
                     $return = array('keyword' => $keyword, 'term' => $term);
                 }
                 break;

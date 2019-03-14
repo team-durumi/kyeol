@@ -95,3 +95,15 @@ function back_issues_date($tid)
         return format_date($node->created, 'custom', 'Y.m.d');
     }
 }
+
+function _slowalk_search($view_name, $display_id, $key)
+{
+    $search = views_get_view($view_name);
+    $search->set_display($display_id);
+    $filter = $search->get_item($display_id, 'filter', 'search_api_views_fulltext');
+    $filter['value'] = $key;
+    $search->set_item('page', 'filter', 'search_api_views_fulltext', $filter);
+    $search->pre_execute();
+    $search->execute();
+    return $search->total_rows;
+}
