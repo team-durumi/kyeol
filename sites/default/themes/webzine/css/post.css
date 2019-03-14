@@ -5,7 +5,7 @@
 
 /* post */
 
-.cke_editable img, .postA img{width:100%;max-width:100%;height:auto;}
+.cke_editable img, .postA img{width:100%;max-width:100%;height:auto;vertical-align:top;}
 .cke_editable p, .postA p{font-size:1rem;line-height:2rem;margin-bottom:2rem;word-break:keep-all;}
 .cke_editable p.big-text, .postA p.big-text{font-size:1.125rem;}
 .cke_editable p.origin, .postA p.origin{font-size:0.875rem;color:#888;line-height:1.5rem}
