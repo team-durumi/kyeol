@@ -219,7 +219,7 @@ body.front .ng01 li a i{font-size:16px;line-height:36px}
 .tc02 dd p{line-height:20px;margin-bottom:6px}
 /*검색결과 정보 텍스트*/
 .td01{font-size:1rem;line-height:20px}
-.td01 i{width:20px;height:20px;line-height:20px;border-radius:10px;margin-right:3px;font-size:12px;vertical-align:middle}
+.td01 i{width:20px;height:20px;line-height:20px;border-radius:10px;margin-right:3px;font-size:12px;vertical-align:bottom}
 /*메인 소제목*/
 .th01{margin-bottom:21px}
 .th01 dt{font-size:17px;line-height:18px}

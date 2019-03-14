@@ -96,8 +96,8 @@ footer .infoA li span, footer .infoA li a{color:#fff}
 .fc01_01 .leftA{float:left;width:48.5%}
 .fc01_01 .rightA{float:right;width:48.5%}
 .fc01_02{position:relative}
-.fc01_02:before{content:"";display:block;width:292px;height:476px;background:url(../images/bg_pattern_main02.png) no-repeat 0 0;position:absolute;left:0;top:65px}
-.fc01_02:after{content:"";display:block;width:434px;height:333px;background:url(../images/bg_pattern_main03.png) no-repeat 0 0;position:absolute;right:0;bottom:-100px}
+.fc01_02:before{content:"";display:block;width:292px;height:476px;background:url(../images/bg_pattern_main02.png) no-repeat 0 0;position:absolute;left:0;top:65px;z-index:-1;}
+.fc01_02:after{content:"";display:block;width:434px;height:333px;background:url(../images/bg_pattern_main03.png) no-repeat 0 0;position:absolute;right:0;bottom:-100px;z-index:-1;}
 .fc01_02 .inner{padding:65px 0}
 .fc01_03{background:url(../images/bg_pattern_comb02.png);position:relative}
 .fc01_03 .inner{padding:58px 0;overflow:hidden}
@@ -155,7 +155,7 @@ footer .infoA li span, footer .infoA li a{color:#fff}
 .sidebar ul.menu li.active a{color:#9f865f;font-weight:500}
 .sidebar ul.menu li a:hover{color:#9f865f;text-decoration:none}
 /*컨텐트 타이틀*/
-section h1.title{font-size:38px;line-height:50px;padding-bottom:24px;font-family:'Iropke Batang',sans-serif;border-bottom:2px solid #111}
+section h1.title{font-size:38px;line-height:40px;padding-bottom:24px;font-family:'Iropke Batang',sans-serif;border-bottom:2px solid #111}
 /* 페이징 */
 .pager{text-align:center;margin-top:40px}
 .pager li.pager-item, .pager li.pager-previous, .pager li.pager-next, .pager li.first, .pager li.last{margin:0;display:inline-block;width:2.75rem;height:2.75rem;padding:0}
@@ -410,6 +410,7 @@ body.front .ng01 li a i{font-size:2rem;line-height:73px}
 .con01 > dl > dt{width:34%;float:left;font-size:28px;line-height:36px;color:#111;font-family:'Iropke Batang',sans-serif}
 .con01 > dl > dd{width:66%;float:right}
 .con01 > dl > dd p:last-child{margin-bottom:0}
+.page-node-102 .caption{display:none;}
 
 /* jQuery UI modal */
 .ui-dialog .ui-widget-header{background:transparent;border-color:transparent;border-bottom:solid 1px #ededed;}
