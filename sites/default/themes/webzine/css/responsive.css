@@ -104,7 +104,7 @@ footer .infoA li strong{margin-right:3px}
 /*메인 슬라이더 배너*/
 .ib01 li{background-position:center top;background-size:auto 100%}
 .ib01 li img{height:450px}
-.ib01 li dl{top:125px;left:15px;margin-left:0}
+.ib01 li dl{top:125px;left:15px;right:inherit;margin-left:0}
 .ib01 li dl dt{font-size:30px;line-height:36px;margin-bottom:0.6rem}
 .ib01 li dl dd{font-size:14px;line-height:20px}
 .ib01 .slick-dots{width:100%;top:inherit;bottom:25px;left:0;margin-top:0;margin-left:0;text-align:left;padding-left:12px}
