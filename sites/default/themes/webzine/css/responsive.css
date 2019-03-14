@@ -20,7 +20,7 @@ header nav .btn_icon01{position:absolute;right:15px;top:15px}
 header .cf01{top:-150px;height:150px}
 /*푸터*/
 footer{padding:20px 0 40px}
-footer .addrA{float:none;width:auto;min-height:32px;padding-left:20px;padding-top:2px;background-size:10px;margin-bottom:20px}
+footer .addrA{float:none;width:auto;min-height:32px;padding-left:20px;padding-top:2px;padding-bottom:5px;background-size:10px;margin-bottom:20px;background-position:0 50%;height:inherit;word-break:keep-all;}
 footer .addrA .cpr{font-size:11px;line-height:13px}
 footer .infoA{float:none;width:auto}
 footer .infoA li{padding:4px 10px;font-size:12px}
@@ -130,7 +130,7 @@ footer .infoA li strong{margin-right:3px}
 .lc01_01 li dl{height:90px;padding:10px 0 0}
 .lc01_01 li dt{margin-bottom:4px}
 .lc01_01 li dt a{font-size:18px;line-height:26px}
-.lc01_01 li dd{display:block}
+.lc01_01 li dd{display:block;max-height:48px;}
 /*기본 리스트*/
 .lc02 li{padding:20px 0;border-bottom:1px solid #ddd}
 .lc02 li .thumb{height:77px;width:104px;margin-right:16px}
