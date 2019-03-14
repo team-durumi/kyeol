@@ -154,21 +154,21 @@
             <?php if(render($content['field_person'])): ?>
                 <dl class="ng05">
                     <dt>관련인물</dt>
-                    <dd><?php print get_term_link($content['field_person'], array('class' => 'btn03', 'prefix' => '#'));?></dd>
+                    <dd><?php print get_term_link($content['field_person'], array('class' => 'btn03', 'voca' => 'person'));?></dd>
                 </dl>
             <?php endif;?>
 
             <?php if(render($content['field_area'])): ?>
                 <dl class="ng05">
                     <dt>관련지역</dt>
-                    <dd><?php print get_term_link($content['field_area'], array('class' => 'btn03', 'prefix' => '#'));?></dd>
+                    <dd><?php print get_term_link($content['field_area'], array('class' => 'btn03', 'voca' => 'location'));?></dd>
                 </dl>
             <?php endif;?>
 
             <?php if(render($content['field_years'])): ?>
                 <dl class="ng05">
                     <dt>관련시기</dt>
-                    <dd><?php print get_term_link($content['field_years'], array('class' => 'btn03', 'prefix' => '#'));?></dd>
+                    <dd><?php print get_term_link($content['field_years'], array('class' => 'btn03', 'voca' => 'years'));?></dd>
                 </dl>
             <?php endif;?>
         </aside>

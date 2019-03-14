@@ -114,7 +114,11 @@ function get_term_link($term, $options = array())
             if(isset($options['suffix'])) {
                 $name .= $options['suffix'];
             }
-            $html[] = '<a class="'.$classes.'" href="/'.drupal_get_path_alias('taxonomy/term/'.$item['tid']).'">'.$name.'</a>';
+            if(isset($options['voca'])) {
+                $html[] = '<a class="'.$classes.'" href="/archive/'.$options['voca'].'?search='.$name.'">'.$name.'</a>';
+            } else {
+                $html[] = '<a class="'.$classes.'" href="/'.drupal_get_path_alias('taxonomy/term/'.$item['tid']).'">'.$name.'</a>';
+            }
         }
         return implode('', $html);
     }
