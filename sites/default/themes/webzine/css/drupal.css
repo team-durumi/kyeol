@@ -26,3 +26,7 @@ div.messages{margin-top: 35px}
 
 /*모아보기-인물*/
 .fc_box01_01 .rightF.person{margin-right:10px;cursor:pointer}
+
+/*본문 이미지 캡션*/
+.caption{display:block;position:relative;}
+.caption p{position:absolute;margin:0;bottom:0;right:0;background-color:rgba(0, 0, 0, 0.4);color: #e3e3e3;font-size:10px;font-size:1rem;font-weight:300;text-align:right;padding:6px 5px;left:0;font-size:1.1rem}
