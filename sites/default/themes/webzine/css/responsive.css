@@ -261,6 +261,8 @@ header .lg01{margin-top:22px;}
 /* 기사 제목 영역 */
 @media screen and (max-width: 1108px) {
 .th02 .inner{left:inherit;margin-left:15px;}
+.ib01 .slick-dots{width: auto;bottom: 20px;left: 15px;margin-top: 0;margin-right: 0;}
+.ib01 .slick-dots li{display:inline-block;}
 }
 
 /* 태블릿 가로 */
