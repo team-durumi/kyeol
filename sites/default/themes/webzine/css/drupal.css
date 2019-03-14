@@ -32,7 +32,7 @@ div.messages{margin-top: 35px}
 .caption p{position:absolute;margin:0;bottom:0;right:0;background-color:rgba(0, 0, 0, 0.4);color: #e3e3e3;font-size:10px;font-size:.8rem;line-height:1.8;font-weight:300;text-align:left;padding:6px 12px;left:0;}
 
 /*본문 Youtube*/
-.field-type-youtube .field-items .field-item{margin-bottom:10px}
+.field-type-youtube .field-items .field-item, .field-type-video .field-items .field-item{margin-bottom:10px}
 
 /*본문 영상*/
 .field-type-video video{max-width:100%;height:auto}
