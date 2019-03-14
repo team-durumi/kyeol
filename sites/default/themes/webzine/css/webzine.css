@@ -268,7 +268,7 @@ body.front .lg01 em b{color:#fff}
 .ng01 li a{display:block;width:60px;height:60px;line-height:60px;border-radius:30px;text-align:center;background:url(../images/bg_header_menu.png) no-repeat center center;transition:height 0.5s}
 .ng01 li a i{font-size:1.8rem;line-height:60px;color:#fff}
 .ng01 li a:hover{background:#9f865f}
-body.front .ng01 li a{width:73px;height:73px;line-height:73px;border-radius:36.5px}
+body.front .ng01 li a{width:73px;height:73px;line-height:73px;border-radius:36.5px;transition:inherit;}
 body.front .ng01 li a i{font-size:2rem;line-height:73px}
 /*태그리스트*/
 .ng02{margin-top:40px}
