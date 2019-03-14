@@ -168,8 +168,12 @@ $(document).ready(function() {
 	$('#user-login input').focus(function() {
 		$(this).siblings('.description').hide();
 	});
-	$('#user-login input').blur(function() {
-		$(this).siblings('.description').show();
+	$('#user-login input').change(function () {
+		if($(this).val().length === 0) {
+			$(this).siblings('.description').show();
+		} else {
+			$(this).siblings('.description').hide();
+		}
 	});
 	$('#user-login .description').click(function() {
 		$(this).hide();
