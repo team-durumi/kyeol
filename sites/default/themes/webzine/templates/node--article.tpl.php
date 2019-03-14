@@ -122,6 +122,18 @@
                     </dd>
                 </dl>
             <?php endif;?>
+            <?php if(render($content['field_youtube'])):?>
+                <dl class="ng04 youtube">
+                    <dt>Youtube</dt>
+                    <dd><?php print render($content['field_youtube']);?></dd>
+                </dl>
+            <?php endif;?>
+            <?php if(render($content['field_mov'])):?>
+                <dl class="ng04 mov">
+                    <dt>영상</dt>
+                    <dd><?php print render($content['field_mov']);?></dd>
+                </dl>
+            <?php endif;?>
             <?php if(render($content['field_url'])): ?>
                 <dl class="ng04 link">
                     <dt>참고문헌</dt>
