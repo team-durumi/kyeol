@@ -196,7 +196,7 @@ $(document).ready(function() {
             box.dialog({
             	modal: true,
                 title:title,
-                minWidth:500,
+                minWidth:320,
 				position: { my: "center", at: "center", of: window }
             });
         });
