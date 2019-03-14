@@ -410,7 +410,7 @@ body.front .ng01 li a i{font-size:2rem;line-height:73px}
 .con01 > dl > dt{width:34%;float:left;font-size:28px;line-height:36px;color:#111;font-family:'Iropke Batang',sans-serif}
 .con01 > dl > dd{width:66%;float:right}
 .con01 > dl > dd p:last-child{margin-bottom:0}
-.page-node-102 .caption{display:none;}
+.page-node-102 .caption p{display:none;}
 
 /* jQuery UI modal */
 .ui-dialog .ui-widget-header{background:transparent;border-color:transparent;border-bottom:solid 1px #ededed;}
