@@ -207,7 +207,7 @@ section h1.title{font-size:38px;line-height:50px;padding-bottom:24px;font-family
 .ib01 li dl{position:absolute;top:230px;right:50%;margin-left:16px;max-width:500px;word-break:keep-all;}
 .ib01 li dl dt{font-size:50px;line-height:62px;color:#fff;margin-bottom:1rem;font-family:'Iropke Batang','IropkeBatang',sans-serif}
 .ib01 li dl dd{font-size:18px;line-height:30px;color:#fff;font-weight:300}
-.ib01 .slick-dots{width:auto;top:50%;left:50%;margin-top:-40px;margin-left:554px}
+.ib01 .slick-dots{width:auto;top:50%;right:50%;margin-top:-40px;margin-right:-494px}
 .ib01 .slick-dots li{background-color:transparent;display:block;margin-bottom:15px}
 .ib01 .slick-dots li button{width:20px;height:20px;border-radius:10px;padding:0;border:1px solid #fff;text-indent:-9999px}
 .ib01 .slick-dots li.slick-active button{background-color:#fff}
