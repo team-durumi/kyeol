@@ -197,6 +197,7 @@ $(document).ready(function() {
             	modal: true,
                 title:title,
                 minWidth:320,
+                width:'50%',
 				position: { my: "center", at: "center", of: window }
             });
         });
