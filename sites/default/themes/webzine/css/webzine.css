@@ -263,7 +263,7 @@ section h1.title{font-size:38px;line-height:40px;padding-bottom:24px;font-family
 body.front .lg01 a{width:370px;height:70px;background-image:url(../images/logo_main.png);background-size:contain;}
 body.front .lg01 em{color:#fff;margin-top:5px;}
 body.front .lg01 em b{color:#fff;line-height:3.8rem;}
-body.front .lg01 em i{line-height::;}
+body.front .lg01 em i{line-height:2.7rem;}
 /*모아보기 지역 지도*/
 .map01{margin-top:40px}
 .map01 iframe{width:100%;height:446px}
