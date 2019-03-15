@@ -4,6 +4,7 @@
 .tabs.primary li a{border:3px solid #9f865f;min-width:100px;margin:1em 0.5em;display:block;padding:0.5em;text-decoration:none;text-align:center;color:#9f865f}
 .tabs.primary li:nth-child(1) a{margin-left:0}
 .tabs.primary li a:hover{background-color:#9f865f;color:white}
+.not-logged-in .tabs{display:none;}
 
 /*지난호 보기*/
 .lc01 li.views-row:nth-child(3n){margin-right:0}

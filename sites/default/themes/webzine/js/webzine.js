@@ -196,8 +196,8 @@ $(document).ready(function() {
             box.dialog({
             	modal: true,
                 title:title,
-                minWidth:320,
-                width:'50%',
+                width:'80%',
+                maxWidth:590,
 				position: { my: "center", at: "center", of: window }
             });
         });
