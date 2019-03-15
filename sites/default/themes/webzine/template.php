@@ -66,6 +66,7 @@ function webzine_preprocess_page(&$variables)
     }
     drupal_add_js(array('Webzine' => array('vol' => $main->baseUrl.'/vol/'.$main->vol())), 'setting');
     drupal_add_js('https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js', array('type' => 'external', 'scope' => 'header', 'group' => JS_LIBRARY));
+    drupal_add_js(drupal_get_path('theme', 'webzine') . 'js/jquery.dialogOptions.js', array('type' => 'file', 'scope' => 'header', 'group' => JS_LIBRARY));
     drupal_add_js('https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.min.js', array('type' => 'external', 'scope' => 'header', 'group' => JS_LIBRARY ));
     drupal_add_js('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js', array('type' => 'external', 'scope' => 'header', 'group' => JS_THEME ));
     drupal_add_js(drupal_get_path('module', 'ckeditor') . '/plugins/cavacnote/jquery/jquery.cavacnote.js', array('type' => 'file', 'scope' => 'header', 'group' => JS_LIBRARY));
