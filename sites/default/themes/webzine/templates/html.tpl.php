@@ -64,5 +64,6 @@
 <?php print $page; ?>
 <?php print $page_bottom; ?>
 
+<button onclick="topFunction()" id="toTop" title="맨위로" style="display: block;"><i class="xi xi-2x xi-arrow-top"></i></button>
 </body>
 </html>
