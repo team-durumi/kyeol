@@ -149,9 +149,9 @@ section h1.title{font-size:24px;line-height:30px;padding-bottom:20px;}
 .lc03 > dl > dd .lc02_01 li dl{margin-left:0}
 /*로고*/
 .lg01 a{width:200px;height:36px;background-size:200px 36px}
-.lg01 em{color:#554531;line-height:17.6px;margin-left:5px;padding-left:10px;}
+.lg01 em{color:#554531;line-height:17.6px;margin-top:2px;padding-top:2px;margin-left:5px;padding-left:10px;}
 .lg01 em b{font-size:17.6px;vertical-align:inherit;}
-.lg01 em i{font-size:7px;vertical-align:inherit;}
+.lg01 em i{font-size:7px;vertical-align:inherit;line-height:1.8rem;}
 body.front .lg01 a{width:200px;height:36px;background-size:200px 36px}
 body.front .lg01 em{margin-top:2px;padding-top:4px;}
 body.front .lg01 em b{line-height:17.6px;vertical-align:inherit}
