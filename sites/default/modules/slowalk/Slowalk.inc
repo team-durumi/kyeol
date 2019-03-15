@@ -338,6 +338,7 @@ class Archive extends Slowalk
         $this->yearsQeury();
         $html = '';
         $html .= '<a class="btn03" href="/archive/years/?search=' . $this->years[$pid]['name'] . '">#' . $this->years[$pid]['name'] . '</a>';
+        asort($this->years[$pid]['child']);
         foreach($this->years[$pid]['child'] as $child) {
             $html .= '<a class="btn03" href="/archive/years/?search=' . $child . '">#' . $child . '</a>';
         }
