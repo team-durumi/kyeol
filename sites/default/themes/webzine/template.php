@@ -110,7 +110,7 @@ function get_term_link($term, $options = array())
         foreach($term['#items'] as $item) {
             $name = isset($options['type']) ? sprintf($options['type'], $item['taxonomy_term']->name) : $item['taxonomy_term']->name;
             if(!$first && strpos($name, '년대') !== false) {
-                $html[] = '<br />';
+                $html[] = '<br /><br />';
             }
             if(isset($options['prefix'])) {
                 $name = $options['prefix'] . $name;
