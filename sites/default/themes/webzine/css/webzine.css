@@ -41,7 +41,7 @@ body.front{background-color:#f5f5f5}
 header{border-bottom:1px solid #ddd}
 header .inner{height:100px;overflow:hidden;transition:height 0.5s}
 header .lg01{float:left;margin-top:24px}
-body.front header .lg01{margin-top:32px}
+body.front header .lg01{margin-top:19px}
 header .ng01{float:right;margin-top:19px}
 body.front header .ng01{float:right;margin-top:19px}
 body.front header{position:absolute;top:0;left:0;width:100%;z-index:10;border-bottom:none}
@@ -255,10 +255,10 @@ section h1.title{font-size:38px;line-height:40px;padding-bottom:24px;font-family
 .lc03 > dl > dd .lc02_01 li:last-child{border-bottom:none}
 /*로고*/
 .lg01 a{display:inline-block;width:280px;height:52px;background:url(../images/logo_sub.png) no-repeat 0 0;text-indent:-9999px;vertical-align:top;transition:all 0.5s}
-.lg01 em{color:#554531;line-height:2.3rem;font-family:'Iropke Batang',sans-serif;margin-left:10px;position:relative;padding-left:20px;border-left:solid 1px #cbcbcb;display:inline-block;}
-.lg01 em b{font-size:2.6875rem}
-.lg01 em i{font-size:1.125rem;font-style:normal}
-body.front .lg01 a{width:366px;height:67px;background-image:url(../images/logo_main.png);background-size:contain;}
+.lg01 em{color:#554531;line-height:3.2rem;font-family:'Iropke Batang',sans-serif;margin-left:10px;position:relative;padding-left:20px;border-left:solid 1px #cbcbcb;display:inline-block;}
+.lg01 em b{font-size:2.6875rem;font-weight:300;vertical-align:bottom;}
+.lg01 em i{font-size:1.125rem;line-height:2.2rem;font-style:normal;vertical-align:bottom;}
+body.front .lg01 a{width:370px;height:70px;background-image:url(../images/logo_main.png);background-size:contain;}
 body.front .lg01 em{color:#fff;}
 body.front .lg01 em b{color:#fff}
 /*모아보기 지역 지도*/
@@ -269,7 +269,7 @@ body.front .lg01 em b{color:#fff}
 .ng01 li a{display:block;width:60px;height:60px;line-height:60px;border-radius:30px;text-align:center;background:url(../images/bg_header_menu.png) no-repeat center center;transition:height 0.5s}
 .ng01 li a i{font-size:1.8rem;line-height:60px;color:#fff}
 .ng01 li a:hover{background:#9f865f}
-body.front .ng01 li a{width:73px;height:73px;line-height:73px;border-radius:36.5px;transition:inherit;}
+body.front .ng01 li a{width:70px;height:70px;line-height:70px;border-radius:70px;transition:inherit;}
 body.front .ng01 li a i{font-size:2rem;line-height:73px}
 /*태그리스트*/
 .ng02{margin-top:40px}
