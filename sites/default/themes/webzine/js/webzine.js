@@ -200,6 +200,7 @@ $(document).ready(function() {
 			    maxWidth: 600,
 			    height: 'auto',
 			    modal: true,
+			    clickOut: true,
 			    fluid: true, //new option
 				position: { my: "center", at: "center", of: window }
             });
