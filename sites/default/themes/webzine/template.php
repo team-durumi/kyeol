@@ -106,8 +106,12 @@ function get_term_link($term, $options = array())
         if($options) {
             $classes = $options['class'] ?? '';
         }
+        $first = true;
         foreach($term['#items'] as $item) {
             $name = isset($options['type']) ? sprintf($options['type'], $item['taxonomy_term']->name) : $item['taxonomy_term']->name;
+            if(!$first && strpos($name, '년대') !== false) {
+                $html[] = '<br />';
+            }
             if(isset($options['prefix'])) {
                 $name = $options['prefix'] . $name;
             }
@@ -119,6 +123,7 @@ function get_term_link($term, $options = array())
             } else {
                 $html[] = '<a class="'.$classes.'" href="/'.drupal_get_path_alias('taxonomy/term/'.$item['tid']).'">'.$name.'</a>';
             }
+            $first = false;
         }
         return implode('', $html);
     }
