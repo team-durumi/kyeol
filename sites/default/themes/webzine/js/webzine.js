@@ -209,7 +209,6 @@ $(document).ready(function() {
 	// on window resize run function
 	$(window).resize(function () {
 	    fluidDialog();
-	    console.log('resized');
 	});
 
 	// catch dialog if opened within a viewport smaller than the dialog width
