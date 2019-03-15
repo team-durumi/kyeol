@@ -64,6 +64,7 @@ header.searchOpened .cf01{top:0}
 body.pc.scrolling{padding-top:100px}
 body.pc.scrolling header{position:fixed;left:0;top:0;width:100%;background-color:#fff;z-index:60}
 body.pc.scrolling.adminimal-menu header{top:29px}
+body.pc.scrolling header .lg01 em{margin-top:0;}
 /*스크롤 헤더 - 메인*/
 body.pc.front.scrolling{padding-top:0}
 body.pc.front.scrolling header .lg01{margin-top:24px}
@@ -259,7 +260,7 @@ section h1.title{font-size:38px;line-height:40px;padding-bottom:24px;font-family
 .lg01 em b{font-size:2.6875rem;font-weight:300;vertical-align:bottom;}
 .lg01 em i{font-size:1.125rem;line-height:2.2rem;font-style:normal;vertical-align:bottom;}
 body.front .lg01 a{width:370px;height:70px;background-image:url(../images/logo_main.png);background-size:contain;}
-body.front .lg01 em{color:#fff;}
+body.front .lg01 em{color:#fff;margin-top:5px;}
 body.front .lg01 em b{color:#fff;line-height:3.8rem;}
 /*모아보기 지역 지도*/
 .map01{margin-top:40px}
