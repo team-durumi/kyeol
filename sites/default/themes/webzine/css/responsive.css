@@ -150,12 +150,10 @@ section h1.title{font-size:24px;line-height:30px;padding-bottom:20px;}
 /*로고*/
 .lg01 a{width:200px;height:36px;background-size:200px 36px}
 .lg01 em{color:#554531;line-height:17.6px;margin-left:5px;padding-left:10px;}
-.lg01 em b{font-size:17.6px}
-.lg01 em i{font-size:7px}
+.lg01 em b{font-size:17.6px;line-height:17.6px;vertical-align:inherit}
+.lg01 em i{font-size:7px;line-height:1.8rem;vertical-align:inherit}
 body.front .lg01 a{width:200px;height:36px;background-size:200px 36px}
 body.front .lg01 em{margin-top:2px;padding-top:2px;}
-body.front .lg01 em b{line-height:17.6px;vertical-align:inherit}
-body.front .lg01 em i{line-height:1.8rem;vertical-align:inherit}
 /*모아보기 지역 지도*/
 .map01{margin-top:20px}
 .map01 iframe{height:300px}
