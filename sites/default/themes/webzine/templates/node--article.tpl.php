@@ -220,7 +220,7 @@
     <div class="relateA">
         <ul class="lc01 inner">
             <?php $i=1; foreach($content['field_related_article']['#items'] as $article): ?>
-                <?php if(isset(isset($article['node']))): ?>
+                <?php if(isset($article['node'])): ?>
                     <?php if($article['node']->status !== '1') continue; ?>
                     <?php $img = ($article['node']->field_image) ? image_style_url('main_article', $article['node']->field_image['und'][0]['uri']) : file_create_url(drupal_get_path('theme', 'webzine').'/images/no-image-square.png');?>
                     <?php $body = field_view_field('node', $article['node'], 'body', 'teaser');?>
