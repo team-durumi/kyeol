@@ -236,6 +236,7 @@
                 <?php endif;?>
             <?php endforeach;?>
         </ul>
+        <div class="clear"></div>
     </div>
     <?php endif;?>
 <?php endif;?>
