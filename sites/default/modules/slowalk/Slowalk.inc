@@ -203,6 +203,7 @@ class Webzines extends Slowalk
             }
         }
         $html .= '</ul>
+                    <div class="clear"></div>
                 </div>';
         return $html;
     }
