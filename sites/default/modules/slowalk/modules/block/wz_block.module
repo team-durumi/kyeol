@@ -189,6 +189,7 @@ function wz_main_articles_block_view()
                     </li>';
     }
     $html .= '</ul>';
+    $html .= '<div class="clear"></div>';
     $html .= '</div>';
     $block = array(
         'articles' => array(
