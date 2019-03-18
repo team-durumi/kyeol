@@ -41,7 +41,7 @@ function webzine_preprocess_page(&$variables)
     if(empty($variables['page']['sidebar_first'])) {
         $variables['main_class'] = 'fc03';
         if(strpos(request_uri(), 'vol') !== false) {
-            $variables['title'] = '지난호 보기';
+            $variables['title'] = '지난호 보기1';
             $variables['theme_hook_suggestions'][] = 'page__vol';
         } elseif (arg(0) === 'taxonomy') {
             drupal_add_css('#page-title:before{content:"#"}', 'inline');
