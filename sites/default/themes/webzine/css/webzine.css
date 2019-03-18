@@ -217,7 +217,7 @@ section h1.title{font-size:38px;line-height:40px;padding-bottom:24px;font-family
 .ib01 .slick-dotted.slick-slider{margin-bottom:0}
 .ib01:after{content:"";display:block;width:311px;height:307px;;background:url(../images/bg_pattern_main01.png) no-repeat 0 0;position:absolute;right:0;bottom:-230px}
 /*메인 두번째 헤드라인 리스트*/
-.lc01{overflow:hidden}
+.lc01+.clear{float:none;clear:both;}
 .lc01 li{float:left;width:31.2%;margin-right:2.9%;margin-bottom:2.9%;background-color:#fff;border:solid 1px #ddd;position:relative;}
 .lc01 li:nth-child(3n){margin-right:0}
 .lc01 li .thumb{display:block;height:261px;width:100%;position:relative}
