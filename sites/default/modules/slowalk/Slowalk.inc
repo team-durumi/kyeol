@@ -202,8 +202,7 @@ class Webzines extends Slowalk
                 $html = strtr($html, $row);
             }
         }
-        $html .= '</ul>
-                    <div class="clear"></div>
+        $html .= '</ul><div class="clear"></div>                    
                 </div>';
         return $html;
     }
