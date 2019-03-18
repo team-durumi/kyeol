@@ -231,7 +231,7 @@ section h1.title{font-size:38px;line-height:40px;padding-bottom:24px;font-family
 .lc01 li dd{max-height:58px;display:block;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}
 /*지난호 보기 리스트*/
 .lc01_01{margin-top:40px}
-.lc01_01 li dl{height:158px;padding:16px 0 0;box-sizing:border-box}
+.lc01_01 li dl{height:158px;padding:16px 24px;box-sizing:border-box}
 .lc01_01 li dt{margin-bottom:8px}
 .lc01_01 li dt a{font-size:28px;line-height:50px;color:#111;font-family:'Iropke Batang',sans-serif}
 .lc01_01 li dd p{margin-bottom:5px;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden}

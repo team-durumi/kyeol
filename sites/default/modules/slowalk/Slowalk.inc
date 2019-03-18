@@ -181,7 +181,7 @@ class Webzines extends Slowalk
         if(isset($options['rows'])) {
             foreach($options['rows'] as $row) {
                 $html .= '<li>
-                    <a href="#" class="thumb"><span><img src="{{ img }}" alt=""/></span></a>
+                    <a href="{{ node_url }}" class="thumb"><span><img src="{{ img }}" alt=""/></span></a>
                     <dl class="conA">
                         <dt>
                             <span class="category">
