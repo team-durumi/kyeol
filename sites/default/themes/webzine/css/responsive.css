@@ -280,7 +280,7 @@ html{font-size:13px}
 @media screen and (max-width: 350px) {
 header .lg01{margin-top:22px;}
 body.front .lg01 a,
-.lg01 a{width:140px;height:36px;background-size:contain;}
+.lg01 a{width:140px;height:36px;background-size:contain;background-position:50% 50%;}
 }
 
 
