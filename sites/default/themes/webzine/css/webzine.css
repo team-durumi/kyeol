@@ -112,7 +112,7 @@ footer .infoA li span, footer .infoA li a{color:#fff}
 .fc02 aside{float:left;width:17.148%}
 .fc02 section{float:right;width:72.256%}
 /*서브페이지-일반형 프레임*/
-.fc03 .inner{overflow:hidden;padding-bottom:100px}
+.fc03 .inner{padding-bottom:100px}
 .fc03 nav{padding:20px 0 56px;text-align:right}
 /*뷰페이지 프레임*/
 .fc04 .cBody{width:728px;margin:0 auto;padding:100px 0 0;position:relative}
