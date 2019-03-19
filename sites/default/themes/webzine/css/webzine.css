@@ -68,7 +68,7 @@ header.searchOpened .cf01{top:0}
 body.pc.scrolling{padding-top:100px}
 body.pc.scrolling header{position:fixed;left:0;top:0;width:100%;background-color:#fff;z-index:60}
 body.pc.scrolling.adminimal-menu header{top:29px}
-.footnotes header{position:inherit;left:inherit;top:inherit;width:inherit;background-color:inherit;z-index:inherit}
+body.pc.scrolling header section.footnotes header{position:inherit;left:inherit;top:inherit;width:inherit;background-color:inherit;z-index:inherit}
 body.pc.scrolling header .lg01 em{margin-top:0;}
 /*스크롤 헤더 - 메인*/
 body.pc.front.scrolling{padding-top:0}
