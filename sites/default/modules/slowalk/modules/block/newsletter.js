@@ -15,9 +15,15 @@
         let newsletterDiv = $('<div />');
         newsletterDiv.append(responseText);
         newsletterDiv.dialog({
-            height:300,
-            width:500,
+            modal: true,
             title:"뉴스레터 신청",
+            width: 'auto', // overcomes width:'auto' and maxWidth bug
+            maxWidth: 600,
+            height: 'auto',
+            modal: true,
+            clickOut: true,
+            fluid: true, //new option
+            position: { my: "center", at: "center", of: window },
             close:function(event,ui) {
                 $('#newsletter-form input[type=text]').val('');
             }
