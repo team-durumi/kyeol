@@ -19,7 +19,7 @@ a:hover,a:active{text-decoration:underline}
 input[type=text],
 input[type=password],
 input[type=date],
-input[type=email]{font-size:1rem;height:2.875rem;text-indent:1rem;border:1px solid #dadde1;box-sizing:border-box}
+input[type=email]{font-family:'Noto Sans KR',sans-serif;font-size:1rem;height:2.875rem;text-indent:1rem;border:1px solid #dadde1;box-sizing:border-box}
 textarea{font-size:1rem;padding:1rem;border:1px solid #dadde1;box-sizing:border-box}
 input[type=text].error,
 input[type=password].error,
