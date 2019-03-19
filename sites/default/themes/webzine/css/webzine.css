@@ -69,7 +69,6 @@ body.pc.scrolling{padding-top:100px}
 body.pc.scrolling header{position:fixed;left:0;top:0;width:100%;background-color:#fff;z-index:60}
 body.pc.scrolling.adminimal-menu header{top:29px}
 body.pc.scrolling header .lg01 em{margin-top:0;}
-body .footnotes header{position:inherit;left:inherit;top:inherit;width:inherit;background-color:inherit;z-index:inherit}
 /*스크롤 헤더 - 메인*/
 body.pc.front.scrolling{padding-top:0}
 body.pc.front.scrolling header .lg01{margin-top:24px}
@@ -441,6 +440,9 @@ body.page-archive-person .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-clos
 .ui-dialog.ui-widget.ui-widget-content:before{content:'';position:absolute;background: transparent;top: -10px;left:10px;width: 0;height: 0;border-left: 10px solid transparent;border-right: 10px solid transparent;border-bottom: 10px solid #fff;}
 .ui-dialog.ui-widget.ui-widget-content:after{content:'';position:absolute;background: transparent;top: -12px;left: 8px;width: 0;height: 0;border-left: 12px solid transparent;border-right: 12px solid transparent;z-index: -1;border-bottom: 12px solid #e9e9e9;}
 */
+
+/* 각주 헤더 초기화*/
+.footnotes header{position:inherit!important;left:inherit!important;top:inherit!important;width:inherit!important;background-color:inherit;z-index:inherit!important}
 
 /* 기사 - 이미지 슬라이더 */
 .slider-nav .slick-slide{margin:0 1%;}
