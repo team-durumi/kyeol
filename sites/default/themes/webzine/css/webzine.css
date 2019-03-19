@@ -441,8 +441,10 @@ body.page-archive-person .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-clos
 .ui-dialog.ui-widget.ui-widget-content:after{content:'';position:absolute;background: transparent;top: -12px;left: 8px;width: 0;height: 0;border-left: 12px solid transparent;border-right: 12px solid transparent;z-index: -1;border-bottom: 12px solid #e9e9e9;}
 */
 
-/* 각주 헤더 초기화*/
+/* 각주 */
 .footnotes header{position:inherit!important;left:inherit!important;top:inherit!important;width:inherit!important;background-color:inherit;z-index:inherit!important}
+.footnotes ol li a{background: #ededed;display:inline-block;padding: .3em .7em;border-radius: 4px;text-indent:}
+.footnotes ol li a:before{content:'';font-family:'xeicon';text-indent:0;}
 
 /* 기사 - 이미지 슬라이더 */
 .slider-nav .slick-slide{margin:0 1%;}
