@@ -24,10 +24,10 @@ textarea{font-size:1rem;padding:1rem;border:1px solid #dadde1;box-sizing:border-
 input[type=text].error,
 input[type=password].error,
 input[type=email].error{border-color:#ff0000;color:#515358}
-input::-webkit-input-placeholder {color:#d7c3a4;font-family:'Noto Sans KR',sans-serif}
-input:-ms-input-placeholder {color:#d7c3a4;font-family:'Noto Sans KR',sans-serif}
-input::-webkit-input-placeholder {color:#d7c3a4;font-family:'Noto Sans KR',sans-serif}
-input:-ms-input-placeholder {color:#d7c3a4;font-family:'Noto Sans KR',sans-serif}
+input::-webkit-input-placeholder {font-family:'Noto Sans KR',sans-serif}
+input:-ms-input-placeholder {font-family:'Noto Sans KR',sans-serif}
+input::-webkit-input-placeholder {font-family:'Noto Sans KR',sans-serif}
+input:-ms-input-placeholder {font-family:'Noto Sans KR',sans-serif}
 textarea.error{border-color:#e31919;color:#e31919}
 .feed-icon{display:none;}
 /**** Layout ****/
@@ -68,7 +68,7 @@ header.searchOpened .cf01{top:0}
 body.pc.scrolling{padding-top:100px}
 body.pc.scrolling header{position:fixed;left:0;top:0;width:100%;background-color:#fff;z-index:60}
 body.pc.scrolling.adminimal-menu header{top:29px}
-body.pc.scrolling.adminimal-menu .footnotes header{position:inherit;left:inherit;top:inherit;width:inherit;background-color:inherit;z-index:inherit}
+.footnotes header{position:inherit;left:inherit;top:inherit;width:inherit;background-color:inherit;z-index:inherit}
 body.pc.scrolling header .lg01 em{margin-top:0;}
 /*스크롤 헤더 - 메인*/
 body.pc.front.scrolling{padding-top:0}
