@@ -155,7 +155,7 @@ CKEDITOR.plugins.add( 'footnotes', {
                            : 1;
         var prefix  = editor.config.footnotesPrefix ? '-' + editor.config.footnotesPrefix : '';
         if (data && data.occurrences[footnote_id] == 1) {
-            links = '<a href="#footnote-marker' + prefix + '-' + order + '-1">^</a> ';
+            links = '<a href="#footnote-marker' + prefix + '-' + order + '-1"></a> ';
         } else if (data && data.occurrences[footnote_id] > 1) {
             var i = 0
               , l = data.occurrences[footnote_id]

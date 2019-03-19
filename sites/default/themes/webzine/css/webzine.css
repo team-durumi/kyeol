@@ -443,8 +443,7 @@ body.page-archive-person .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-clos
 
 /* 각주 */
 .footnotes header{position:inherit!important;left:inherit!important;top:inherit!important;width:inherit!important;background-color:inherit;z-index:inherit!important}
-.footnotes ol li a{background: #ededed;display:inline-block;padding: .3em .7em;border-radius: 4px;text-indent:}
-.footnotes ol li a:before{content:'';font-family:'xeicon';text-indent:0;}
+.footnotes ol li a{background: #ededed;display:inline-block;padding: .3em .7em;border-radius: 4px;font-family:'xeicon';}
 
 /* 기사 - 이미지 슬라이더 */
 .slider-nav .slick-slide{margin:0 1%;}
