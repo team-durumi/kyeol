@@ -24,6 +24,10 @@ textarea{font-size:1rem;padding:1rem;border:1px solid #dadde1;box-sizing:border-
 input[type=text].error,
 input[type=password].error,
 input[type=email].error{border-color:#ff0000;color:#515358}
+input::-webkit-input-placeholder {color:#d7c3a4;font-family:'Noto Sans KR',sans-serif}
+input:-ms-input-placeholder {color:#d7c3a4;font-family:'Noto Sans KR',sans-serif}
+input::-webkit-input-placeholder {color:#d7c3a4;font-family:'Noto Sans KR',sans-serif}
+input:-ms-input-placeholder {color:#d7c3a4;font-family:'Noto Sans KR',sans-serif}
 textarea.error{border-color:#e31919;color:#e31919}
 .feed-icon{display:none;}
 /**** Layout ****/
@@ -191,10 +195,10 @@ section h1.title{font-size:38px;line-height:40px;padding-bottom:24px;font-family
 .cf01 fieldset{width:728px;height:62px;margin:80px auto 0;border-bottom:1px solid #fff}
 .cf01 label{display:block;width:0;height:0;text-indent:-9999px;overflow:hidden}
 .cf01 input{background-color:transparent;border:none;height:60px;color:#fff;font-size:28px;text-indent:0;width:90%}
-.cf01 input::-webkit-input-placeholder {color:#d7c3a4;font-family:'Noto Sans KR',sans-serif}
-.cf01 input:-ms-input-placeholder {color:#d7c3a4;font-family:'Noto Sans KR',sans-serif}
-.cf01 input::-webkit-input-placeholder {color:#d7c3a4;font-family:'Noto Sans KR',sans-serif}
-.cf01 input:-ms-input-placeholder {color:#d7c3a4;font-family:'Noto Sans KR',sans-serif}
+.cf01 input::-webkit-input-placeholder {color:#d7c3a4}
+.cf01 input:-ms-input-placeholder {color:#d7c3a4}
+.cf01 input::-webkit-input-placeholder {color:#d7c3a4}
+.cf01 input:-ms-input-placeholder {color:#d7c3a4}
 .cf01 button{float:right;border:none;background-color:transparent;margin-top:15px;cursor:pointer}
 .cf01 button i{font-size:32px;font-weight:bold;color:#fff}
 /*뉴스레터 신청*/
