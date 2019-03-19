@@ -424,7 +424,7 @@ body.front .ng01 li a i{font-size:2rem;line-height:73px}
 .ui-dialog.ui-widget.ui-widget-content{border: solid 1px #ddd;border-radius: 2px;box-shadow: 4px 4px 10px 0px rgba(0,0,0,.2);position:relative;}
 .ui-dialog.ui-widget.ui-widget-content strong{font-weight:normal;}
 body.html .ui-widget-overlay{background:rgba(0,0,0,.5);opacity:inherit}
-body.page-archive-person .ui-dialog-title{font-family:'Iropke Batang',sans-serif!important;font-size:1.8rem;}
+body.page-archive-person .ui-dialog-title{font-family:'Iropke Batang',sans-serif!important;font-size:1.8rem;font-weight:500!important}
 body.page-archive-person .ui-dialog .ui-dialog-content{padding:1rem 2rem;}
 body.page-archive-person .ui-dialog .ui-dialog-titlebar{padding:1rem 2rem;}
 body.page-archive-person .ui-dialog .ui-dialog-titlebar-close{right:2em;margin-top:-15px;}
