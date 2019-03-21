@@ -86,10 +86,12 @@
                         <a class="btn02 category" href="<?php print $category_path;?>"><?php print $category;?></a>
                     </div>
                     <h1><?php print $title;?></h1>
+                    <?php foreach($writers as $writer): ?>
                     <p>
-                        <b>글 <?php print $writer;?></b>
-                        <em><?php print $writer_info;?></em>
+                        <b>글 <?php print $writer['name'];?></b>
+                        <em><?php print $writer['info'];?></em>
                     </p>
+                    <?php endforeach;?>
                     <div class="ng03">
                         <a href="#" class="share"><i class="xi-share-alt-o"></i></a>
                         <dl>

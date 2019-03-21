@@ -52,10 +52,18 @@ function webzine_preprocess_page(&$variables)
                 $variables['main_class'] = 'fc04';
                 $cat_tid = $variables['node']->field_category['und'][0]['tid'];
                 $variables['category'] = $main->catLabel[$cat_tid];
-                $wid = $variables['node']->field_writer['und'][0]['tid'];
-                $writer = taxonomy_term_load($wid);
-                $variables['writer'] = $writer->name;
-                $variables['writer_info'] = ($writer->field_position) ? strip_tags($writer->field_position['und'][0]['value']) : '';
+                if(isset($variables['node']->field_writer['und'])) {
+                    $writers = array();
+                    foreach($variables['node']->field_writer['und'] as $writerInfo) {
+                        $wid = $writerInfo['tid'];
+                        $writer = taxonomy_term_load($wid);
+                        $writers[] = array(
+                            'name' => $writer->name,
+                            'info' => ($writer->field_position) ? strip_tags($writer->field_position['und'][0]['value']) : ''
+                        );
+                    }
+                    $variables['writers'] = $writers;
+                }
                 $image = ($variables['node']->field_image) ? image_style_url('article', $variables['node']->field_image['und'][0]['uri']) : '';
                 $variables['image'] = ($image) ? ' style="background-image:url('.$image.')"' : '';
                 $variables['vol_path'] = '/vol/' . $main->vol();
