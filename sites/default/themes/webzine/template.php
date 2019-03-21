@@ -36,6 +36,8 @@ function webzine_css_alter(&$css)
 function webzine_preprocess_page(&$variables)
 {
     $main = new Slowalk();
+    $vol = $main->vol();
+    $variables['vol'] = sprintf('%02d', $vol);  //호수 노출
 
     $variables['main_class'] = 'fc02';
     if(empty($variables['page']['sidebar_first'])) {
@@ -49,6 +51,7 @@ function webzine_preprocess_page(&$variables)
         if(isset($variables['node'])) {
             if($variables['node']->type === 'article') {
                 $main->vol = $variables['node']->field_vol['und'][0]['tid'];
+                $variables['thisVol'] = sprintf('%02d', $main->vol());  //호수 노출
                 $variables['main_class'] = 'fc04';
                 $cat_tid = $variables['node']->field_category['und'][0]['tid'];
                 $variables['category'] = $main->catLabel[$cat_tid];
@@ -72,7 +75,7 @@ function webzine_preprocess_page(&$variables)
             }
         }
     }
-    drupal_add_js(array('Webzine' => array('vol' => $main->baseUrl.'/vol/'.$main->vol())), 'setting');
+    drupal_add_js(array('Webzine' => array('vol' => $main->baseUrl.'/vol/'.$vol)), 'setting');
     drupal_add_js('https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js', array('type' => 'external', 'scope' => 'header', 'group' => JS_LIBRARY));
     drupal_add_js('https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.min.js', array('type' => 'external', 'scope' => 'header', 'group' => JS_LIBRARY ));
     drupal_add_js('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js', array('type' => 'external', 'scope' => 'header', 'group' => JS_THEME ));
@@ -83,9 +86,6 @@ function webzine_preprocess_page(&$variables)
     drupal_add_css('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css', array('type' => 'external', 'group' => CSS_THEME));
     drupal_add_css('https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css', array('type' => 'external', 'group' => CSS_THEME));
     drupal_add_css(drupal_get_path('module', 'ckeditor') . '/plugins/cavacnote/css/cavacnote.css', array('type' => 'file', 'group' => CSS_THEME));
-
-    //호수 노출
-    $variables['vol'] = sprintf('%02d', $main->vol());
 }
 
 /**
