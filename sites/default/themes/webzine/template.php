@@ -38,13 +38,14 @@ function webzine_preprocess_page(&$variables)
     $main = new Slowalk();
     $vol = $main->vol();
     $variables['vol'] = sprintf('%02d', $vol);  //호수 노출
-
     $variables['main_class'] = 'fc02';
     if(empty($variables['page']['sidebar_first'])) {
         $variables['main_class'] = 'fc03';
         if(strpos(request_uri(), 'vol') !== false) {
-            $variables['title'] = '지난호 보기';
             $variables['theme_hook_suggestions'][] = 'page__vol';
+            $term = taxonomy_term_load(arg(2));
+            $termname = sprintf('%02d', $term->name);
+            drupal_set_title('#'.$termname.'호 다시보기');
         } elseif (arg(0) === 'taxonomy') {
             drupal_add_css('#page-title:before{content:"#"}', 'inline');
         }
