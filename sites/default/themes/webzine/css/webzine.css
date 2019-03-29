@@ -209,6 +209,13 @@ section h1.title{font-size:38px;line-height:40px;padding-bottom:24px;font-family
 /*메인 슬라이더 배너*/
 .ib01{position:relative}
 .ib01 li{position:relative;background-position:center top;background-repeat:no-repeat;background-color:#ddd}
+.ib01 li a{
+	display:block;
+	background: -moz-linear-gradient(left, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 29%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 29%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 29%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3000000', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+}
 .ib01 li img{visibility:hidden}
 .ib01 li dl{position:absolute;top:230px;right:50%;margin-left:16px;max-width:556px;word-break:keep-all;}
 .ib01 li dl dt{font-size:50px;line-height:62px;color:#fff;margin-bottom:1rem;font-family:'Iropke Batang','IropkeBatang',sans-serif}
