@@ -43,7 +43,7 @@ function get_client_ip()
 }
 
 if($_SERVER['HTTP_USER_AGENT'] === 'Bitbucket-Webhooks/2.0' || ip_check($bitbucket_ip, get_client_ip()) === true) {
-    echo shell_exec( 'cd /home/ubuntu/public_html/webzine && /usr/bin/git pull 2>&1' );
+    echo shell_exec( 'cd /var/www/html/kyeol && /usr/bin/git pull 2>&1' );
 } else {
     echo 'Reject Access!';
     echo get_client_ip();
