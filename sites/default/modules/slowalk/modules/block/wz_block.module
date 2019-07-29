@@ -220,6 +220,7 @@ function wz_main_newsletter_block_view()
                 'newsletter' => array(
                     '#type' => 'textfield',
                     '#title' => '이메일',
+                    '#id' => 'letter_email',
                     '#name' => 'email',
                     '#attributes' => array('placeholder' => '이메일을 입력하세요')
                 ),
