@@ -95,9 +95,9 @@
                     <div class="ng03">
                         <a href="#" class="share"><i class="xi-share-alt-o"></i></a>
                         <dl>
-                            <dt>게시글을 공유해보세요</dt>
+                            <dt><label for="share_url">게시글을 공유해보세요</label></dt>
                             <dd>
-                                <input type="text" name="share_url" value="<?php print $url;?>"/>
+                                <input id="share_url" type="text" name="share_url" value="<?php print $url;?>"/>
                                 <button>링크복사</button>
                             </dd>
                         </dl>
