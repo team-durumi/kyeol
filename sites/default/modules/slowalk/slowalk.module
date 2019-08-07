@@ -18,7 +18,7 @@ function slowalk_menu()
         'description' => '웹진 어드민 페이지입니다',
         'page callback' => 'drupal_get_form',
         'page arguments' => array('wz_main_callback'),
-        'access arguments' => array('access administrator'),
+        'access arguments' => array('access administrator webzine'),
         'file' => 'include/main.php'
     );
 
@@ -34,7 +34,7 @@ function slowalk_menu()
         'description' => '메인페이지 슬라이드 설정 페이지입니다.',
         'page callback' => 'drupal_get_form',
         'page arguments' => array('wz_slide_callback'),
-        'access arguments' => array('access administrator'),
+        'access arguments' => array('access administrator webzine'),
         'type' => MENU_LOCAL_TASK,
         'weight' => 1,
         'file' => 'include/slide.php'
@@ -70,6 +70,10 @@ function slowalk_permission()
         'access webzine ajax' => array(
             'title' => 'Webzine Ajax',
             'description' => 'Webzine Ajax access role.'
+        ),
+        'access administrator webzine' => array(
+          'title' => 'Webzine Administor',
+          'description' => 'Webzine administor page access role.'
         )
     );
 }
