@@ -47,12 +47,14 @@ footer .infoA li strong{margin-right:3px}
 .fc03 nav{padding:15px 0 25px}
 section h1.title{font-size:24px;line-height:30px;padding-bottom:20px;}
 /*뷰페이지 프레임*/
-.fc04 .cBody{width:auto;margin:0 15px;padding:50px 0 0}
+.fc04 .cBody{width:auto;padding:50px 0 0}
 .fc04 .cBody aside{position:static;width:auto;background-color:#f5f5f5;margin-bottom:20px}
-.fc04 .cBody .postA{padding-bottom:20px}
+.fc04 .cBody .postA{padding-bottom:20px;width:auto;margin:0 15px;padding-bottom:50px}
 .fc04 .taglistA{padding:16px 0 11px}
 .fc04 .taglistA .btn03{margin-bottom:5px}
 .fc04 .writerA{padding:16px 0;margin-bottom:30px}
+.fc04 .writerA .inner{padding:15px 15px}
+.fc04 .relateA{margin-top:30px}
 .fc04 .relateA .lc01 dl{padding:14px;height:90px}
 /*공통 박스 프레임*/
 .fc_box01{padding:24px;margin-top:20px}
@@ -142,6 +144,11 @@ section h1.title{font-size:24px;line-height:30px;padding-bottom:20px;}
 .lc02_01 li dl{margin-left:120px}
 .lc02_01 li dt .category{display:block;margin-bottom:5px}
 .lc02_01 li dd p.summury{max-height:58px;-webkit-line-clamp:2}
+
+.relateA .lc02 li .thumb{height:113px;width:150px;margin-right:15px}
+.relateA .lc02 li .thumb img{min-height:113px}
+.relateA .lc02 li dt > a{max-height:64px;-webkit-line-clamp:3}
+
 /*필자 리스트*/
 .lc03 > dl > dt{float:none;width:auto;padding-top:30px;font-size:1.2rem}
 .lc03 > dl > dt a{font-size:1.2rem}
@@ -233,9 +240,15 @@ body.front .ng01 li a i{font-size:16px;line-height:36px}
 /*서브 뷰 타이틀*/
 .th02{background-image:url(../images/bg_view_title_m.png);background-size:cover;display:table;width:100%;min-height:inherit;}
 .th02 .inner{position:relative;left:0;bottom:0;margin:0;padding:40px 15px 20px;width:auto;display:table-cell;vertical-align:bottom;}
-.th02 h1{display:block;font-size:29px;line-height:35px;margin-bottom:20px}
+.th02 h1{display:block;font-size:29px;line-height:35px;margin-bottom:5px}
 .th02 .category{margin-bottom:5px}
+.th02 ul.metas li:before{margin:0 8px 0 6px;font-size:12px}
+.th02 ul.metas li b{font-size:13px}
+.th02 p{margin-bottom:10px}
 .th02 .ng03{position:absolute;bottom:-20px;right:15px}
+
+	.th03{font-size:20px;line-height:1.2}
+
 /*소개 페이지*/
 .con01{margin-top:20px}
 .con01 .banner{margin-bottom:30px;height:140px;background-size:cover;background-position:center center}
@@ -254,7 +267,12 @@ footer .infoA li.l1, footer .infoA li.l3{border-right:none;}
 
 /* 뷰페이지 사이드영역 크기별 대응 */
 @media screen and (max-width: 1440px) {
-.fc04 .cBody aside{position:relative;top:inherit;right:inherit;width:inherit;}
+.fc04 .cBody aside{position:relative;top:inherit;left:inherit;width:inherit;margin-bottom:0;margin-left:0;border-top:1px solid #ddd;width:1108px;margin:0 auto}
+.ng05{margin-bottom:0;padding:15px}
+.ng05 dt{margin-bottom:10px}
+.ng05 dd a.btn03{margin-bottom:4px}
+.fc04 .cBody aside .ng05:last-child{padding:15px;}
+
 }
 
 /* 기사 제목 영역 */
@@ -262,6 +280,8 @@ footer .infoA li.l1, footer .infoA li.l3{border-right:none;}
 .th02 .inner{left:inherit;margin-left:15px;}
 .ib01 .slick-dots{width:auto;bottom:20px;left:0;margin-top:0;margin-right:0;}
 .ib01 .slick-dots li{display:inline-block;}
+.fc04 .cBody aside{width:auto;margin:0}
+
 }
 
 /* 태블릿 가로 */
