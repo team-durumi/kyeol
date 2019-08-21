@@ -87,14 +87,16 @@
                     </div>
                     <h1><?php print $title;?></h1>
                     <div class="writers">
+                      <p><b>글</b>
                       <?php foreach($writers as $writer): ?>
-                        <p><b>글 <?php print $writer['name'];?></b><em><?php print $writer['info'];?></em></p>
+                        <b><?php print $writer['name'];?></b><em><?php print $writer['info'];?></em>
                       <?php endforeach;?>
+                      </p>
                     </div>
-                    <div class="dates">
-                      <p>게시일 <?php print format_date($created, 'custom', 'Y.m.d');?></p>
-                      <p>최종수정일 <?php print format_date($changed, 'custom', 'Y.m.d');?></p>
-                    </div>
+                    <ul class="metas">
+                      <li><b>게시일</b><span><?php print format_date($created, 'custom', 'Y.m.d');?></span></li>
+                      <li><b>최종수정일</b><span><?php print format_date($changed, 'custom', 'Y.m.d');?></span></li>
+                    </ul>
                     <div class="ng03">
                         <a href="#" class="share"><i class="xi-share-alt-o"></i></a>
                         <dl>

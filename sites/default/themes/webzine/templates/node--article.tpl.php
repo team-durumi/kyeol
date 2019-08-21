@@ -104,7 +104,7 @@
         <!-- attachA -->
         <div class="attachA">
             <?php if(render($content['field_slide'])):?>
-                <dl class="ng04 slide">
+                <dl class="slide">
                     <!--dt>이미지</dt-->
                     <dd>
                         <ul class="slider">
@@ -164,36 +164,43 @@
     <!-- //cBody -->
     <?php if(render($content['field_related_article'])): ?>
       <div class="relateA">
-        <h4>연결되는 글</h4>
-        <ul class="lc01 inner">
-          <?php $i=1; foreach($content['field_related_article']['#items'] as $article): ?>
-            <?php if(isset($article['node'])): ?>
-              <?php if($article['node']->status !== '1') continue; ?>
-              <?php $img = ($article['node']->field_image) ? image_style_url('main_article', $article['node']->field_image['und'][0]['uri']) : file_create_url(drupal_get_path('theme', 'webzine').'/images/no-image-square.png');?>
-              <?php $body = field_view_field('node', $article['node'], 'body', 'teaser');?>
-              <li class="l<?php print $i++;?>">
-                <a href="/node/<?php print $article['node']->nid;?>" class="thumb"><span><img src="<?php print $img;?>" alt="<?php print $article['node']->title;?>"/></span></a>
-                <dl class="conA">
-                  <dt>
-                    <a href="/node/<?php print $article['node']->nid;?>"><?php print $article['node']->title;?></a>
-                  </dt>
-                  <dd><?php print strip_tags(render($body));?></dd>
-                </dl>
-              </li>
-            <?php endif;?>
-          <?php endforeach;?>
-        </ul>
-        <div class="clear"></div>
+        <div class="inner">
+          <h3 class="th03">연결되는 글</h3>
+          <ul class="lc02">
+            <?php $i=1; foreach($content['field_related_article']['#items'] as $article): ?>
+              <?php if(isset($article['node'])): ?>
+                <?php if($article['node']->status !== '1') continue; ?>
+                <?php $img = ($article['node']->field_image) ? image_style_url('main_article', $article['node']->field_image['und'][0]['uri']) : file_create_url(drupal_get_path('theme', 'webzine').'/images/no-image-square.png');?>
+                <?php $body = field_view_field('node', $article['node'], 'body', 'teaser');?>
+                <li class="l<?php print $i++;?>">
+                  <a href="/node/<?php print $article['node']->nid;?>" class="thumb"><span><img src="<?php print $img;?>" alt="<?php print $article['node']->title;?>"/></span></a>
+                  <dl class="conA">
+                    <dt>
+                      <a href="/node/<?php print $article['node']->nid;?>"><?php print $article['node']->title;?></a>
+                    </dt>
+                    <dd>
+                      <p class="summury"><?php print strip_tags(render($body));?></p>
+                      <p class="meta">
+                        <span><?php print get_writers($article['node']->field_writer);?></span>
+                        <em>2019. 03. 01</em>
+                      </p>
+                    </dd>
+                  </dl>
+                </li>
+              <?php endif;?>
+            <?php endforeach;?>
+          </ul>
+        </div>
       </div>
     <?php endif;?>
 
     <?php if(render($content['field_tags'])): ?>
-        <div class="taglistA">
-            <dl class="ng06 inner">
-                <dt>Tag</dt>
-                <dd><?php print get_term_link($content['field_tags'], array('class' => 'btn03', 'prefix' => '#'));?></dd>
-            </dl>
-        </div>
+    <div class="taglistA">
+      <dl class="ng06 inner">
+        <dt>Tag</dt>
+        <dd><?php print get_term_link($content['field_tags'], array('class' => 'btn03', 'prefix' => '#'));?></dd>
+      </dl>
+    </div>
     <?php endif;?>
 
     <?php if(render($content['field_writer'])): ?>
@@ -215,8 +222,9 @@
         </div>
     <?php endif;?>
 
+    <div class="attachA">
     <?php if(render($content['field_url'])): ?>
-      <dl class="ng04 link">
+      <dl class="ng04 link inner">
         <dt>참고문헌</dt>
         <dd>
           <ul>
@@ -240,5 +248,6 @@
         </dd>
       </dl>
     <?php endif;?>
+    </div>
 
 <?php endif;?>

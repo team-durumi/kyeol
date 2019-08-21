@@ -22,7 +22,7 @@ $(window).resize(function() {
 
 /* 메뉴고정 */
 $(window).scroll(function(e){
-	if ($(window).scrollTop() > 0) {         
+	if ($(window).scrollTop() > 0) {
 		$("body.pc").addClass("scrolling");
 	} else {
 		$("body.pc").removeClass("scrolling");
@@ -38,7 +38,7 @@ function viewport() {
 }
 
 $(document).ready(function() {
-	
+
 	var dw = viewport().width;
 	if(dw <= 768){	//모바일
 		$("body").removeClass('pc');
@@ -110,8 +110,8 @@ $(document).ready(function() {
         }
     });
 	$(".ng03 dl dd button").click(function(){
-		$(this).siblings('input').select(); 
-		document.execCommand('copy'); 
+		$(this).siblings('input').select();
+		document.execCommand('copy');
 		$(this).text('완료');
 		$(this).append($('<i class="xi-check-min"></i>'));
 
@@ -146,19 +146,19 @@ $(document).ready(function() {
 	}
 
 	//기사페이지 이미지 슬라이드
-	$('.ng04.slide ul.slider').slick({
+	$('.slide ul.slider').slick({
 		autoplay:true,
 		speed:500,
 		adaptiveHeight: true,
 		autoplaySpeed:6000,
 		arrows:true,
 		dots:false,
-		asNavFor: '.ng04.slide ul.slider-nav'
+		asNavFor: '.slide ul.slider-nav'
 	});
-	$('.ng04.slide ul.slider-nav').slick({
+	$('.slide ul.slider-nav').slick({
 		slidesToShow: 3,
 		slidesToScroll: 1,
-		asNavFor: '.ng04.slide ul.slider',
+		asNavFor: '.slide ul.slider',
 		arrows:true,
 		dots: true,
 		focusOnSelect: true
@@ -272,7 +272,7 @@ function form_validation(){
 		}
 		else
 			return true;
-	});	
+	});
 	//뉴스레터
 	$(".cf02").validate({
         rules: {

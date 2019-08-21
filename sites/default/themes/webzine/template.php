@@ -97,13 +97,19 @@ function webzine_preprocess_page(&$variables)
  */
 function get_writers($field_writer)
 {
-    if(isset($field_writer['#items'])) {
-        $writers = array();
-        foreach($field_writer['#items'] as $item) {
-            $writers[] = $item['taxonomy_term']->name;
-        }
-        return implode(', ', $writers);
+  $writers = array();
+  if(isset($field_writer['#items'])) {
+    foreach($field_writer['#items'] as $item) {
+      $writers[] = $item['taxonomy_term']->name;
     }
+  } elseif(isset($field_writer['und'])) {
+    foreach($field_writer['und'] as $Arr) {
+      $tid = $Arr['tid'];
+      $term = taxonomy_term_load($tid);
+      $writers[] = $term->name;
+    }
+  }
+  return implode(', ', $writers);
 }
 
 /**
