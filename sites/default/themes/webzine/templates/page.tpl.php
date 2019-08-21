@@ -86,12 +86,15 @@
                         <a class="btn02 category" href="<?php print $category_path;?>"><?php print $category;?></a>
                     </div>
                     <h1><?php print $title;?></h1>
-                    <?php foreach($writers as $writer): ?>
-                    <p>
-                        <b>글 <?php print $writer['name'];?></b>
-                        <em><?php print $writer['info'];?></em>
-                    </p>
-                    <?php endforeach;?>
+                    <div class="writers">
+                      <?php foreach($writers as $writer): ?>
+                        <p><b>글 <?php print $writer['name'];?></b><em><?php print $writer['info'];?></em></p>
+                      <?php endforeach;?>
+                    </div>
+                    <div class="dates">
+                      <p>게시일 <?php print format_date($created, 'custom', 'Y.m.d');?></p>
+                      <p>최종수정일 <?php print format_date($changed, 'custom', 'Y.m.d');?></p>
+                    </div>
                     <div class="ng03">
                         <a href="#" class="share"><i class="xi-share-alt-o"></i></a>
                         <dl>
