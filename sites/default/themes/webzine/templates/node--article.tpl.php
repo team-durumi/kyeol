@@ -134,31 +134,6 @@
                     <dd><?php print render($content['field_mov']);?></dd>
                 </dl>
             <?php endif;?>
-            <?php if(render($content['field_url'])): ?>
-                <dl class="ng04 link">
-                    <dt>참고문헌</dt>
-                    <dd>
-                        <ul>
-                            <?php foreach($content['field_url']['#items'] as $link): ?>
-                                <li><a href="<?php print $link['url'];?>"><?php print $link['title'];?></a></li>
-                            <?php endforeach;?>
-                        </ul>
-                    </dd>
-                </dl>
-            <?php endif;?>
-
-            <?php if(render($content['field_related_file'])): ?>
-                <dl class="ng04 file">
-                    <dt>도움이 되는 자료</dt>
-                    <dd>
-                        <ul>
-                            <?php foreach($content['field_related_file']['#items'] as $file): ?>
-                                <li><a class="btn03" href="<?php print file_create_url($file['node']->field_file['und'][0]['uri']);?>"><i class="xi-paperclip"></i><?php print $file['node']->field_file['und'][0]['filename'];?></a></li>
-                            <?php endforeach;?>
-                        </ul>
-                    </dd>
-                </dl>
-            <?php endif;?>
         </div>
         <!-- //attachA -->
         <!-- aside -->
@@ -187,6 +162,30 @@
         <!-- //aside -->
     </div>
     <!-- //cBody -->
+    <?php if(render($content['field_related_article'])): ?>
+      <div class="relateA">
+        <h4>연결되는 글</h4>
+        <ul class="lc01 inner">
+          <?php $i=1; foreach($content['field_related_article']['#items'] as $article): ?>
+            <?php if(isset($article['node'])): ?>
+              <?php if($article['node']->status !== '1') continue; ?>
+              <?php $img = ($article['node']->field_image) ? image_style_url('main_article', $article['node']->field_image['und'][0]['uri']) : file_create_url(drupal_get_path('theme', 'webzine').'/images/no-image-square.png');?>
+              <?php $body = field_view_field('node', $article['node'], 'body', 'teaser');?>
+              <li class="l<?php print $i++;?>">
+                <a href="/node/<?php print $article['node']->nid;?>" class="thumb"><span><img src="<?php print $img;?>" alt="<?php print $article['node']->title;?>"/></span></a>
+                <dl class="conA">
+                  <dt>
+                    <a href="/node/<?php print $article['node']->nid;?>"><?php print $article['node']->title;?></a>
+                  </dt>
+                  <dd><?php print strip_tags(render($body));?></dd>
+                </dl>
+              </li>
+            <?php endif;?>
+          <?php endforeach;?>
+        </ul>
+        <div class="clear"></div>
+      </div>
+    <?php endif;?>
 
     <?php if(render($content['field_tags'])): ?>
         <div class="taglistA">
@@ -216,27 +215,30 @@
         </div>
     <?php endif;?>
 
-    <?php if(render($content['field_related_article'])): ?>
-    <div class="relateA">
-        <ul class="lc01 inner">
-            <?php $i=1; foreach($content['field_related_article']['#items'] as $article): ?>
-                <?php if(isset($article['node'])): ?>
-                    <?php if($article['node']->status !== '1') continue; ?>
-                    <?php $img = ($article['node']->field_image) ? image_style_url('main_article', $article['node']->field_image['und'][0]['uri']) : file_create_url(drupal_get_path('theme', 'webzine').'/images/no-image-square.png');?>
-                    <?php $body = field_view_field('node', $article['node'], 'body', 'teaser');?>
-                    <li class="l<?php print $i++;?>">
-                        <a href="/node/<?php print $article['node']->nid;?>" class="thumb"><span><img src="<?php print $img;?>" alt="<?php print $article['node']->title;?>"/></span></a>
-                        <dl class="conA">
-                            <dt>
-                                <a href="/node/<?php print $article['node']->nid;?>"><?php print $article['node']->title;?></a>
-                            </dt>
-                            <dd><?php print strip_tags(render($body));?></dd>
-                        </dl>
-                    </li>
-                <?php endif;?>
+    <?php if(render($content['field_url'])): ?>
+      <dl class="ng04 link">
+        <dt>참고문헌</dt>
+        <dd>
+          <ul>
+            <?php foreach($content['field_url']['#items'] as $link): ?>
+              <li><a href="<?php print $link['url'];?>"><?php print $link['title'];?></a></li>
             <?php endforeach;?>
-        </ul>
-        <div class="clear"></div>
-    </div>
+          </ul>
+        </dd>
+      </dl>
     <?php endif;?>
+
+    <?php if(render($content['field_related_file'])): ?>
+      <dl class="ng04 file">
+        <dt>도움이 되는 자료</dt>
+        <dd>
+          <ul>
+            <?php foreach($content['field_related_file']['#items'] as $file): ?>
+              <li><a class="btn03" href="<?php print file_create_url($file['node']->field_file['und'][0]['uri']);?>"><i class="xi-paperclip"></i><?php print $file['node']->field_file['und'][0]['filename'];?></a></li>
+            <?php endforeach;?>
+          </ul>
+        </dd>
+      </dl>
+    <?php endif;?>
+
 <?php endif;?>

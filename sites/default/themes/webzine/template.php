@@ -73,6 +73,8 @@ function webzine_preprocess_page(&$variables)
                 $variables['vol_path'] = '/vol/' . $main->vol();
                 $variables['category_path'] = '/category/' . $main->machine_name[$cat_tid];
                 $variables['url'] = $main->baseUrl . request_uri();
+                $variables['created'] = $variables['node']->created;
+                $variables['changed'] = $variables['node']->changed;
             }
         }
     }
