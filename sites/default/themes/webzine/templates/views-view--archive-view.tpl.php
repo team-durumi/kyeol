@@ -46,7 +46,7 @@ $archive = new Archive();
 
     <?php if($voca === 'location'): ?>
 
-            <?php print $archive->getMap();?>
+            <?php /*print $archive->getMap(); 190917 구글맵 임시 주석처리 */ ?>
 
     <?php endif;?>
 
