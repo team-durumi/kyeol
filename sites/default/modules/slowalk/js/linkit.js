@@ -7,7 +7,6 @@ let jquery_term_count = 0;
       let dialogid = 'term' + jquery_term_count;
       jquery_term_count += 1;
       $.post("/ajax/webzine", {type: "term", href: href}).done(function (response) {
-        console.log(response);
         let popuptitle = response.name;
         let popuptext = response.description;
         $("<div id='" + dialogid + "' title='" + popuptitle + "'><p>" + popuptext + "</p></div>").insertAfter(obj);
