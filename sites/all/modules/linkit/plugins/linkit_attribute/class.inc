@@ -29,7 +29,7 @@ function linkit_attribute_plugin_class($plugin, $settings = array()) {
     '#title' => $plugin['name'],
     '#maxlength' => 255,
     '#size' => 40,
-    '#default_value' => '',
+    '#default_value' => 'term',
     '#weight' => isset($settings['weight']) ? $settings['weight'] : 0,
   );
 }
