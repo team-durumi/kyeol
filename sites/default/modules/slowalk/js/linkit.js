@@ -10,20 +10,10 @@ let jquery_term_count = 0;
         let popuptitle = response.name;
         let popuptext = response.description;
         $("<div id='" + dialogid + "' title='" + popuptitle + "'><p>" + popuptext + "</p></div>").insertAfter(obj);
-        $('#' + dialogid).dialog({
-          autoOpen: false,
-          resizable: false,
-          modal: false
-        });
+        $('#' + dialogid).dialog({autoOpen: false, resizable: false, modal: false});
         $(obj).click(function(e) {
           e.preventDefault();
-          $('#' + dialogid).dialog("option", "position", {
-            my: "left top",
-            at: "left bottom",
-            of: e,
-            offset: "5 30"
-          });
-          $('#' + dialogid).dialog('open');
+          $('#' + dialogid).dialog("option", "position", {my: "left top", at: "left bottom", of: e, offset: "5 30"}).dialog('open');
         });
       });
     });
