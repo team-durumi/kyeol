@@ -88,6 +88,13 @@ function webzine_ajax_callback()
                 $archive = new Archive();
                 $return = $archive->getPerson();
                 break;
+          case 'term':
+            $href = $_POST['href'];
+            $explode = explode('/', $href);
+            $tid = $explode[2];
+            $term = taxonomy_term_load($tid);
+            $return = $term;
+            break;
         }
         drupal_json_output($return);
     } else {

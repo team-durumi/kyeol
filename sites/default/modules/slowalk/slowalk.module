@@ -111,3 +111,13 @@ function _slowalk_search($view_name, $display_id, $key)
     $search->execute();
     return $search->total_rows;
 }
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function slowalk_preprocess_page(&$variables)
+{
+  if(isset($variables['node']) && $variables['node']->type === 'article') {
+    drupal_add_js(__SLOWALK__ . '/js/linkit.js', array('type' => 'file', 'scope' => 'footer', 'group' => JS_THEME));
+  }
+}
