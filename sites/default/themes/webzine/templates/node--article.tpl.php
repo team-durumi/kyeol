@@ -182,7 +182,7 @@
                       <p class="summury"><?php print strip_tags(render($body));?></p>
                       <p class="meta">
                         <span><?php print get_writers($article['node']->field_writer);?></span>
-                        <em>2019. 03. 01</em>
+                        <em><?php print format_date($article['node']->created, "custom", "Y.m.d");?></em>
                       </p>
                     </dd>
                   </dl>
