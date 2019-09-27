@@ -38,7 +38,7 @@ function wz_main_callback($form, &$form_state)
         '#type' => 'checkboxes',
         '#title' => '기사 분류',
         '#options' => array(
-            2 => '연구자의 말',
+            2 => '좌담',
             3 => '논평',
             4 => '에세이',
             5 => '자료해제',

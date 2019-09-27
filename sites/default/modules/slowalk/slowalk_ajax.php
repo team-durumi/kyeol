@@ -12,7 +12,7 @@ function webzine_ajax_callback()
         $type = $_POST['type'];
         $return = array();
         $catLabel = array(
-            2 => '연구자의 말',
+            2 => '좌담',
             3 => '논평',
             4 => '에세이',
             5 => '자료해제',
