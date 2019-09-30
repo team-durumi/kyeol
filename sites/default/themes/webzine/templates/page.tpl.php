@@ -147,6 +147,9 @@
             </div>
         <?php endif;?>
     </div>
+    <div class="fc01_03">
+      <?php print render($page['sidebar_second']);?>
+    </div>
     <!-- //서브 컨텐츠 영역 -->
     <footer>
         <div class="inner">
