@@ -56,6 +56,7 @@ function webzine_ajax_callback()
                     ->fieldCondition('field_vol', 'tid', $vol)
                     ->fieldOrderBy('field_category', 'tid', 'ASC')
                     ->propertyOrderBy('created', 'DESC')
+                    ->range(0,6)
                     ->execute();
                 if($result['node']) {
                     $nids = array_keys($result['node']);
