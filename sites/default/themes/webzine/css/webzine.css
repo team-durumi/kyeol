@@ -191,7 +191,7 @@ section h1.title{font-size:38px;line-height:40px;padding-bottom:24px;font-family
 .btn03:hover{border-color:#a18963;color:#a18963;text-decoration:none}
 .btn_icon01 i{font-size:38px;font-weight:bold;color:#fff}
 .btns{padding:0 0 4rem;text-align:center;}
-.btns.btn01{margin:0 auto;}
+.btns.btn01{margin:0 auto;font-size:1.2rem;}
 /*헤더 검색창*/
 .cf01 .btn_icon01{position:absolute;right:45px;top:40px}
 .cf01 fieldset{width:728px;height:62px;margin:80px auto 0;border-bottom:1px solid #fff}
