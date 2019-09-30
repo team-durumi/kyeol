@@ -105,7 +105,7 @@ footer .infoA li span, footer .infoA li a{color:#fff}
 .fc01_02{position:relative}
 .fc01_02:before{content:"";display:block;width:292px;height:476px;background:url(../images/bg_pattern_main02.png) no-repeat 0 0;position:absolute;left:0;top:65px;z-index:-1;}
 .fc01_02:after{content:"";display:block;width:434px;height:333px;background:url(../images/bg_pattern_main03.png) no-repeat 0 0;position:absolute;right:0;bottom:-100px;z-index:-1;}
-.fc01_02 .inner{padding:65px 0}
+.fc01_02 .inner{padding:65px 0 35px}
 .fc01_03{background:url(../images/bg_pattern_comb02.png);position:relative}
 .fc01_03 .inner{padding:58px 0;overflow:hidden}
 .fc01_03 h2{float:left;width:50%;font-size:28px;line-height:40px;color:#fff;font-family:'Iropke Batang',sans-serif}
@@ -190,6 +190,8 @@ section h1.title{font-size:38px;line-height:40px;padding-bottom:24px;font-family
 .btn03{display:inline-block;border:1px solid #ddd;padding:6px 16px;border-radius:20px;box-sizing:border-box;background-color:#fff;margin:0 0 7px 5px;}
 .btn03:hover{border-color:#a18963;color:#a18963;text-decoration:none}
 .btn_icon01 i{font-size:38px;font-weight:bold;color:#fff}
+.btns{padding:0 0 4rem;text-align:center;}
+.btns.btn01{margin:0 auto;}
 /*헤더 검색창*/
 .cf01 .btn_icon01{position:absolute;right:45px;top:40px}
 .cf01 fieldset{width:728px;height:62px;margin:80px auto 0;border-bottom:1px solid #fff}
