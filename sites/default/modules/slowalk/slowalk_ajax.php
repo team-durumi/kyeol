@@ -54,8 +54,8 @@ function webzine_ajax_callback()
                     ->propertyCondition('status', 1)
                     ->propertyCondition('nid', $nid, 'NOT IN')
                     ->fieldCondition('field_vol', 'tid', $vol)
-                    ->fieldOrderBy('field_category', 'tid', 'ASC')
-                    ->propertyOrderBy('created', 'DESC')
+//                    ->fieldOrderBy('field_category', 'tid', 'ASC')
+                    ->propertyOrderBy('changed', 'DESC')
                     ->range(0,6)
                     ->execute();
                 if($result['node']) {
