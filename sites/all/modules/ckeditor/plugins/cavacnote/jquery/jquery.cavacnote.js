@@ -35,7 +35,7 @@ function isMobile() {
             $(obj).click(function(e) {
                 if (isMobile()) {
                     $('#' + dialogid).dialog("option", "position", {
-                        my: "left top",
+                        my: "center",
                         at: "center",
                         of: window
                     });
