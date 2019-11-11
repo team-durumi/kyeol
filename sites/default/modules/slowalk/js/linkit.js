@@ -13,7 +13,7 @@ let jquery_term_count = 0;
         $('#' + dialogid).dialog({autoOpen: false, resizable: false, modal: false});
         $(obj).click(function(e) {
           e.preventDefault();
-          $('#' + dialogid).dialog("option", "position", {my: "center", at: "center", of: window}).dialog('open');
+          $('#' + dialogid).dialog("option", "position", {my: "left top", at: "left bottom", of: e, offset: "5 30"}).dialog('open');
         });
       });
     });

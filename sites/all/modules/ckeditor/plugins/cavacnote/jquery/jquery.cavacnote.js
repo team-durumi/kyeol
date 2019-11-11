@@ -1,5 +1,9 @@
 var jquery_cavacnote_count = 0;
 
+function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
 (function($){  
     $.fn.cavacnote = function(options) {
         /*
@@ -29,11 +33,20 @@ var jquery_cavacnote_count = 0;
             });
             
             $(obj).click(function(e) {
-                $('#' + dialogid).dialog("option", "position", {
-                    my: "center",
-                    at: "center",
-                    of: window
-                });
+                if (isMobile()) {
+                    $('#' + dialogid).dialog("option", "position", {
+                        my: "left top",
+                        at: "center",
+                        of: window
+                    });
+                } else {
+                    $('#' + dialogid).dialog("option", "position", {
+                        my: "left top",
+                        at: "left bottom",
+                        of: e,
+                        offset: "5 30"
+                    });
+                }
                 console.log(e);
                 $('#' + dialogid).dialog('open');
                 //return false;
