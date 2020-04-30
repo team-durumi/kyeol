@@ -45,7 +45,7 @@ function webzine_preprocess_page(&$variables)
             $variables['theme_hook_suggestions'][] = 'page__vol';
             $term = taxonomy_term_load(arg(2));
             $termname = sprintf('%02d', $term->name);
-            drupal_set_title('#'.$termname.'호 다시보기');
+            drupal_set_title('#'.$termname.'년 글 다시보기');
         } elseif (arg(0) === 'taxonomy') {
             drupal_add_css('#page-title:before{content:"#"}', 'inline');
         }

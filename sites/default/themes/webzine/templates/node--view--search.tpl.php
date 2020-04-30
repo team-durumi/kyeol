@@ -11,7 +11,7 @@
 <dl class="conA">
     <dt>
         <span class="category">
-            <?php print get_term_link($content['field_vol'], array('class' => 'btn02 version', 'type' => '%02d', 'suffix' => '호'));?>
+            <?php print get_term_link($content['field_vol'], array('class' => 'btn02 version', 'type' => '%02d', 'suffix' => '년'));?>
             <?php print get_term_link($content['field_category'], array('class' => 'btn02 mention'));?>
         </span>
         <a href="<?php print $node_url;?>"><?php print $title;?></a>

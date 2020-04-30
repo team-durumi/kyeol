@@ -47,7 +47,7 @@ $img = ($term->field_image) ? image_style_url('main_article', $term->field_image
 <a href="<?php print $term_url;?>" class="thumb"><span><img src="<?php print $img;?>" alt="<?php print $term->description;?>"/></span></a>
 <dl class="conA">
     <dt>
-        <a href="<?php print $term_url;?>"><?php print $term_name;?>호</a>
+        <a href="<?php print $term_url;?>"><?php print $term_name;?>년</a>
     </dt>
     <dd>
         <?php print $term->description;?>

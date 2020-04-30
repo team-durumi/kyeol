@@ -105,8 +105,8 @@ $webzine->vol = arg(2);
                     <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
                     <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
                     <div class="fc_box01 fc_box01_01">
-                        <p class="td01 leftF"><i><?php print $webzine->vol();?></i>호에 대한 기사가 총 <em><?php print $webzine->total();?>건</em> 있습니다.</p>
-                        <a class="btn01 rightF" href="/back-issues">호수 목록 보기</a>
+                        <p class="td01 leftF"><i><?php print $webzine->vol();?></i>년 발행된 기사가 총 <em><?php print $webzine->total();?>건</em> 있습니다.</p>
+                        <!--<a class="btn01 rightF" href="/back-issues">호수 목록 보기</a>-->
                     </div>
                     <?php print $webzine->getWebzine(2);?>
                     <?php print $webzine->getWebzine(5);?>

@@ -185,7 +185,7 @@ class Webzines extends Slowalk
                     <dl class="conA">
                         <dt>
                             <span class="category">
-                                <a class="btn02 version" href="{{ vol_path }}">{{ vol }}호</a>
+                                <a class="btn02 version" href="{{ vol_path }}">{{ vol }}년</a>
                                 <a class="btn02 mention" href="{{ category_path }}">{{ category }}</a>
                             </span>
                             <a href="{{ node_url }}">{{ title }}</a>
