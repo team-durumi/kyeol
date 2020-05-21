@@ -1,0 +1,418 @@
+/* 레이어팝업 */
+.layerpopup {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+  background-color: #4a4a4a;
+}
+
+.layerpopup form {
+  height: 100%;
+}
+
+.layerpopup .group {
+  overflow: hidden;
+  overflow: hidden;
+  overflow-y: auto;
+  position: relative;
+  top: 50%;
+  width: 695px;
+  max-width: 90%;
+  max-height: 90%;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: #fff;
+  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+}
+
+.layerpopup .item {
+  padding: 25px 30px;
+  padding-top: 100px;
+}
+
+.layerpopup .bul1 {
+  margin: 10px 0;
+}
+
+.box1 {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 25px;
+  background-color: #f8f9fa;
+}
+
+.layerpopup p.box1 {
+  margin: 30px 0 0;
+  padding: 10px;
+  text-align: center;
+}
+
+.layerpopup h2 {
+  padding: 10px;
+  background-color: #373a5b;
+  font-size: 21px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  width: 100% !important;
+}
+
+.layerpopup.type1 {
+  background-color: rgba(0, 0, 0, .6);
+}
+
+.layerpopup.type1 h2 {
+  padding: 30px 10px;
+  font-size: 1.8rem;
+}
+
+.layerpopup.type1 .group {
+  width: 410px;
+}
+
+.layerpopup.type1 .table-wrap:after,
+.layerpopup.type1 .table-wrap table {
+  min-width: 0;
+}
+
+.layerpopup.type1 .table-wrap th.txt-left {
+  white-space: normal;
+}
+
+.layerpopup.type1 .table-wrap input[type='text'] {
+  max-width: 90%;
+  height: 35px;
+  padding: 0 15px;
+  border: 1px solid #e3e6e8;
+  font-size: 1.5rem;
+}
+
+.form-set {
+  display: inline-block;
+  margin-right: 30px;
+  font-size: 1.6rem;
+  color: #888;
+  vertical-align: top;
+}
+
+.form-radio label {
+  position: relative;
+  padding-left: 22px;
+  font-size: 16px;
+}
+
+/* 타이틀 */
+.title1 {
+  position: relative;
+  margin: 30px 0 20px;
+  padding-left: 20px;
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #000022;
+}
+
+.title1:before {
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  background: linear-gradient(120deg, #6132a0, #a33fa5);
+  content: '';
+}
+
+.title1:after {
+  position: absolute;
+  left: 4px;
+  top: 15px;
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  content: '';
+}
+
+.title1 .txt1 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.title1 .txt1 strong {
+  font-weight: 400;
+}
+
+.title1+.title1 {
+  margin-top: -20px;
+}
+
+.title2 {
+  position: relative;
+  margin: 40px 0 10px;
+  padding-left: 20px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #000022;
+}
+
+.title2:before {
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 9px;
+  height: 6px;
+  box-shadow: 0 2px #fff, 0 4px #3caab1;
+  border-top: 2px solid #3caab1;
+  border-bottom: 2px solid #3caab1;
+  content: '';
+}
+
+.title2:first-child {
+  margin-top: 0;
+}
+
+.title3 {
+  margin: 30px 0 10px;
+  font-size: 21px;
+  font-weight: 600;
+  color: #000022;
+}
+
+.title4 {
+  margin: 30px 0 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+}
+
+.title4:first-child {
+  margin-top: 0;
+}
+
+.title5 {
+  margin-bottom: 25px;
+  font-size: 41px;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* 테이블 */
+.table-wrap {
+  overflow: hidden;
+  overflow-x: auto;
+  position: relative;
+  z-index: 0;
+  border-top: 2px solid #5c2e98;
+}
+
+.table-wrap:after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  min-width: 500px;
+  height: 1px;
+  background-color: #5c2e98;
+  content: '';
+}
+
+.table-wrap table {
+  min-width: 500px;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.table-wrap th {
+  padding: 10px;
+  border-bottom: 1px solid #5c2e98;
+  font-weight: 400;
+  color: #000022;
+  white-space: nowrap;
+}
+
+.table-wrap td {
+  padding: 8px;
+  border-bottom: 1px solid #cfd4d7;
+  text-align: center;
+}
+
+.table-wrap tbody th {
+  border-bottom: 1px solid #cfd4d7;
+}
+
+.table-wrap .notice {
+  display: inline-block;
+  width: 60px;
+  height: 25px;
+  border: 1px solid #3caab1;
+  background-color: #fff;
+  font-family: 'Gotham', 'noto';
+  font-size: 1.2rem;
+  color: #3caab1;
+  text-align: center;
+  line-height: 23px;
+  vertical-align: middle;
+}
+
+.table-wrap .subject a {
+  display: inline-block;
+  overflow: hidden;
+  max-width: 100%;
+  padding-right: 30px;
+  color: #000022;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.table-wrap .subject .new {
+  display: inline-block;
+  position: absolute;
+  left: auto;
+  top: auto;
+  width: 20px;
+  height: 20px;
+  margin: 5px 0 0 -25px;
+  border-radius: 100%;
+  background-color: #3caab1;
+  color: transparent;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.table-wrap .subject .new:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding-right: 1px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #fff;
+  font-family: 'Gotham';
+  content: 'N';
+  text-align: center;
+  line-height: 19px;
+}
+
+.table-wrap+ul.box1 {
+  margin-top: 20px;
+  padding: 30px 50px;
+}
+
+.table-wrap+ul.box1 li {
+  position: relative;
+  padding-left: 80px;
+}
+
+.table-wrap+ul.box1 li+li {
+  margin-top: 5px;
+}
+
+.table-wrap+ul.box1 .icon1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.table-wrap.break {
+  word-break: keep-all;
+}
+
+.table-wrap.point1 th,
+.table-wrap.point1 td {
+  padding: 15px;
+}
+
+.table-wrap .bg {
+  background-color: #f7f8f9;
+  color: #000222;
+}
+
+.table-wrap.point1 td[colspan='8'] {
+  padding: 40px 15px;
+}
+
+*+.table-wrap {
+  margin-top: 10px;
+}
+
+p.txt-center+.table-wrap {
+  margin-top: 30px;
+}
+
+caption,
+legend {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.btns {
+  display: inline-block;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.txt-center {
+  text-align: center !important;
+}
+
+.btns .btn-l {
+  max-width: 48%;
+}
+
+.btn1 {
+  border: 0 none;
+  background-color: #5c2e98;
+  color: #fff;
+}
+
+.btn2 {
+  border: 1px solid #cfd4d7;
+  background-color: #fff;
+  transition: all .2s;
+}
+
+.btn-l {
+  display: inline-block;
+  width: 155px;
+  height: 50px;
+  font-size: 16px;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 48px;
+  vertical-align: middle;
+}
+
+.btns>*+* {
+  margin-left: 5px;
+}
+
+.cf02 a.btn.form-submit {
+  float: left;
+  width: 30%;
+  text-align: center;
+  background-color: #2d1900;
+  border: none;
+  height: 66px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  line-height: 3.8;
+}

@@ -275,16 +275,19 @@ function form_validation(){
 	});
 	//뉴스레터
 	$(".cf02").validate({
-        rules: {
-            email: {
-                required: true,
-                email: true
-            }
-         },
-        messages: {
-            email: "올바른 이메일 주소를 입력하세요"
-         }
-    });
+      ignore: [],
+      rules: {
+          email: {
+              required: true,
+              email: true
+          },
+          agreed: { required: true }
+      },
+      messages: {
+          email: "올바른 이메일 주소를 입력하세요",
+          agreed: ""
+      }
+  });
 
 
 

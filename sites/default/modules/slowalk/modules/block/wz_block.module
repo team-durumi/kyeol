@@ -229,6 +229,12 @@ function wz_main_newsletter_block_view()
                     '#name' => 'type',
                     '#value' => 'newsletter'
                 ),
+                'agreed' => array(
+                  '#type' => 'hidden',
+                  '#name' => 'agreed',
+                  '#value' => false,
+                  '#attributes' => ['id' => ['agreed']]
+                ),
                 'submit' => array(
                     '#type' => 'submit',
                     '#value' => '뉴스레터 신청하기',
@@ -245,6 +251,10 @@ function wz_main_newsletter_block_view()
             )
         )
     );
+    $block['modal'] = [
+      '#markup' => file_get_contents(__WZ_BLOCK__ . '/newsletter-privacy-notice.html'),
+      '#attached' => ['css' => [__WZ_BLOCK__ . '/newsletter.css']]
+    ];
 
     return $block;
 }

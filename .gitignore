@@ -20,3 +20,4 @@ sites/*/private
 
 # Ignore .htaccess
 .htaccess
+.DS_Store

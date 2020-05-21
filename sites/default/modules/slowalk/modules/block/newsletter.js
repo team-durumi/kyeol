@@ -4,9 +4,19 @@
            beforeSubmit: showRequest,
            success: showResponse
         });
+        $('#newsletter-form .btn.form-submit').click(function(e){
+          $('#newsletter-privacy-notice').show();
+        });
+        $('#newsletter-privacy-notice .btn-l.btn1').click(function(e){
+          if($('input[name=agree]:checked').val() == 'Y') {
+            $('#agreed').val('Y');
+            $('#newsletter-privacy-notice').hide();
+            $('#newsletter-form').submit();
+          }
+        });
     });
 
-    function showRequest (formData, jqForm, options) {
+    function showRequest(formData, jqForm, options) {
         let form = jqForm[0];
         return $(form).valid();
     }
