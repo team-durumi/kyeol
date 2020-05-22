@@ -3,7 +3,7 @@
    모바일 페이지를 기준으로 프린트 스타일을 잡았습니다. 
    ========================================================================== */
 
-header, nav, aside, body.front, body.scrolling.mobile, footer, button, .cf01, .cf02, .ng03{
+header, nav, aside, body.front, body.scrolling.mobile, footer, button, .cf01, .cf02, .ng03, .fc01_03, .th02 .inner{
   display: none;
 }
 
@@ -18,6 +18,10 @@ body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,inpu
 .inner{width:auto;margin:0 15px;padding:0;box-sizing:border-box}
 
 /*헤더*/
+
+/*본문 이미지 사이즈*/
+.cke_editable img, .postA img{width:30%;max-width:30%;height:auto;vertical-align:top;}
+.cke_editable iframe, .postA iframe{max-width:30%}
 
 /*메인페이지 프레임*/
 .fc01_01 .inner{padding:30px 0 32px}
