@@ -242,6 +242,7 @@ section h1.title{font-size:38px;line-height:40px;padding-bottom:24px;font-family
 .lc01 li dt{margin-bottom:10px}
 .lc01 li dt i{display:block;margin:0 0 4px;font-style:normal;color:#9f865f;font-weight:600}
 .lc01 li dt a{font-size:20px;line-height:32px;color:#111;font-weight:600;max-height:64px;display:block;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}
+.lc01 li dt .field-name-field-category a {color:#9f865f;font-weight:600; font-size: 16px; }
 .lc01 li:hover dt a{text-decoration:underline;}
 .lc01 li dd{max-height:58px;display:block;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}
 /*지난호 보기 리스트*/
@@ -473,4 +474,3 @@ body.page-archive-person .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-clos
 /* 기사 - 이미지 슬라이더 */
 .slider-nav .slick-slide{margin:0 1%;}
 .slider-nav .slick-slide.slick-current img{border:solid 3px #9f865f;box-sizing:border-box;}
-

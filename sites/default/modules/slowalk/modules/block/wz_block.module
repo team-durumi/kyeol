@@ -184,7 +184,7 @@ function wz_main_articles_block_view()
                                 <i>'.$item['category'].'</i>
                                 <a href="/node/'.$item['nid'].'">'.$item['title'].'</a>
                             </dt>
-                            <dd>'.$item['body'].'</dd>
+                            <dd>'.$item['writer'].'</dd>
                         </dl>
                     </li>';
     }
