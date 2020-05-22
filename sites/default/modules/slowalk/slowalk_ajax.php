@@ -35,13 +35,15 @@ function webzine_ajax_callback()
                 if($result['node']) {
                     $nid = key($result['node']);
                     $node = node_load($nid);
-                    $body = field_view_field('node', $node, 'body', 'teaser');
+                    $body = strip_tags(render(field_view_field('node', $node, 'body', 'teaser')));
+                    $writer = render(field_view_field('node', $node, 'field_writer', ['label' => 'hidden']));
                     $return = array(
                         'nid' => $nid,
                         'url' => '/node/'.$nid,
                         'title' => $node->title,
                         'img' => ($node->field_image) ? image_style_url('main_feature', $node->field_image['und'][0]['uri']) : file_create_url(drupal_get_path('theme', 'webzine').'/images/no-image-square.png'),
-                        'body' => strip_tags(render($body))
+                        'body' => $body,
+                        'writer' => $writer,
                     );
                 }
                 break;

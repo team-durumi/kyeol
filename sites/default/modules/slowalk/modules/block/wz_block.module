@@ -151,7 +151,7 @@ function wz_main_features_block_view()
                         <a href="/node/'.$item['nid'].'" class="thumb"><img src="'.$item['img'].'" alt=""/></a>
                         <dl class="conA">
                             <dt><a href="/node/'.$item['nid'].'">'.$item['title'].'</a></dt>
-                            <dd>'.$item['body'].'</dd>
+                            <dd>'.$item['writer'].'</dd>
                         </dl>
 
                     </div>
